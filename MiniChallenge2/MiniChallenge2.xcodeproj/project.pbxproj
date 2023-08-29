@@ -58,7 +58,6 @@
 				73C011CE2A9E5CBD008FCA67 /* Views */,
 				73C011CD2A9E5C49008FCA67 /* Models */,
 				73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */,
-				73C011C12A9E5988008FCA67 /* ContentView.swift */,
 				73C011C32A9E5988008FCA67 /* Assets.xcassets */,
 				73C011C52A9E5988008FCA67 /* Preview Content */,
 			);
@@ -83,6 +82,7 @@
 		73C011CE2A9E5CBD008FCA67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73C011C12A9E5988008FCA67 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
