@@ -22,6 +22,8 @@
 		73C011E72A9E7B59008FCA67 /* ScoreArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E62A9E7B59008FCA67 /* ScoreArea.swift */; };
 		73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E82A9E837A008FCA67 /* Quiz.swift */; };
 		73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011EA2A9E83E6008FCA67 /* QuizController.swift */; };
+		F03356232A9E7018007472F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03356222A9E7018007472F8 /* Router.swift */; };
+		F03356252A9E7733007472F8 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03356242A9E7733007472F8 /* RouterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		73C011E62A9E7B59008FCA67 /* ScoreArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreArea.swift; sourceTree = "<group>"; };
 		73C011E82A9E837A008FCA67 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		73C011EA2A9E83E6008FCA67 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
+		F03356222A9E7018007472F8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = SOURCE_ROOT; };
+		F03356242A9E7733007472F8 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				73C011D62A9E6FE2008FCA67 /* Quiz */,
+				F03356222A9E7018007472F8 /* Router.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				73C011EA2A9E83E6008FCA67 /* QuizController.swift */,
+				F03356242A9E7733007472F8 /* RouterController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +255,8 @@
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
 				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
+				F03356232A9E7018007472F8 /* Router.swift in Sources */,
+				F03356252A9E7733007472F8 /* RouterController.swift in Sources */,
 				73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */,
 				73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */,
 				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
@@ -383,7 +391,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
-				DEVELOPMENT_TEAM = 4X6L65DYQU;
+				DEVELOPMENT_TEAM = TACYQT6842;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -391,6 +399,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,7 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
-				DEVELOPMENT_TEAM = 4X6L65DYQU;
+				DEVELOPMENT_TEAM = TACYQT6842;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -420,6 +429,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
