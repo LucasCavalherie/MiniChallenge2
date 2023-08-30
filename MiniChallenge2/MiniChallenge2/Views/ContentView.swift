@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var routerController = RouterController.shared
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack(path: routerController.navigationStackBinding) {
+            VStack {
+                // Essa tela geralmente
+                Text("Stack vazia")
+            }
+            .navigationDestination(for: String.self) { viewKey in
+                // Usar funções do routerController para mudar telas
+                switch viewKey {
+                case "Home":
+                    // Mostrar view de Home
+                    Text("Home!")
+                // Adicionar outros cases para outras telas
+                default:
+                    // Fazer tela de erro para quando a tela solicitada
+                    // não existir
+                    Text("Erro!")
+                }
+            }
         }
-        .padding()
     }
 }
 
