@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7309D8822A9FAB750050C770 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309D8812A9FAB750050C770 /* ResultView.swift */; };
 		73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */; };
 		73C011C22A9E5988008FCA67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011C12A9E5988008FCA67 /* ContentView.swift */; };
 		73C011C42A9E5988008FCA67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C011C32A9E5988008FCA67 /* Assets.xcassets */; };
@@ -19,9 +20,12 @@
 		73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E22A9E7A34008FCA67 /* AnswerButton.swift */; };
 		73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E42A9E7AA2008FCA67 /* Countdown.swift */; };
 		73C011E72A9E7B59008FCA67 /* ScoreArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E62A9E7B59008FCA67 /* ScoreArea.swift */; };
+		73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E82A9E837A008FCA67 /* Quiz.swift */; };
+		73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011EA2A9E83E6008FCA67 /* QuizController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7309D8812A9FAB750050C770 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		73C011BC2A9E5988008FCA67 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge2App.swift; sourceTree = "<group>"; };
 		73C011C12A9E5988008FCA67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		73C011E22A9E7A34008FCA67 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		73C011E42A9E7AA2008FCA67 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		73C011E62A9E7B59008FCA67 /* ScoreArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreArea.swift; sourceTree = "<group>"; };
+		73C011E82A9E837A008FCA67 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		73C011EA2A9E83E6008FCA67 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		73C011CF2A9E5D75008FCA67 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				73C011EA2A9E83E6008FCA67 /* QuizController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 			children = (
 				73C011E12A9E7A17008FCA67 /* Components */,
 				73C011D42A9E6F9E008FCA67 /* QuizView.swift */,
+				7309D8812A9FAB750050C770 /* ResultView.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 				73C011D72A9E700C008FCA67 /* Question.swift */,
 				73C011D92A9E706F008FCA67 /* Category.swift */,
 				73C011DB2A9E71CF008FCA67 /* Answer.swift */,
+				73C011E82A9E837A008FCA67 /* Quiz.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -238,8 +247,11 @@
 				73C011D82A9E700C008FCA67 /* Question.swift in Sources */,
 				73C011DE2A9E7415008FCA67 /* QuestionData.swift in Sources */,
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
+				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
 				73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */,
+				73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */,
+				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
 				73C011D52A9E6F9E008FCA67 /* QuizView.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
 				73C011E72A9E7B59008FCA67 /* ScoreArea.swift in Sources */,
