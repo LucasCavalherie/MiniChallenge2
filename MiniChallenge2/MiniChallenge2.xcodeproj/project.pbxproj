@@ -10,6 +10,10 @@
 		7309D8822A9FAB750050C770 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309D8812A9FAB750050C770 /* ResultView.swift */; };
 		73356B232AA0FC7100B1EA71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B222AA0FC7100B1EA71 /* User.swift */; };
 		73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B252AA1065F00B1EA71 /* Achievement.swift */; };
+		73356B282AA1113D00B1EA71 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B272AA1113D00B1EA71 /* UserController.swift */; };
+		73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B292AA1115700B1EA71 /* OlympicController.swift */; };
+		73356B2C2AA113BC00B1EA71 /* AchievementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */; };
+		73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B2D2AA113CE00B1EA71 /* SportsData.swift */; };
 		73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */; };
 		73C011C22A9E5988008FCA67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011C12A9E5988008FCA67 /* ContentView.swift */; };
 		73C011C42A9E5988008FCA67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C011C32A9E5988008FCA67 /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 		7309D8812A9FAB750050C770 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		73356B222AA0FC7100B1EA71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		73356B252AA1065F00B1EA71 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		73356B272AA1113D00B1EA71 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		73356B292AA1115700B1EA71 /* OlympicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicController.swift; sourceTree = "<group>"; };
+		73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsData.swift; sourceTree = "<group>"; };
+		73356B2D2AA113CE00B1EA71 /* SportsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsData.swift; sourceTree = "<group>"; };
 		73C011BC2A9E5988008FCA67 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge2App.swift; sourceTree = "<group>"; };
 		73C011C12A9E5988008FCA67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +165,8 @@
 			children = (
 				73C011EA2A9E83E6008FCA67 /* QuizController.swift */,
 				F03356242A9E7733007472F8 /* RouterController.swift */,
+				73356B272AA1113D00B1EA71 /* UserController.swift */,
+				73356B292AA1115700B1EA71 /* OlympicController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				73C011DD2A9E7415008FCA67 /* QuestionData.swift */,
+				73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */,
+				73356B2D2AA113CE00B1EA71 /* SportsData.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -321,17 +333,21 @@
 				73C011DA2A9E706F008FCA67 /* Category.swift in Sources */,
 				73C011D82A9E700C008FCA67 /* Question.swift in Sources */,
 				73C011DE2A9E7415008FCA67 /* QuestionData.swift in Sources */,
+				73356B282AA1113D00B1EA71 /* UserController.swift in Sources */,
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
 				73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */,
 				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
 				73CBECBC2AA018F700756EF0 /* Country.swift in Sources */,
 				F03356232A9E7018007472F8 /* Router.swift in Sources */,
+				73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */,
 				73CBECBE2AA019BA00756EF0 /* ChampionshipResult.swift in Sources */,
 				F03356252A9E7733007472F8 /* RouterController.swift in Sources */,
 				73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */,
 				73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */,
+				73356B2C2AA113BC00B1EA71 /* AchievementsData.swift in Sources */,
 				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
+				73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */,
 				73C011D52A9E6F9E008FCA67 /* QuizView.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
 				73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */,

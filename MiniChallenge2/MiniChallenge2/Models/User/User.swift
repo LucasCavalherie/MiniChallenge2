@@ -9,11 +9,12 @@ import Foundation
 
 struct User: Identifiable{
     let id = UUID()
-    let onboarded: Bool
-    let name: String
-    let level: Int
-    let medalScore: Int
-    let unlockedSports: [Sport]
-    let pastOlympics: [Olympic]
-    let currentOlympic: Olympic
+    var onboarded: Bool
+    var name: String
+    var level: Int
+    var medalScore: Int
+    var unlockedSports: [Sport] // caso de problema mudar para uuids
+    var pastOlympics: [Olympic]
+    var achievements: [Achievement]
+    var currentOlympic: Olympic?
 }

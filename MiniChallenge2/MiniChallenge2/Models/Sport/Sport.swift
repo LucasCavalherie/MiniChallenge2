@@ -13,4 +13,5 @@ struct Sport: Identifiable{
     let imageName: String
     let symbolName: String
     let link: String
+    let countryScoreOrder: [Country]
 }
