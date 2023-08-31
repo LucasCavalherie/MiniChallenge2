@@ -14,6 +14,7 @@ struct Question: Identifiable, Equatable{
     
     let id = UUID()
     let text: String
+    let imageName: String = ""
     let category: Category
     let answers: [Answer]
 }

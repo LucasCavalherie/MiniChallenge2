@@ -8,7 +8,7 @@
 import Foundation
 
 class QuizController: ObservableObject {
-    @Published var quiz : Quiz = Quiz(total: 1, corrects: 0, errors: 0)
+    @Published var quiz : Quiz = Quiz(total: 1, corrects: 0, errors: 0, answered: false, questions: [])
     @Published var question: Question = DataQuestions().questions.randomElement()!
     @Published var dataQuestions: [Question] = DataQuestions().questions
     

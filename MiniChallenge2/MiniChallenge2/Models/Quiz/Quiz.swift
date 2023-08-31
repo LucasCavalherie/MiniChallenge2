@@ -12,4 +12,6 @@ struct Quiz: Identifiable{
     var total: Int
     var corrects: Int
     var errors: Int
+    var answered: Bool
+    var questions: [Question]
 }
