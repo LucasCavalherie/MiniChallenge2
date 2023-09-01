@@ -13,7 +13,9 @@ class UserController: ObservableObject {
         return instance
     }()
     
-    @Published var user : User = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [], pastOlympics: [], achievements: [], currentOlympic: nil)
+    private init() {}
+    
+    @Published var user : User = User(onboarded: false, name: "User", level: 1, medalScore: 1000, unlockedSports: SportsData().sport, pastOlympics: [], achievements: [], currentOlympic: nil)
     @Published var userCountry : Country = Country(name: "Brasil", flagEmoji: "🇧🇷")
     
     func onboardingDone() {

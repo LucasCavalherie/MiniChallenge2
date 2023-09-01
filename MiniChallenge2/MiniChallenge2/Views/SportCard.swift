@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SportCard: View {
     let sport: Sport
+    @ObservedObject var routerController = RouterController.shared
     
     var body: some View {
         ZStack {
@@ -40,16 +41,20 @@ struct SportCard: View {
                 
                 Spacer()
                 
-                HStack {
-                    Text("Competir")
-                        .font(.body)
-                        .fontWeight(.semibold)
+                Button {
+                    routerController.addKeyToViewStack(viewKey: "Quiz")
+                } label: {
+                    HStack {
+                        Text("Competir")
+                            .font(.body)
+                            .foregroundColor(Color("Black"))
+                            .fontWeight(.semibold)
+                    }
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 36)
+                    .background(Color("White"))
+                    .cornerRadius(10)
                 }
-                .padding(.vertical, 12)
-                .padding(.horizontal, 36)
-                .background(Color("White"))
-                .cornerRadius(10)
-                
             }
             .padding()
         }

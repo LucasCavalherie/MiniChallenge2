@@ -8,36 +8,53 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var userController = UserController()
+    @ObservedObject var userController = UserController.shared
+    @ObservedObject var olympicController = OlympicController.shared
     
     var body: some View {
         VStack {
-            HStack {
-                VStack (alignment: .leading) {
-                    Text(userController.user.name)
-                        .font(.title)
-                    Text("Nível " + String(userController.user.level))
-                }
-                
-                Spacer()
-                
-                HStack {
-                    Image(systemName: "medal.fill")
-                    Text(String(userController.user.medalScore))
-                }
-                .foregroundColor(.white)
-                .padding(.horizontal)
-                .padding(.vertical, 8)
-                .background(.black)
-                .cornerRadius(50)
-            }
-            .padding(32)
-            .background(Color("White"))
+            NavBarView()
             
             Spacer()
             
-            Text("Temporada da Olimpíada")
+            VStack (alignment: .leading) {
+                Text("Olimpíada atual")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(olympicController.olympic.championships) { championship in
+                            SportCard(sport: championship.sport)
+                                .padding(.horizontal, 8)
+                        }
+                    }
+                }
+            }
+            .padding()
             
+            VStack (alignment: .leading) {
+                Text("Prêmios")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(0..<6) { index in
+                            Rectangle()
+                                .fill(Color("Gray"))
+                                .frame(width: 140, height: 100)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(Color("Green"), lineWidth: 3)
+                                )
+                                .padding(8)
+                        }
+                            
+                    }
+                }
+            }
+            .padding()
             
             Spacer()
         }
