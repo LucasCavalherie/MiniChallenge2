@@ -25,6 +25,23 @@ final class SportsData{
                 Country(name: "Alemanha", flagEmoji: "🇩🇪"),
                 Country(name: "Argentina", flagEmoji: "🇦🇷")
             ]
+        ),
+        
+        Sport(
+            name: "Rugby",
+            imageName: "Vela",
+            symbolName: "figure.rugby",
+            color: Color("Orange"),
+            link: "https://olympics.com/pt/esportes/vela/",
+            countryScoreOrder: [
+                Country(name: "Espanha", flagEmoji: "🇪🇸"),
+                Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
+                Country(name: "Japão", flagEmoji: "🇯🇵"),
+                Country(name: "Itália", flagEmoji: "🇮🇹"),
+                Country(name: "França", flagEmoji: "🇫🇷"),
+                Country(name: "Alemanha", flagEmoji: "🇩🇪"),
+                Country(name: "Argentina", flagEmoji: "🇦🇷")
+            ]
         )
     
     ]

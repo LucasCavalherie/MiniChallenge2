@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject var routerController = RouterController.shared
     
     var body: some View {
-        NavigationStack(path: routerController.navigationStackBinding) {
+        NavigationStack(path: $routerController.viewStack) {
             VStack {
                 // Essa tela geralmente
                 Text("Stack vazia")
@@ -21,7 +21,8 @@ struct ContentView: View {
                 switch viewKey {
                 case "Home":
                     // Mostrar view de Home
-                    Text("Home!")
+                    HomeView()
+                        .navigationBarBackButtonHidden(true)
                 // Adicionar outros cases para outras telas
                 default:
                     // Fazer tela de erro para quando a tela solicitada

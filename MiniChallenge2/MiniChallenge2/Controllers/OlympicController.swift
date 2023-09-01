@@ -8,6 +8,11 @@
 import Foundation
 
 class OlympicController: ObservableObject {
+    static var shared: OlympicController = {
+        let instance = OlympicController()
+        return instance
+    }()
+    
     @Published var olympic : Olympic = Olympic(name: "Olimpiadas", medalScore: 0, championships: [])
     
     func upMedalScore(position: Int) {
@@ -22,6 +27,12 @@ class OlympicController: ObservableObject {
                 olympic.medalScore += 0
         }
         
+    }
+    
+    private init() {
+        if (UserController.shared.user.currentOlympic == nil) {
+            createOlympic()
+        }
     }
     
     func createOlympic() {
@@ -57,7 +68,7 @@ class OlympicController: ObservableObject {
     
     func finishChampionship(championship : inout Championship) {
         let score = championship.quiz.total
-        let playerChampionshipResult = ChampionshipResult(country: UserController().userCountry, value: score)
+        let playerChampionshipResult = ChampionshipResult(country: UserController.shared.userCountry, value: score)
         championship.championshipResults.append(playerChampionshipResult)
         championship.championshipResults.sort(by: {$0.value > $1.value})
         
