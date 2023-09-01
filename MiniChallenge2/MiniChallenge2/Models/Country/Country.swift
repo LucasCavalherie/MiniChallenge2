@@ -10,7 +10,7 @@ import Foundation
 struct Country: Identifiable{
     let id = UUID()
     let name: String
-    let flagImageName: String
+    let flagImageName: String = ""
     let flagEmoji: String
 }
 
