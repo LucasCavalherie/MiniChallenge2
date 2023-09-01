@@ -14,37 +14,26 @@ class RouterController : ObservableObject {
         return instance
     }()
     
-    private var router : Router
+    @Published var viewStack : [String] = []
     private let baseStack : [String] = ["Home"]
-    var navigationStackBinding : Binding<[String]> = Binding(get: {[]}, set:{_ in })
     
     private init() {
-        router = Router()
         clear()
-        navigationStackBinding = Binding(
-            get: {self.router.viewStack},
-            set: {
-                self.router.viewStack = $0
-            }
-        )
     }
     
     func addKeyToViewStack(viewKey: String) -> Void {
-        router.viewStack.append(viewKey)
+        viewStack.append(viewKey)
+        print(viewStack)
         self.objectWillChange.send()
     }
     
     func goBack() -> Void {
-        router.viewStack.removeLast()
+        viewStack.removeLast()
         self.objectWillChange.send()
     }
     
     func clear() -> Void {
-        router.viewStack = baseStack
+        viewStack = baseStack
         self.objectWillChange.send()
-    }
-    
-    func getViewStack() -> [String] {
-        return router.viewStack
     }
 }

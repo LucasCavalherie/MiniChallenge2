@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject var routerController = RouterController.shared
     
     var body: some View {
-        NavigationStack(path: routerController.navigationStackBinding) {
+        NavigationStack(path: $routerController.viewStack) {
             VStack {
                 // Essa tela geralmente
                 Text("Stack vazia")
