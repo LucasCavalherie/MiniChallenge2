@@ -35,7 +35,6 @@
 		73CBECB92AA0145C00756EF0 /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECB82AA0145C00756EF0 /* Championship.swift */; };
 		73CBECBC2AA018F700756EF0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECBB2AA018F700756EF0 /* Country.swift */; };
 		73CBECBE2AA019BA00756EF0 /* ChampionshipResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECBD2AA019BA00756EF0 /* ChampionshipResult.swift */; };
-		F03356232A9E7018007472F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03356222A9E7018007472F8 /* Router.swift */; };
 		F03356252A9E7733007472F8 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03356242A9E7733007472F8 /* RouterController.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		73CBECB82AA0145C00756EF0 /* Championship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championship.swift; sourceTree = "<group>"; };
 		73CBECBB2AA018F700756EF0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		73CBECBD2AA019BA00756EF0 /* ChampionshipResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipResult.swift; sourceTree = "<group>"; };
-		F03356222A9E7018007472F8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = SOURCE_ROOT; };
 		F03356242A9E7733007472F8 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -150,7 +148,6 @@
 				73CBECB22AA00E6200756EF0 /* Championship */,
 				73CBECB12AA00E3800756EF0 /* Sport */,
 				73C011D62A9E6FE2008FCA67 /* Quiz */,
-				F03356222A9E7018007472F8 /* Router.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,7 +343,6 @@
 				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
 				73CBECBC2AA018F700756EF0 /* Country.swift in Sources */,
-				F03356232A9E7018007472F8 /* Router.swift in Sources */,
 				73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */,
 				73CBECBE2AA019BA00756EF0 /* ChampionshipResult.swift in Sources */,
 				F03356252A9E7733007472F8 /* RouterController.swift in Sources */,
