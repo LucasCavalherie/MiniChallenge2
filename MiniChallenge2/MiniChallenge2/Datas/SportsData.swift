@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class SportsData{
     var sport: [Sport] = [
@@ -13,6 +14,7 @@ final class SportsData{
             name: "Vela",
             imageName: "Vela",
             symbolName: "sailboat.fill",
+            color: Color("Blue"),
             link: "https://olympics.com/pt/esportes/vela/",
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
