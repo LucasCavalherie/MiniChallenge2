@@ -32,20 +32,20 @@ struct AnswerButton: View {
     func corButton() -> Color{
         if clicked{
             if answer.correct{
-                return .green
+                return Color("Green")
             }else{
-                return .red
+                return Color("Red")
             }
         }else{
-            return .gray
+            return Color("Gray")
         }
     }
     
     func corFont() -> Color{
         if clicked{
-            return .white
+            return Color("White")
         }else{
-            return .black
+            return Color("Black")
         }
     }
     

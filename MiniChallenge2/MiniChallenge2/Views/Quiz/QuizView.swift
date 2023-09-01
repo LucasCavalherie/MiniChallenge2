@@ -16,36 +16,31 @@ struct QuizView: View {
                 ResultView()
             } else {
                 VStack{
+                    Spacer()
+                    
                     Countdown(counter: $quizController.timer, countTo: quizController.totalTime){
                         quizController.timeFinished = true
                     }
-                    
-                    Spacer()
 
                     VStack(spacing: 16){
                         VStack(spacing: 8){
-                            Text("Question \(quizController.quiz.total):")
-                                .font(.title2)
-                                .fontWeight(.bold)
+                            Text("Pergunta \(quizController.quiz.total):")
+                                .font(.subheadline)
+                                .foregroundColor(Color("DarkGray"))
+                                .fontWeight(.semibold)
+                            
                             Text(quizController.question.text)
+                                .font(.headline)
                                 .multilineTextAlignment(.center)
                                 .frame(height: 100)
                         }
-                        HStack(spacing: 4){
-                            Image(systemName: quizController.question.category.symbol)
-                            Text(quizController.question.category.title)
-                                .font(.footnote)
-                                .fontWeight(.bold)
-                        }
-                        .fontWeight(.semibold)
                     }
                     .foregroundColor(.black)
                     .frame(maxWidth: .infinity)
                     .padding(12)
-                    .background(.gray)
+                    .background(Color("White"))
                     .cornerRadius(12)
-
-                    Spacer()
+                    .padding(.bottom, 36)
 
                     VStack(spacing: 16){
                         ForEach(quizController.question.answers) { answer in
@@ -59,6 +54,7 @@ struct QuizView: View {
                 }
                 .padding(.horizontal, 24)
                 .onAppear{quizController.generateFirstQuestion()}
+                .background(Color("Blue"))
                 .navigationBarBackButtonHidden()
             }
         }
