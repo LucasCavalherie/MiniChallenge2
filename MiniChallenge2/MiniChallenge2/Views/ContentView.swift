@@ -23,6 +23,10 @@ struct ContentView: View {
                     // Mostrar view de Home
                     HomeView()
                         .navigationBarBackButtonHidden(true)
+                case "Quiz":
+                    // Mostrar view de Quiz
+                    QuizView()
+                        .navigationBarBackButtonHidden(true)
                 // Adicionar outros cases para outras telas
                 default:
                     // Fazer tela de erro para quando a tela solicitada

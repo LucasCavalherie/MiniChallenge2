@@ -25,7 +25,7 @@ struct HomeView: View {
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(olympicController.olympic.championships) { championship in
-                            SportCard(sport: championship.sport)
+                            SportCard(championship: championship)
                                 .padding(.horizontal, 8)
                         }
                     }
