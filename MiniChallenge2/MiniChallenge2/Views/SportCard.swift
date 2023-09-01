@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct SportCard: View {
-    let sport: Sport
+    let championship: Championship
     @ObservedObject var routerController = RouterController.shared
     
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(sport.color)
+                .fill(championship.sport.color)
             
             VStack {
                 HStack (alignment: .top) {
                     HStack {
-                        Image(systemName: sport.symbolName)
-                        Text(sport.name)
+                        Image(systemName: championship.sport.symbolName)
+                        Text(championship.sport.name)
                             .font(.headline)
                             .fontWeight(.bold)
                     }
@@ -66,6 +66,18 @@ struct SportCard: View {
 
 struct SportCard_Previews: PreviewProvider {
     static var previews: some View {
-        SportCard(sport: SportsData().sport[0])
+        let quiz = Quiz(questions: DataQuestions().questions)
+        let championship = Championship(
+            sport: SportsData().sport[0],
+            quiz: quiz,
+            done: false,
+            championshipResults: [
+                ChampionshipResult(
+                    country: SportsData().sport[0].countryScoreOrder[0],
+                    value: 10
+                )
+            ]
+        )
+        SportCard(championship: championship)
     }
 }
