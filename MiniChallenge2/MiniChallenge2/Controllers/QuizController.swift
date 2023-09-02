@@ -8,12 +8,21 @@
 import Foundation
 
 class QuizController: ObservableObject {
-    @Published var quiz : Quiz = Quiz(total: 1, corrects: 0, errors: 0, answered: false, questions: [])
+    static var shared: QuizController = {
+        let instance = QuizController()
+        return instance
+    }()
+    
+    private init() {
+        self.generateFirstQuestion()
+    }
+    
+    @Published var quiz : Quiz = Quiz(total: 100, corrects: 0, errors: 0, answered: false, questions: [])
     @Published var question: Question = DataQuestions().questions.randomElement()!
     @Published var dataQuestions: [Question] = DataQuestions().questions
     
     @Published var timer = 0
-    @Published var totalTime = 30
+    @Published var totalTime = 10
     @Published var timeFinished = false
     let waitTime: TimeInterval = 1.0
     
@@ -38,6 +47,10 @@ class QuizController: ObservableObject {
                 dataQuestions.remove(at: dataQuestions.firstIndex(of: question)!)
             }
         }
+    }
+    
+    func changeQuiz(quiz: Quiz) {
+        self.quiz = quiz
     }
     
     func generateFirstQuestion() {

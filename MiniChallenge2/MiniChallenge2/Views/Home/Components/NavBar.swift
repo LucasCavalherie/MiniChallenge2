@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavBarView: View {
+struct NavBar: View {
     @ObservedObject var userController = UserController.shared
     
     var body: some View {
@@ -43,6 +43,6 @@ struct NavBarView: View {
 
 struct NavBarView_Previews: PreviewProvider {
     static var previews: some View {
-        NavBarView()
+        NavBar()
     }
 }

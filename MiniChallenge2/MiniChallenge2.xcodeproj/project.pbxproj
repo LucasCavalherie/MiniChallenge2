@@ -10,7 +10,7 @@
 		7309D8822A9FAB750050C770 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309D8812A9FAB750050C770 /* ResultView.swift */; };
 		73132E752AA171B700FF3E03 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E742AA171B700FF3E03 /* HomeView.swift */; };
 		73132E772AA1775400FF3E03 /* SportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E762AA1775400FF3E03 /* SportCard.swift */; };
-		73132E7B2AA2699100FF3E03 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E7A2AA2699100FF3E03 /* NavBarView.swift */; };
+		73132E7B2AA2699100FF3E03 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E7A2AA2699100FF3E03 /* NavBar.swift */; };
 		73356B232AA0FC7100B1EA71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B222AA0FC7100B1EA71 /* User.swift */; };
 		73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B252AA1065F00B1EA71 /* Achievement.swift */; };
 		73356B282AA1113D00B1EA71 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B272AA1113D00B1EA71 /* UserController.swift */; };
@@ -36,6 +36,10 @@
 		73CBECB92AA0145C00756EF0 /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECB82AA0145C00756EF0 /* Championship.swift */; };
 		73CBECBC2AA018F700756EF0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECBB2AA018F700756EF0 /* Country.swift */; };
 		73CBECBE2AA019BA00756EF0 /* ChampionshipResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECBD2AA019BA00756EF0 /* ChampionshipResult.swift */; };
+		73F692142AA2B1E200769BE9 /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692132AA2B1E200769BE9 /* RankView.swift */; };
+		73F692162AA2BD5000769BE9 /* NavBarQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692152AA2BD5000769BE9 /* NavBarQuiz.swift */; };
+		73F692182AA2C1DA00769BE9 /* ChampionshipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */; };
+		73F6921A2AA2C64000769BE9 /* ChampionshipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692192AA2C64000769BE9 /* ChampionshipData.swift */; };
 		F03356252A9E7733007472F8 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03356242A9E7733007472F8 /* RouterController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +47,7 @@
 		7309D8812A9FAB750050C770 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		73132E742AA171B700FF3E03 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		73132E762AA1775400FF3E03 /* SportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCard.swift; sourceTree = "<group>"; };
-		73132E7A2AA2699100FF3E03 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		73132E7A2AA2699100FF3E03 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		73356B222AA0FC7100B1EA71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		73356B252AA1065F00B1EA71 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		73356B272AA1113D00B1EA71 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,10 @@
 		73CBECB82AA0145C00756EF0 /* Championship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championship.swift; sourceTree = "<group>"; };
 		73CBECBB2AA018F700756EF0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		73CBECBD2AA019BA00756EF0 /* ChampionshipResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipResult.swift; sourceTree = "<group>"; };
+		73F692132AA2B1E200769BE9 /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
+		73F692152AA2BD5000769BE9 /* NavBarQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarQuiz.swift; sourceTree = "<group>"; };
+		73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipController.swift; sourceTree = "<group>"; };
+		73F692192AA2C64000769BE9 /* ChampionshipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipData.swift; sourceTree = "<group>"; };
 		F03356242A9E7733007472F8 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -157,11 +165,10 @@
 		73C011CE2A9E5CBD008FCA67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73F692122AA2B1CC00769BE9 /* Rank */,
+				73F692102AA2B18500769BE9 /* Home */,
 				73C011D32A9E6F6B008FCA67 /* Quiz */,
 				73C011C12A9E5988008FCA67 /* ContentView.swift */,
-				73132E742AA171B700FF3E03 /* HomeView.swift */,
-				73132E762AA1775400FF3E03 /* SportCard.swift */,
-				73132E7A2AA2699100FF3E03 /* NavBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 				F03356242A9E7733007472F8 /* RouterController.swift */,
 				73356B272AA1113D00B1EA71 /* UserController.swift */,
 				73356B292AA1115700B1EA71 /* OlympicController.swift */,
+				73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 				73C011DD2A9E7415008FCA67 /* QuestionData.swift */,
 				73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */,
 				73356B2D2AA113CE00B1EA71 /* SportsData.swift */,
+				73F692192AA2C64000769BE9 /* ChampionshipData.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 				73C011E22A9E7A34008FCA67 /* AnswerButton.swift */,
 				73C011E42A9E7AA2008FCA67 /* Countdown.swift */,
 				73C011E62A9E7B59008FCA67 /* ScoreArea.swift */,
+				73F692152AA2BD5000769BE9 /* NavBarQuiz.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -263,6 +273,32 @@
 				73CBECBB2AA018F700756EF0 /* Country.swift */,
 			);
 			path = Country;
+			sourceTree = "<group>";
+		};
+		73F692102AA2B18500769BE9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				73F692112AA2B1AA00769BE9 /* Components */,
+				73132E742AA171B700FF3E03 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		73F692112AA2B1AA00769BE9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				73132E762AA1775400FF3E03 /* SportCard.swift */,
+				73132E7A2AA2699100FF3E03 /* NavBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		73F692122AA2B1CC00769BE9 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				73F692132AA2B1E200769BE9 /* RankView.swift */,
+			);
+			path = Rank;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,22 +374,25 @@
 				73132E752AA171B700FF3E03 /* HomeView.swift in Sources */,
 				73C011C22A9E5988008FCA67 /* ContentView.swift in Sources */,
 				73C011DA2A9E706F008FCA67 /* Category.swift in Sources */,
+				73F692142AA2B1E200769BE9 /* RankView.swift in Sources */,
 				73C011D82A9E700C008FCA67 /* Question.swift in Sources */,
 				73C011DE2A9E7415008FCA67 /* QuestionData.swift in Sources */,
 				73356B282AA1113D00B1EA71 /* UserController.swift in Sources */,
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
 				73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */,
 				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
+				73F692162AA2BD5000769BE9 /* NavBarQuiz.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
 				73CBECBC2AA018F700756EF0 /* Country.swift in Sources */,
-				73132E7B2AA2699100FF3E03 /* NavBarView.swift in Sources */,
-				F03356232A9E7018007472F8 /* Router.swift in Sources */,
+				73132E7B2AA2699100FF3E03 /* NavBar.swift in Sources */,
+				73F6921A2AA2C64000769BE9 /* ChampionshipData.swift in Sources */,
 				73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */,
 				73CBECBE2AA019BA00756EF0 /* ChampionshipResult.swift in Sources */,
 				F03356252A9E7733007472F8 /* RouterController.swift in Sources */,
 				73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */,
 				73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */,
 				73356B2C2AA113BC00B1EA71 /* AchievementsData.swift in Sources */,
+				73F692182AA2C1DA00769BE9 /* ChampionshipController.swift in Sources */,
 				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
 				73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */,
 				73C011D52A9E6F9E008FCA67 /* QuizView.swift in Sources */,

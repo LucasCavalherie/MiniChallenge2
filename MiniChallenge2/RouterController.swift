@@ -23,7 +23,6 @@ class RouterController : ObservableObject {
     
     func addKeyToViewStack(viewKey: String) -> Void {
         viewStack.append(viewKey)
-        print(viewStack)
         self.objectWillChange.send()
     }
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
-    @ObservedObject var quizController = QuizController()
+    @ObservedObject var quizController = QuizController.shared
     
     var body: some View {
         VStack{

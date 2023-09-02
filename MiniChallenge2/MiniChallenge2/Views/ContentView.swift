@@ -27,6 +27,10 @@ struct ContentView: View {
                     // Mostrar view de Quiz
                     QuizView()
                         .navigationBarBackButtonHidden(true)
+                case "Rank":
+                    // Mostrar view de Quiz
+                    RankView()
+                        .navigationBarBackButtonHidden(true)
                 // Adicionar outros cases para outras telas
                 default:
                     // Fazer tela de erro para quando a tela solicitada
