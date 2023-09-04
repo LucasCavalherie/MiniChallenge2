@@ -47,11 +47,15 @@ struct SportCard: View {
                     routerController.addKeyToViewStack(viewKey: "Rank")
                 } label: {
                     HStack {
-                        Text("Competir")
-                            .font(.body)
-                            .foregroundColor(Color("Black"))
-                            .fontWeight(.semibold)
+                        if championship.done {
+                            Text("Resultados")
+                        } else {
+                            Text("Competir")
+                        }
                     }
+                    .font(.body)
+                    .foregroundColor(Color("Black"))
+                    .fontWeight(.semibold)
                     .padding(.vertical, 12)
                     .padding(.horizontal, 36)
                     .background(Color("White"))

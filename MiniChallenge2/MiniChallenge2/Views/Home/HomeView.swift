@@ -44,12 +44,9 @@ struct HomeView: View {
                     HStack {
                         ForEach(0..<6) { index in
                             Rectangle()
-                                .fill(Color("Gray"))
+                                .fill(Color("Green"))
                                 .frame(width: 140, height: 100)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .stroke(Color("Green"), lineWidth: 3)
-                                )
+                                .cornerRadius(16)
                                 .padding(8)
                         }
                             
