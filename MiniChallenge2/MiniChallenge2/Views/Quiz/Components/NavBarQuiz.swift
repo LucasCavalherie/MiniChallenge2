@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct NavBarQuiz: View {
+    @ObservedObject var routerController = RouterController.shared
     @ObservedObject var quizController = QuizController.shared
     
     var body: some View {
         HStack (alignment: .center) {
             HStack {
-                Image(systemName: "xmark")
-                    .font(.title)
+                Button {
+                    routerController.addKeyToViewStack(viewKey: "Home")
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.title)
+                }
+                
             }
             
             Spacer()
@@ -22,10 +28,12 @@ struct NavBarQuiz: View {
             HStack {
                 Image(systemName: "sailboat.fill")
                     .font(.title)
+                    .foregroundColor(Color("Black"))
                 
                 Text("Vela")
                     .font(.title)
                     .fontWeight(.bold)
+                    .foregroundColor(Color("Black"))
                     .padding(.vertical, 2)
             }
             

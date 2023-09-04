@@ -20,6 +20,7 @@ struct HomeView: View {
             VStack (alignment: .leading) {
                 Text("Olimpíada atual")
                     .font(.title3)
+                    .foregroundColor(Color("Black"))
                     .fontWeight(.bold)
                 
                 ScrollView (.horizontal, showsIndicators: false) {
@@ -36,6 +37,7 @@ struct HomeView: View {
             VStack (alignment: .leading) {
                 Text("Prêmios")
                     .font(.title3)
+                    .foregroundColor(Color("Black"))
                     .fontWeight(.bold)
                 
                 ScrollView (.horizontal, showsIndicators: false) {

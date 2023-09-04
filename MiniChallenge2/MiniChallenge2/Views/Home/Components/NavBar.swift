@@ -17,8 +17,10 @@ struct NavBar: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.vertical, 2)
+                    .foregroundColor(Color("Black"))
                 
                 Text("Nível " + String(userController.user.level))
+                    .foregroundColor(Color("Black"))
                     .font(.headline)
                     .italic()
             }
