@@ -44,7 +44,7 @@ class OlympicController: ObservableObject {
     func createChampionships(sportList: [Sport]) {
         for sport in sportList {
             let quiz = Quiz(questions: DataQuestions().questions)
-            let championship = Championship(sport: sport, quiz: quiz, done: false, championshipResults: createChampionshipResults(sport: sport, step: 100))
+            let championship = Championship(sport: sport, quiz: quiz, done: false, championshipResults: createChampionshipResults(sport: sport, step: 1))
             
             olympic.championships.append(championship)
         }
@@ -64,18 +64,6 @@ class OlympicController: ObservableObject {
     
     func listChampionshipResults(championship : Championship) -> [ChampionshipResult] {
         return championship.championshipResults.sorted(by: {$0.value > $1.value})
-    }
-    
-    func finishChampionship(championship : inout Championship) {
-        let score = championship.quiz.total
-        let playerChampionshipResult = ChampionshipResult(country: UserController.shared.userCountry, value: score)
-        championship.championshipResults.append(playerChampionshipResult)
-        championship.championshipResults.sort(by: {$0.value > $1.value})
-        
-        let position = championship.championshipResults.firstIndex(where: {$0.id == playerChampionshipResult.id})
-        upMedalScore(position: position ?? 3)
-        
-        championship.done = true
     }
     
     func finishOlympic() {

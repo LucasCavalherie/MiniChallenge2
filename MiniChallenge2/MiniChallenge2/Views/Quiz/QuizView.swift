@@ -8,51 +8,22 @@
 import SwiftUI
 
 struct QuizView: View {
-    @ObservedObject var quizController = QuizController()
+    @ObservedObject var quizController = QuizController.shared
+    @ObservedObject var championshipController = ChampionshipController.shared
     
     var body: some View{
         VStack{
             if quizController.timeFinished{
-                ResultView()
+                RankView()
             } else {
                 VStack {
-                    HStack (alignment: .center) {
-                        HStack {
-                            Image(systemName: "xmark")
-                                .font(.title)
-                        }
-                        
-                        Spacer()
-                        
-                        HStack {
-                            Image(systemName: "sailboat.fill")
-                                .font(.title)
-                            
-                            Text("Vela")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .padding(.vertical, 2)
-                        }
-                        
-                        Spacer()
-                        
-                        HStack {
-                            Text(String(quizController.quiz.corrects))
-                        }
-                        .font(.headline)
-                        .foregroundColor(Color("White"))
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
-                        .background(Color("Green"))
-                        .cornerRadius(50)
-                    }
-                    .padding(24)
-                    .background(Color("White"))
+                    NavBarQuiz()
                     
                     VStack{
                         Spacer()
                         
                         Countdown(counter: $quizController.timer, countTo: quizController.totalTime){
+                            championshipController.finishChampionship()
                             quizController.timeFinished = true
                         }
 
@@ -91,10 +62,7 @@ struct QuizView: View {
                     .background(Color("Blue"))
                     .navigationBarBackButtonHidden()
                 }
-                }
-                
-                
-                
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct SportCard: View {
     let championship: Championship
     @ObservedObject var routerController = RouterController.shared
+    @ObservedObject var championshipController = ChampionshipController.shared
     
     var body: some View {
         ZStack {
@@ -42,7 +43,8 @@ struct SportCard: View {
                 Spacer()
                 
                 Button {
-                    routerController.addKeyToViewStack(viewKey: "Quiz")
+                    championshipController.currentChampionship = championship
+                    routerController.addKeyToViewStack(viewKey: "Rank")
                 } label: {
                     HStack {
                         Text("Competir")
