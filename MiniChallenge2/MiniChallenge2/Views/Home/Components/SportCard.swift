@@ -32,12 +32,14 @@ struct SportCard: View {
                     
                     Spacer()
                     
-                    Image(systemName: "info.circle.fill")
-                        .padding(.horizontal, 4)
-                        .padding(.vertical, 4)
-                        .font(.headline)
-                        .foregroundColor(Color("White"))
-                        .fontWeight(.bold)
+                    Link(destination: URL(string: championship.sport.link)!) {
+                        Image(systemName: "info.circle.fill")
+                            .padding(.horizontal, 4)
+                            .padding(.vertical, 4)
+                            .font(.headline)
+                            .foregroundColor(Color("White"))
+                            .fontWeight(.bold)
+                    }
                 }
                 
                 Spacer()
