@@ -47,7 +47,7 @@ class ChampionshipController: ObservableObject {
     func finishChampionship() {
         let score = QuizController.shared.quiz.corrects // mudar depois
         let playerChampionshipResult = ChampionshipResult(country: UserController.shared.userCountry, value: score)
-        currentChampionship.championshipResults.append(playerChampionshipResult)
+        currentChampionship.championshipResults.insert(playerChampionshipResult, at: 0)
         currentChampionship.championshipResults.sort(by: {$0.value > $1.value})
         
         let position = currentChampionship.championshipResults.firstIndex(where: {$0.id == playerChampionshipResult.id})

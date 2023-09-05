@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct AnswerButton: View {
+    @ObservedObject var quizController = QuizController.shared
+    
     @Binding var answer: Answer
     @State var clicked: Bool = false
-    var onClick: () -> Void
+    var onClickInstant: () -> Void
+    var onClickDelayed: () -> Void
     
     var body: some View {
         Button {
+            onClickInstant()
             withAnimation(.easeIn) {
                 clicked = true
             }
-            onClick()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                onClickDelayed()
+            }
         } label: {
             Text(answer.text)
                 .foregroundColor(corFont())
@@ -27,6 +33,7 @@ struct AnswerButton: View {
                 .background(corButton())
                 .cornerRadius(8)
         }
+        .disabled(quizController.answerDelayBlock)
     }
     
     func corButton() -> Color{
@@ -60,8 +67,13 @@ struct AnswerButton: View {
 
 struct AnswerButton_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerButton(answer: .constant(Answer(text: "43 caracteres maximo", correct: false))){
-            print("a")
-        }
+        AnswerButton(answer: .constant(Answer(text: "43 caracteres maximo", correct: false)),
+            onClickInstant: {
+                print("Instant")
+            },
+            onClickDelayed: {
+                print("a")
+            }
+        )
     }
 }
