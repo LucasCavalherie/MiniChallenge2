@@ -17,12 +17,12 @@ class QuizController: ObservableObject {
         self.generateFirstQuestion()
     }
     
-    @Published var quiz : Quiz = Quiz(total: 100, corrects: 0, errors: 0, answered: false, questions: [])
+    @Published var quiz : Quiz = Quiz(total: 0, corrects: 0, errors: 0, answered: false, questions: [])
     @Published var question: Question = DataQuestions().questions.randomElement()!
     @Published var dataQuestions: [Question] = DataQuestions().questions
     
     @Published var timer = 0
-    @Published var totalTime = 10
+    @Published var totalTime = 30
     @Published var timeFinished = false
     let waitTime: TimeInterval = 1.0
     

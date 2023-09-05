@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct NavBarQuiz: View {
+    @ObservedObject var routerController = RouterController.shared
     @ObservedObject var quizController = QuizController.shared
+    @ObservedObject var championshipController = ChampionshipController.shared
     
     var body: some View {
         HStack (alignment: .center) {
             HStack {
-                Image(systemName: "xmark")
-                    .font(.title)
+                Button {
+                    routerController.clear()
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.title)
+                        .foregroundColor(Color("Black"))
+                }
             }
             
             Spacer()
             
             HStack {
-                Image(systemName: "sailboat.fill")
+                Image(systemName: championshipController.currentChampionship.sport.symbolName)
                     .font(.title)
+                    .foregroundColor(Color("Black"))
                 
-                Text("Vela")
+                Text(championshipController.currentChampionship.sport.name)
                     .font(.title)
                     .fontWeight(.bold)
+                    .foregroundColor(Color("Black"))
                     .padding(.vertical, 2)
             }
             

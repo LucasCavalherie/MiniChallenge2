@@ -29,7 +29,7 @@ struct QuizView: View {
 
                         VStack(spacing: 16){
                             VStack(spacing: 8){
-                                Text("Pergunta \(quizController.quiz.total):")
+                                Text("Pergunta \(quizController.quiz.total + 1):")
                                     .font(.subheadline)
                                     .foregroundColor(Color("DarkGray"))
                                     .fontWeight(.semibold)

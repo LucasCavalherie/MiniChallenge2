@@ -67,6 +67,7 @@ struct RankView: View {
                         }
                         
                     }
+                    .listRowBackground(Color("White"))
                     .padding(.vertical, 4)
                 }
             }
