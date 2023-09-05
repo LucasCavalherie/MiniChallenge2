@@ -69,6 +69,7 @@ class QuizController: ObservableObject {
         timeFinished = false
         dataQuestions = quiz.questions
         question = dataQuestions.randomElement()!
+        answerDelayBlock = false
         dataQuestions.remove(at: self.dataQuestions.firstIndex(of: self.question)!)
     }
     

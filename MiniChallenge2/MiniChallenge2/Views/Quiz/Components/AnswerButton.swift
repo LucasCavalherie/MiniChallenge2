@@ -17,8 +17,8 @@ struct AnswerButton: View {
     
     var body: some View {
         Button {
-            onClickInstant()
             withAnimation(.easeIn) {
+                onClickInstant()
                 clicked = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
@@ -43,7 +43,11 @@ struct AnswerButton: View {
             }else{
                 return Color("Red")
             }
-        }else{
+        }
+        else if quizController.answerDelayBlock && answer.correct {
+            return Color("Green")
+        }
+        else{
             return Color("Gray")
         }
     }
