@@ -8,7 +8,7 @@
 import Foundation
 
 struct Category: Identifiable, Codable{
-    let id = UUID()
+    var id = UUID()
     let symbol: String
     let title: String
     
