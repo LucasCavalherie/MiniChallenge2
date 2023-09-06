@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Answer: Identifiable{
+struct Answer: Identifiable, Codable{
     let id = UUID()
     let text: String
     let correct: Bool

@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Achievement: Identifiable{
+struct Achievement: Identifiable, Codable{
     let id = UUID()
     let name: String
-    let unlockCondition: () -> Bool
+    let unlockCondition: Bool
 }
 

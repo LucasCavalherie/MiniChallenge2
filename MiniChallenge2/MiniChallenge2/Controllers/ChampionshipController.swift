@@ -19,27 +19,6 @@ class ChampionshipController: ObservableObject {
         self.currentChampionship = ChampionshipData().championship
     }
     
-    func createChampionships(sportList: [Sport]) {
-        for sport in sportList {
-            let quiz = Quiz(questions: DataQuestions().questions)
-            let championship = Championship(sport: sport, quiz: quiz, done: false, championshipResults: createChampionshipResults(sport: sport, step: 100))
-            
-            OlympicController.shared.olympic.championships.append(championship)
-        }
-    }
-    
-    func createChampionshipResults(sport: Sport, step: Int) -> [ChampionshipResult] {
-        var championshipResults: [ChampionshipResult] = []
-        var value =  sport.countryScoreOrder.count * step
-        for country in sport.countryScoreOrder {
-            let newResult = ChampionshipResult(country: country, value: value)
-            championshipResults.append(newResult)
-            value -= step
-        }
-        
-        return championshipResults
-    }
-    
     func listChampionshipResults() -> [ChampionshipResult] {
         return currentChampionship.championshipResults.sorted(by: {$0.value > $1.value})
     }

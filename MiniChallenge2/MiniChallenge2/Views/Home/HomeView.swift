@@ -58,6 +58,7 @@ struct HomeView: View {
             Spacer()
         }
         .background(Color("Gray"))
+        .onDisappear{userController.saveData()}
     }
 }
 
