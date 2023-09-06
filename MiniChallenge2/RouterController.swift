@@ -26,6 +26,12 @@ class RouterController : ObservableObject {
         self.objectWillChange.send()
     }
     
+    func switchCurrentView(viewKey: String) -> Void {
+        viewStack.removeLast()
+        viewStack.append(viewKey)
+        self.objectWillChange.send()
+    }
+    
     func goBack() -> Void {
         viewStack.removeLast()
         self.objectWillChange.send()

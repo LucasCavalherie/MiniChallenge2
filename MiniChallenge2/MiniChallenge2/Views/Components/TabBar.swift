@@ -1,50 +1,35 @@
 //
-//  NavBarView.swift
+//  TabBar.swift
 //  MiniChallenge2
 //
-//  Created by Lucas Cavalherie on 01/09/23.
+//  Created by Rafa Teivfik on 06/09/23.
 //
 
 import SwiftUI
 
-struct NavBar: View {
+struct TabBar: View {
     @ObservedObject var userController = UserController.shared
     
     var body: some View {
         HStack {
-            VStack (alignment: .leading) {
-                Text("Brasil")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.vertical, 2)
-                    .foregroundColor(Color("Black"))
-                
-                Text("Nível " + String(userController.user.level))
-                    .foregroundColor(Color("Black"))
-                    .font(.headline)
-                    .italic()
-            }
-            
+            TabBarItem(viewKey: "OlympicsHistory", iconName: "chart.bar", text: "Histórico")
             Spacer()
-            
-            HStack {
-                Image(systemName: "medal.fill")
-                Text(String(userController.user.medalScore))
-            }
-            .font(.headline)
-            .foregroundColor(Color("Black"))
-            .padding(.horizontal)
-            .padding(.vertical, 8)
-            .background(Color("Yellow"))
-            .cornerRadius(50)
+            TabBarItem(viewKey: "Home", iconName: "sportscourt", text: "Olimpíada")
+            Spacer()
+            TabBarItem(viewKey: "Achievements", iconName: "medal", text: "Conquistas")
         }
-        .padding(32)
+        .padding(.all, 0)
+        .frame(height: 84, alignment: .top)
+        .frame(maxWidth: .infinity, alignment: .top)
+        .padding(.horizontal, 27)
+        .padding(.vertical, 0)
+        .border(width: 0.5, edges: [.top], color: Color("DarkGray"))
         .background(Color("White"))
     }
 }
 
-struct NavBarView_Previews: PreviewProvider {
+struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        NavBar()
+        TabBar()
     }
 }
