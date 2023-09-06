@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7309D8822A9FAB750050C770 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309D8812A9FAB750050C770 /* ResultView.swift */; };
 		73132E752AA171B700FF3E03 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E742AA171B700FF3E03 /* HomeView.swift */; };
-		73132E772AA1775400FF3E03 /* SportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E762AA1775400FF3E03 /* SportCard.swift */; };
+		73132E772AA1775400FF3E03 /* UnlockedSportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E762AA1775400FF3E03 /* UnlockedSportCard.swift */; };
 		73132E7B2AA2699100FF3E03 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E7A2AA2699100FF3E03 /* NavBar.swift */; };
+		731857DC2AA8FC7B00F677D1 /* LockedSportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731857DB2AA8FC7B00F677D1 /* LockedSportCard.swift */; };
+		731857DE2AA90C3400F677D1 /* SoonSportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731857DD2AA90C3400F677D1 /* SoonSportCard.swift */; };
+		731857E12AA9163000F677D1 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731857E02AA9163000F677D1 /* ResultsView.swift */; };
 		73356B232AA0FC7100B1EA71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B222AA0FC7100B1EA71 /* User.swift */; };
 		73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B252AA1065F00B1EA71 /* Achievement.swift */; };
 		73356B282AA1113D00B1EA71 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B272AA1113D00B1EA71 /* UserController.swift */; };
@@ -44,10 +46,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7309D8812A9FAB750050C770 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		73132E742AA171B700FF3E03 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		73132E762AA1775400FF3E03 /* SportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCard.swift; sourceTree = "<group>"; };
+		73132E762AA1775400FF3E03 /* UnlockedSportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedSportCard.swift; sourceTree = "<group>"; };
 		73132E7A2AA2699100FF3E03 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		731857DB2AA8FC7B00F677D1 /* LockedSportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedSportCard.swift; sourceTree = "<group>"; };
+		731857DD2AA90C3400F677D1 /* SoonSportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoonSportCard.swift; sourceTree = "<group>"; };
+		731857E02AA9163000F677D1 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		73356B222AA0FC7100B1EA71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		73356B252AA1065F00B1EA71 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		73356B272AA1113D00B1EA71 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731857DF2AA9162300F677D1 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				731857E02AA9163000F677D1 /* ResultsView.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 		73356B212AA0FC6300B1EA71 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 		73C011CE2A9E5CBD008FCA67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				731857DF2AA9162300F677D1 /* Results */,
 				7387A6CB2AA7A642001E58AE /* Onboarding */,
 				73F692122AA2B1CC00769BE9 /* Rank */,
 				73F692102AA2B18500769BE9 /* Home */,
@@ -223,7 +236,6 @@
 			children = (
 				73C011E12A9E7A17008FCA67 /* Components */,
 				73C011D42A9E6F9E008FCA67 /* QuizView.swift */,
-				7309D8812A9FAB750050C770 /* ResultView.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -295,7 +307,9 @@
 		73F692112AA2B1AA00769BE9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				73132E762AA1775400FF3E03 /* SportCard.swift */,
+				731857DB2AA8FC7B00F677D1 /* LockedSportCard.swift */,
+				73132E762AA1775400FF3E03 /* UnlockedSportCard.swift */,
+				731857DD2AA90C3400F677D1 /* SoonSportCard.swift */,
 				73132E7A2AA2699100FF3E03 /* NavBar.swift */,
 			);
 			path = Components;
@@ -388,7 +402,6 @@
 				73356B282AA1113D00B1EA71 /* UserController.swift in Sources */,
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
 				73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */,
-				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
 				73F692162AA2BD5000769BE9 /* NavBarQuiz.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
 				73CBECBC2AA018F700756EF0 /* Country.swift in Sources */,
@@ -399,15 +412,18 @@
 				F03356252A9E7733007472F8 /* RouterController.swift in Sources */,
 				73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */,
 				73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */,
+				731857DC2AA8FC7B00F677D1 /* LockedSportCard.swift in Sources */,
 				73356B2C2AA113BC00B1EA71 /* AchievementsData.swift in Sources */,
 				73F692182AA2C1DA00769BE9 /* ChampionshipController.swift in Sources */,
+				731857DE2AA90C3400F677D1 /* SoonSportCard.swift in Sources */,
+				731857E12AA9163000F677D1 /* ResultsView.swift in Sources */,
 				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
 				73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */,
 				73C011D52A9E6F9E008FCA67 /* QuizView.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
 				73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */,
 				73CBECB72AA0122D00756EF0 /* Olympic.swift in Sources */,
-				73132E772AA1775400FF3E03 /* SportCard.swift in Sources */,
+				73132E772AA1775400FF3E03 /* UnlockedSportCard.swift in Sources */,
 				73CBECB92AA0145C00756EF0 /* Championship.swift in Sources */,
 				73C011E72A9E7B59008FCA67 /* ScoreArea.swift in Sources */,
 				73356B232AA0FC7100B1EA71 /* User.swift in Sources */,

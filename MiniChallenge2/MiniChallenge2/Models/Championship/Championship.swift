@@ -13,12 +13,14 @@ class Championship: Identifiable, Codable{
     let sport: Sport
     let quiz: Quiz
     var done: Bool
+    var unlock: Bool
     var championshipResults: [ChampionshipResult]
     
-    init(sport: Sport, quiz: Quiz, done: Bool, championshipResults: [ChampionshipResult]) {
+    init(sport: Sport, quiz: Quiz, done: Bool, unlock: Bool, championshipResults: [ChampionshipResult]) {
         self.sport = sport
         self.quiz = quiz
         self.done = done
+        self.unlock = unlock
         self.championshipResults = championshipResults
     }
 }

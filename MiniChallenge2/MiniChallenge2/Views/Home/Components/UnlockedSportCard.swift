@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SportCard: View {
+struct UnlockedSportCard: View {
     let championship: Championship
     @ObservedObject var routerController = RouterController.shared
     @ObservedObject var championshipController = ChampionshipController.shared
@@ -66,19 +66,20 @@ struct SportCard: View {
             }
             .padding()
         }
-        .frame(width: 220, height: 320)
+        .frame(width: 220, height: 450)
         .cornerRadius(20)
         
     }
 }
 
-struct SportCard_Previews: PreviewProvider {
+struct UnlockedSportCard_Previews: PreviewProvider {
     static var previews: some View {
         let quiz = Quiz(questions: DataQuestions().questions)
         let championship = Championship(
             sport: SportsData().sport[0],
             quiz: quiz,
             done: false,
+            unlock: false,
             championshipResults: [
                 ChampionshipResult(
                     country: SportsData().sport[0].countryScoreOrder[0],
@@ -86,6 +87,6 @@ struct SportCard_Previews: PreviewProvider {
                 )
             ]
         )
-        SportCard(championship: championship)
+        UnlockedSportCard(championship: championship)
     }
 }
