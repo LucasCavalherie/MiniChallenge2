@@ -14,7 +14,7 @@ final class SportsData{
             name: "Vela",
             imageName: "Vela",
             symbolName: "sailboat.fill",
-            color: Color("Blue"),
+            color: "Blue",
             link: "https://olympics.com/pt/esportes/vela/",
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
@@ -31,7 +31,7 @@ final class SportsData{
             name: "Rugby",
             imageName: "Vela",
             symbolName: "figure.rugby",
-            color: Color("Orange"),
+            color: "Orange",
             link: "https://olympics.com/pt/esportes/vela/",
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),

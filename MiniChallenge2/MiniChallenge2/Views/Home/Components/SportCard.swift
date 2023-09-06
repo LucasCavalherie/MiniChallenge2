@@ -15,7 +15,7 @@ struct SportCard: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(championship.sport.color)
+                .fill(Color(championship.sport.color))
             
             VStack {
                 HStack (alignment: .top) {

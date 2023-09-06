@@ -26,19 +26,22 @@ class OlympicController: ObservableObject {
             default:
                 olympic.medalScore += 0
         }
+        UserController.shared.upMedalScore(medalScore: olympic.medalScore)
         
     }
     
     private init() {
         if (UserController.shared.user.currentOlympic == nil) {
             createOlympic()
+        } else {
+            olympic = UserController.shared.user.currentOlympic!
         }
     }
     
     func createOlympic() {
         olympic = Olympic(name: "Olimpiadas", medalScore: 0, championships: [])
         createChampionships(sportList: UserController.shared.user.unlockedSports)
-        UserController.shared.user.currentOlympic = olympic
+        UserController.shared.saveCurrentOlympic(olympic: olympic)
     }
     
     func createChampionships(sportList: [Sport]) {

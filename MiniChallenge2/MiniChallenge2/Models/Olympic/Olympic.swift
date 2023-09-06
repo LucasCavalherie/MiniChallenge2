@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Olympic: Identifiable{
+struct Olympic: Identifiable, Codable{
     let id = UUID()
     let name: String
     var medalScore: Int
