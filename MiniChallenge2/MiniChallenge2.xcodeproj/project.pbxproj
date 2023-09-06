@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092E986B2AA9018300600349 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E986A2AA9018300600349 /* GoalView.swift */; };
 		7309D8822A9FAB750050C770 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309D8812A9FAB750050C770 /* ResultView.swift */; };
 		73132E752AA171B700FF3E03 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E742AA171B700FF3E03 /* HomeView.swift */; };
 		73132E772AA1775400FF3E03 /* SportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E762AA1775400FF3E03 /* SportCard.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092E986A2AA9018300600349 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		7309D8812A9FAB750050C770 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		73132E742AA171B700FF3E03 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		73132E762AA1775400FF3E03 /* SportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCard.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092E98692AA9015F00600349 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				092E986A2AA9018300600349 /* GoalView.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
 		73356B212AA0FC6300B1EA71 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		73C011CE2A9E5CBD008FCA67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				092E98692AA9015F00600349 /* Goals */,
 				7387A6CB2AA7A642001E58AE /* Onboarding */,
 				73F692122AA2B1CC00769BE9 /* Rank */,
 				73F692102AA2B18500769BE9 /* Home */,
@@ -404,6 +415,7 @@
 				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
 				73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */,
 				73C011D52A9E6F9E008FCA67 /* QuizView.swift in Sources */,
+				092E986B2AA9018300600349 /* GoalView.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
 				73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */,
 				73CBECB72AA0122D00756EF0 /* Olympic.swift in Sources */,
