@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41ECCD342AA8E3D800FEFCEB /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ECCD332AA8E3D800FEFCEB /* Onboarding1.swift */; };
 		7309D8822A9FAB750050C770 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309D8812A9FAB750050C770 /* ResultView.swift */; };
 		73132E752AA171B700FF3E03 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E742AA171B700FF3E03 /* HomeView.swift */; };
 		73132E772AA1775400FF3E03 /* SportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E762AA1775400FF3E03 /* SportCard.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41ECCD332AA8E3D800FEFCEB /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		7309D8812A9FAB750050C770 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		73132E742AA171B700FF3E03 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		73132E762AA1775400FF3E03 /* SportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCard.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41ECCD322AA8E3AE00FEFCEB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				41ECCD332AA8E3D800FEFCEB /* Onboarding1.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		73356B212AA0FC6300B1EA71 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		73C011CE2A9E5CBD008FCA67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41ECCD322AA8E3AE00FEFCEB /* Onboarding */,
 				73F692122AA2B1CC00769BE9 /* Rank */,
 				73F692102AA2B18500769BE9 /* Home */,
 				73C011D32A9E6F6B008FCA67 /* Quiz */,
@@ -383,6 +394,7 @@
 				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
 				73F692162AA2BD5000769BE9 /* NavBarQuiz.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
+				41ECCD342AA8E3D800FEFCEB /* Onboarding1.swift in Sources */,
 				73CBECBC2AA018F700756EF0 /* Country.swift in Sources */,
 				73132E7B2AA2699100FF3E03 /* NavBar.swift in Sources */,
 				73F6921A2AA2C64000769BE9 /* ChampionshipData.swift in Sources */,
