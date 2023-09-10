@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct LogoView: View {
+    @ObservedObject var routerController = RouterController.shared
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image("Pattern")
+                .resizable(resizingMode: .tile)
+                .ignoresSafeArea()
+            VStack {
+                Spacer()
+                Image("Logo")
+                
+                Spacer()
+                
+                Button {
+                    // precisa colocar uma funçao para que o botão se entrou na primeira vez, ele vá para o onboarding, mas se não vá para o home
+                } label: {
+                    Text("Próximo")
+                        .font(.body)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("Black"))
+                        .padding(.vertical,16)
+                        .frame(maxWidth: .infinity)
+                }
+                .background(Color("White"))
+                .cornerRadius(10)
+                .padding(.horizontal,28)
+            }
+        }
     }
 }
-
 struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
         LogoView()

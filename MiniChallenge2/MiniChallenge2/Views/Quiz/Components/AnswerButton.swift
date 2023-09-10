@@ -37,7 +37,7 @@ struct AnswerButton: View {
                 return Color("Red")
             }
         }else{
-            return Color("Gray")
+            return Color("White")
         }
     }
     

@@ -8,8 +8,73 @@
 import SwiftUI
 
 struct Onboarding4: View {
+    @ObservedObject var routerController = RouterController.shared
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Button {
+                    routerController.addKeyToViewStack(viewKey: "OnboardingTela3")
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .font(.title3)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("Black"))
+                    Text("Voltar")
+                        .font(.title3)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("Black"))
+                }
+                
+                Spacer()
+                
+                Button {
+                    routerController.addKeyToViewStack(viewKey: "Home")
+                } label: {
+                    Text("Pular")
+                        .font(.title3)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("Black"))
+                }
+            }
+            .padding(.horizontal,28)
+            .padding(.top,16)
+            
+            Spacer()
+            
+            Image("Mascote4")
+            
+            Spacer()
+            
+            VStack(alignment: .leading) {
+                Text("🥇️ Eeeeita como joga")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("Black"))
+                    .padding(.bottom,8)
+                Text("Ah! E não esqueça de ir acompanhando sua pontuação! Assim você sobe no \(Text("ranking").bold()) e ainda ganha prêmios.")
+                    .font(.body)
+                    .fontWeight(.regular)
+                    .foregroundColor(Color("Black"))
+                    .padding(.bottom,24)
+                
+                Button {
+                    routerController.addKeyToViewStack(viewKey: "Home")
+                } label: {
+                    Text("Começar")
+                        .font(.body)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color("White"))
+                        .padding(.vertical,16)
+                        .frame(maxWidth: .infinity)
+                }
+                .background(Color("Blue"))
+                .cornerRadius(10)
+                
+            }.padding(.horizontal,28)
+            
+            
+            
+        }.background(Color("LightGray"))
     }
 }
 
