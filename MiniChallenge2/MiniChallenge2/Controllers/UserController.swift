@@ -18,9 +18,9 @@ class UserController: ObservableObject {
     @Published var user : User = User(onboarded: false, name: "User", level: 1, medalScore: 1000, unlockedSports: SportsData().sport, pastOlympics: [], achievements: [], currentOlympic: nil)
     @Published var userCountry : Country = Country(name: "Brasil", flagEmoji: "🇧🇷")
     
-    func onboardingDone() {
-        user.onboarded = true
-    }
+//    func onboardingDone() {
+//        user.onboarded = true
+//    }
     
     func upLevel() {
         user.level += 1
@@ -49,4 +49,25 @@ class UserController: ObservableObject {
         user.currentOlympic = nil
     }
 }
+
+
+// MARK: - User Defaults features
+
+extension UserController {
+    
+    private var onboardingKey: String { return "HasCompletedOnboarding" }
+    
+    func userDidFinishOnboarding() {
+        UserDefaults.standard.set(true, forKey: onboardingKey)
+    }
+    
+    func hasUserFinishedOnboarding() -> Bool {
+        return UserDefaults.standard.bool(forKey: onboardingKey)
+    }
+    
+    func resetOnboarding() {
+        UserDefaults.standard.set(false, forKey: onboardingKey)
+    }
+}
+
 

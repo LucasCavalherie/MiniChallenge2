@@ -15,7 +15,7 @@ class RouterController : ObservableObject {
     }()
     
     @Published var viewStack : [String] = []
-    private let baseStack : [String] = ["Home"]
+    private let baseStack : [String] = ["Logo"]
     
     private init() {
         clear()

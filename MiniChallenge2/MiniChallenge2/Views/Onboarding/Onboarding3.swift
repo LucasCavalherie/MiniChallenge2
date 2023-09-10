@@ -28,6 +28,7 @@ struct Onboarding3: View {
                 Spacer()
                 
                 Button {
+                    UserController.shared.userDidFinishOnboarding()
                     routerController.addKeyToViewStack(viewKey: "Home")
                 } label: {
                     Text("Pular")

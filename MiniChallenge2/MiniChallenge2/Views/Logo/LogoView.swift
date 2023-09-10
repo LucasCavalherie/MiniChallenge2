@@ -22,7 +22,11 @@ struct LogoView: View {
                 Spacer()
                 
                 Button {
-                    // precisa colocar uma funçao para que o botão se entrou na primeira vez, ele vá para o onboarding, mas se não vá para o home
+                    if UserController.shared.hasUserFinishedOnboarding() {
+                        routerController.addKeyToViewStack(viewKey: "Home")
+                    } else {
+                        routerController.addKeyToViewStack(viewKey: "OnboardingTela1")
+                    }
                 } label: {
                     Text("Próximo")
                         .font(.body)
