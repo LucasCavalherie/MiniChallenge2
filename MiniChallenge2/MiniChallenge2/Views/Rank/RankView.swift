@@ -74,7 +74,6 @@ struct RankView: View {
             .scrollContentBackground(.hidden)
             .padding(.horizontal)
             
-            if championshipController.currentChampionship.done {
                 Button {
                     routerController.addKeyToViewStack(viewKey: "Home")
                 } label: {
@@ -86,23 +85,6 @@ struct RankView: View {
                         .background(Color("Orange"))
                         .cornerRadius(20)
                 }
-            } else {
-                Button {
-                    let quiz = championshipController.currentChampionship.quiz
-                    quizController.changeQuiz(quiz: quiz)
-                    routerController.addKeyToViewStack(viewKey: "Quiz")
-                } label: {
-                    Text("Começar quiz")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("White"))
-                        .padding()
-                        .background(Color("Green"))
-                        .cornerRadius(20)
-                }
-            }
-            
-            
         }
         .background(Color("Blue"))
     }
