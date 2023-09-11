@@ -8,7 +8,7 @@
 import Foundation
 
 struct Quiz: Identifiable, Codable{
-    let id = UUID()
+    var id = UUID()
     var total: Int = 0
     var corrects: Int = 0
     var errors: Int = 0

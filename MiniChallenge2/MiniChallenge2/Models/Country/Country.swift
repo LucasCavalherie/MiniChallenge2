@@ -8,9 +8,9 @@
 import Foundation
 
 struct Country: Identifiable, Codable{
-    let id = UUID()
+    var id = UUID()
     let name: String
-    let flagImageName: String = ""
+    var flagImageName: String = ""
     let flagEmoji: String
 }
 

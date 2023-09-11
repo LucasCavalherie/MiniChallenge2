@@ -41,6 +41,7 @@ struct HomeView: View {
                     .font(.title2)
                     .foregroundColor(Color("Black"))
                     .fontWeight(.bold)
+                    .padding()
                 
                 HStack {
                     ProgressOlympicBar(value: olympicController.countChampionshipDone(), total: userController.user.unlockedSports.count)
@@ -83,12 +84,13 @@ struct HomeView: View {
 
                         }
                     }
+                    .padding(.horizontal)
                 }
             }
             .padding(.vertical)
             .padding(.horizontal)
             
-            Spacer()
+            TabBar()
         }
         .background(Color("Gray"))
         .onDisappear{userController.saveData()}

@@ -9,7 +9,7 @@ import Foundation
 
 // Struct que representa competições/eventos das olimpiadas
 class Championship: Identifiable, Codable{
-    let id = UUID()
+    var id = UUID()
     let sport: Sport
     let quiz: Quiz
     var done: Bool
