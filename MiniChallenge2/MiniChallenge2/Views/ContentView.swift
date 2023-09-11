@@ -31,6 +31,10 @@ struct ContentView: View {
                 case "Rank":
                     RankView()
                         .navigationBarBackButtonHidden(true)
+                case "Results":
+                    // Mostrar view de Resultados
+                    ResultsView()
+                        .navigationBarBackButtonHidden(true)
                 case "OlympicsHistory":
                     Text("A ser implementado")
                     Button(action: {routerController.clear()}, label: {
