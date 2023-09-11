@@ -15,9 +15,7 @@ class UserController: ObservableObject {
     
     private init() {
         if let userSaved = UserDefaults().object(forKey: "userSaved") as? Data,  let userSaved = try? JSONDecoder().decode(User.self, from: userSaved) {
-            let sport = SportsData().sport[0]
-            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
-            //self.user = userSaved
+            self.user = userSaved
         } else {
             let sport = SportsData().sport[0]
             self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
@@ -33,8 +31,17 @@ class UserController: ObservableObject {
         }
     }
     
-    func onboardingDone() {
+    func userDidFinishOnboarding() {
         user.onboarded = true
+        saveData()
+    }
+    
+    func hasUserFinishedOnboarding() -> Bool {
+        return user.onboarded
+    }
+    
+    func resetOnboarding() {
+        user.onboarded = false
         saveData()
     }
     
@@ -81,4 +88,5 @@ class UserController: ObservableObject {
         saveData()
     }
 }
+
 

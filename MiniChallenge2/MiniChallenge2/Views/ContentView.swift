@@ -22,6 +22,22 @@ struct ContentView: View {
             .navigationDestination(for: String.self) { viewKey in
                 // Usar funções do routerController para mudar telas
                 switch viewKey {
+                    
+                case "Logo":
+                    LogoView()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela1":
+                    Onboarding1()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela2":
+                    Onboarding2()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela3":
+                    Onboarding3()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela4":
+                    Onboarding4()
+                        .navigationBarBackButtonHidden(true)
                 case "Home":
                     HomeView()
                         .navigationBarBackButtonHidden(true)
