@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Question: Identifiable, Equatable{
+struct Question: Identifiable, Equatable, Codable{
     static func == (lhs: Question, rhs: Question) -> Bool {
         return lhs.id == rhs.id
     }
     
-    let id = UUID()
+    var id = UUID()
     let text: String
-    let imageName: String = ""
+    var imageName: String = ""
     let category: Category
     let answers: [Answer]
 }

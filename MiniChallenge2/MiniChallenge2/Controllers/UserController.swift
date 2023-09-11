@@ -13,33 +13,70 @@ class UserController: ObservableObject {
         return instance
     }()
     
-    private init() {}
+    private init() {
+        if let userSaved = UserDefaults().object(forKey: "userSaved") as? Data,  let userSaved = try? JSONDecoder().decode(User.self, from: userSaved) {
+            let sport = SportsData().sport[0]
+            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
+            //self.user = userSaved
+        } else {
+            let sport = SportsData().sport[0]
+            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
+        }
+    }
     
-    @Published var user : User = User(onboarded: false, name: "User", level: 1, medalScore: 1000, unlockedSports: SportsData().sport, pastOlympics: [], achievements: [], currentOlympic: nil)
+    @Published var user : User
     @Published var userCountry : Country = Country(name: "Brasil", flagEmoji: "🇧🇷")
     
+<<<<<<< HEAD
 //    func onboardingDone() {
 //        user.onboarded = true
 //    }
+=======
+    func saveData() {
+        if let encoded = try? JSONEncoder().encode(user) {
+            UserDefaults().set(encoded, forKey: "userSaved")
+        }
+    }
+    
+    func onboardingDone() {
+        user.onboarded = true
+        saveData()
+    }
+>>>>>>> afbcf63619e50d179a2f6d6109191e1859ed7551
     
     func upLevel() {
         user.level += 1
+        saveData()
     }
     
     func upMedalScore(medalScore: Int) {
         user.medalScore += medalScore
+        saveData()
+    }
+    
+    func checkUnlockSport(sport: Sport) -> Bool {
+        return user.unlockedSports.contains(where: {$0.name == sport.name})
     }
     
     func unlockSport(sport: Sport) {
         user.unlockedSports.append(sport)
+        user.medalScore -= sport.value
+        saveData()
     }
     
     func addPastOlympic(olympic: Olympic) {
         user.pastOlympics.append(olympic)
+        saveData()
     }
     
     func addAchievement(achievement: Achievement) {
         user.achievements.append(achievement)
+        saveData()
+    }
+    
+    func saveCurrentOlympic(olympic : Olympic) {
+        user.currentOlympic = olympic
+        saveData()
     }
     
     func finishCurrentOlympic() {
@@ -47,6 +84,7 @@ class UserController: ObservableObject {
             self.addPastOlympic(olympic: user.currentOlympic!)
         }
         user.currentOlympic = nil
+        saveData()
     }
 }
 

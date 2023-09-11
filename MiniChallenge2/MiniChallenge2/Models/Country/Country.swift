@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Country: Identifiable{
-    let id = UUID()
+struct Country: Identifiable, Codable{
+    var id = UUID()
     let name: String
-    let flagImageName: String = ""
+    var flagImageName: String = ""
     let flagEmoji: String
 }
 

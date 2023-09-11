@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct User: Identifiable{
-    let id = UUID()
+struct User: Identifiable, Codable {
+    var id = UUID()
     var onboarded: Bool
     var name: String
     var level: Int
     var medalScore: Int
-    var unlockedSports: [Sport] // caso de problema mudar para uuids
+    var unlockedSports: [Sport]
     var pastOlympics: [Olympic]
     var achievements: [Achievement]
     var currentOlympic: Olympic?

@@ -14,8 +14,27 @@ final class SportsData{
             name: "Vela",
             imageName: "Vela",
             symbolName: "sailboat.fill",
-            color: Color("Blue"),
+            color: "Blue",
             link: "https://olympics.com/pt/esportes/vela/",
+            value: 0,
+            countryScoreOrder: [
+                Country(name: "Espanha", flagEmoji: "🇪🇸"),
+                Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
+                Country(name: "Japão", flagEmoji: "🇯🇵"),
+                Country(name: "Itália", flagEmoji: "🇮🇹"),
+                Country(name: "França", flagEmoji: "🇫🇷"),
+                Country(name: "Alemanha", flagEmoji: "🇩🇪"),
+                Country(name: "Argentina", flagEmoji: "🇦🇷")
+            ]
+        ),
+        
+        Sport(
+            name: "Natação",
+            imageName: "Natação",
+            symbolName: "figure.pool.swim",
+            color: "Orange",
+            link: "https://olympics.com/pt/esportes/vela/",
+            value: 10,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
                 Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
@@ -31,8 +50,9 @@ final class SportsData{
             name: "Rugby",
             imageName: "Vela",
             symbolName: "figure.rugby",
-            color: Color("Orange"),
+            color: "Orange",
             link: "https://olympics.com/pt/esportes/vela/",
+            value: 99999999,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
                 Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),

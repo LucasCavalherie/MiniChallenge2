@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SportCard: View {
+struct UnlockedSportCard: View {
     let championship: Championship
     @ObservedObject var routerController = RouterController.shared
     @ObservedObject var championshipController = ChampionshipController.shared
@@ -15,7 +15,7 @@ struct SportCard: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(championship.sport.color)
+                .fill(Color(championship.sport.color))
             
             VStack {
                 HStack (alignment: .top) {
@@ -32,12 +32,14 @@ struct SportCard: View {
                     
                     Spacer()
                     
-                    Image(systemName: "info.circle.fill")
-                        .padding(.horizontal, 4)
-                        .padding(.vertical, 4)
-                        .font(.headline)
-                        .foregroundColor(Color("White"))
-                        .fontWeight(.bold)
+                    Link(destination: URL(string: championship.sport.link)!) {
+                        Image(systemName: "info.circle.fill")
+                            .padding(.horizontal, 4)
+                            .padding(.vertical, 4)
+                            .font(.headline)
+                            .foregroundColor(Color("White"))
+                            .fontWeight(.bold)
+                    }
                 }
                 
                 Spacer()
@@ -64,19 +66,20 @@ struct SportCard: View {
             }
             .padding()
         }
-        .frame(width: 220, height: 320)
+        .frame(width: 220, height: 450)
         .cornerRadius(20)
         
     }
 }
 
-struct SportCard_Previews: PreviewProvider {
+struct UnlockedSportCard_Previews: PreviewProvider {
     static var previews: some View {
         let quiz = Quiz(questions: DataQuestions().questions)
         let championship = Championship(
             sport: SportsData().sport[0],
             quiz: quiz,
             done: false,
+            unlock: false,
             championshipResults: [
                 ChampionshipResult(
                     country: SportsData().sport[0].countryScoreOrder[0],
@@ -84,6 +87,6 @@ struct SportCard_Previews: PreviewProvider {
                 )
             ]
         )
-        SportCard(championship: championship)
+        UnlockedSportCard(championship: championship)
     }
 }

@@ -26,25 +26,29 @@ class OlympicController: ObservableObject {
             default:
                 olympic.medalScore += 0
         }
+        UserController.shared.upMedalScore(medalScore: olympic.medalScore)
         
     }
     
     private init() {
         if (UserController.shared.user.currentOlympic == nil) {
             createOlympic()
+        } else {
+            olympic = UserController.shared.user.currentOlympic!
         }
     }
     
     func createOlympic() {
         olympic = Olympic(name: "Olimpiadas", medalScore: 0, championships: [])
-        createChampionships(sportList: UserController.shared.user.unlockedSports)
-        UserController.shared.user.currentOlympic = olympic
+        createChampionships(sportList: SportsData().sport)
+        UserController.shared.saveCurrentOlympic(olympic: olympic)
     }
     
     func createChampionships(sportList: [Sport]) {
         for sport in sportList {
+            let unlock = UserController.shared.checkUnlockSport(sport: sport)
             let quiz = Quiz(questions: DataQuestions().questions)
-            let championship = Championship(sport: sport, quiz: quiz, done: false, championshipResults: createChampionshipResults(sport: sport, step: 1))
+            let championship = Championship(sport: sport, quiz: quiz, done: false, unlock: unlock, championshipResults: createChampionshipResults(sport: sport, step: 1))
             
             olympic.championships.append(championship)
         }
@@ -69,5 +73,25 @@ class OlympicController: ObservableObject {
     func finishOlympic() {
         UserController.shared.upMedalScore(medalScore: olympic.medalScore)
         UserController.shared.upLevel()
+    }
+    
+    func countChampionshipDone() -> Int {
+        var dones = 0
+        for championship in olympic.championships {
+            if championship.done {
+                dones += 1
+            }
+        }
+        
+        return dones
+    }
+    
+    func canUnlockSport(championship: Championship) -> Bool {
+        return championship.sport.value <= UserController.shared.user.medalScore
+    }
+    
+    func unlockSport(championship: Championship) {
+        championship.unlock = true
+        UserController.shared.unlockSport(sport: championship.sport)
     }
 }

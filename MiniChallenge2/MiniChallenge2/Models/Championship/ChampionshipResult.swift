@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ChampionshipResult: Identifiable{
-    let id = UUID()
+struct ChampionshipResult: Identifiable, Codable {
+    var id = UUID()
     let country: Country
     let value: Int
 }
