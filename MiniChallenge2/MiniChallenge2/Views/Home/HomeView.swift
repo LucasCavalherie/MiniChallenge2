@@ -22,6 +22,7 @@ struct HomeView: View {
                     .font(.title3)
                     .foregroundColor(Color("Black"))
                     .fontWeight(.bold)
+                    .padding()
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack {
@@ -30,15 +31,17 @@ struct HomeView: View {
                                 .padding(.horizontal, 8)
                         }
                     }
+                    .padding(.horizontal)
                 }
             }
-            .padding()
+            .padding(.all, 0)
             
             VStack (alignment: .leading) {
                 Text("Prêmios")
                     .font(.title3)
                     .foregroundColor(Color("Black"))
                     .fontWeight(.bold)
+                    .padding()
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack {
@@ -51,11 +54,14 @@ struct HomeView: View {
                         }
                             
                     }
+                    .padding(.horizontal)
                 }
             }
-            .padding()
+            .padding(.all, 0)
             
             Spacer()
+            
+            TabBar()
         }
         .background(Color("Gray"))
         .onDisappear{userController.saveData()}
