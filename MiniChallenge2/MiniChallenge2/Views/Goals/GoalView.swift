@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct GoalView: View {
-    
+    let championship: Championship
+    @ObservedObject var routerController = RouterController.shared
+    @ObservedObject var championshipController = ChampionshipController.shared
     
     
     var body: some View {
@@ -114,6 +116,8 @@ struct GoalView: View {
                     }
 
                     Button {
+                        championshipController.currentChampionship = championship
+                        routerController.addKeyToViewStack(viewKey: "Rank")
                     } label: {
                         Text("Iniciar quiz")
                             .font(.title3)
@@ -142,6 +146,18 @@ struct GoalView: View {
 
 struct GoalView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalView()
+        let quiz = Quiz(questions: DataQuestions().questions)
+                let championship = Championship(
+                    sport: SportsData().sport[0],
+                    quiz: quiz,
+                    done: false,
+                    championshipResults: [
+                        ChampionshipResult(
+                            country: SportsData().sport[0].countryScoreOrder[0],
+                            value: 10
+                        )
+                    ]
+                )
+        GoalView(championship: championship)
     }
 }
