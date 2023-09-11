@@ -8,7 +8,7 @@
 import Foundation
 
 struct Olympic: Identifiable, Codable{
-    let id = UUID()
+    var id = UUID()
     let name: String
     var medalScore: Int
     var championships: [Championship]

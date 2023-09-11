@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct User: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     var onboarded: Bool
     var name: String
     var level: Int

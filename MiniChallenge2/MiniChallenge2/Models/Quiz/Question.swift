@@ -12,7 +12,7 @@ struct Question: Identifiable, Equatable, Codable{
         return lhs.id == rhs.id
     }
     
-    let id = UUID()
+    var id = UUID()
     let text: String
     var imageName: String = ""
     let category: Category

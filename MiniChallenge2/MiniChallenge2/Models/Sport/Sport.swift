@@ -9,12 +9,13 @@ import Foundation
 import SwiftUI
 
 struct Sport: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     let name: String
     let imageName: String
     let symbolName: String
     let color: String
     let link: String
+    let value: Int
     let countryScoreOrder: [Country]
 }
 
