@@ -14,23 +14,55 @@ struct ContentView: View {
         NavigationStack(path: $routerController.viewStack) {
             VStack {
                 // Essa tela geralmente
-                Text("Stack vazia")
+                Text("Stack vazia (é pra funcionar assim mesmo)")
+                Button(action: {routerController.clear()}, label: {
+                    Text("Resetar viewStack")
+                })
             }
             .navigationDestination(for: String.self) { viewKey in
                 // Usar funções do routerController para mudar telas
                 switch viewKey {
+                    
+                case "Logo":
+                    LogoView()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela1":
+                    Onboarding1()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela2":
+                    Onboarding2()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela3":
+                    Onboarding3()
+                        .navigationBarBackButtonHidden(true)
+                case "OnboardingTela4":
+                    Onboarding4()
+                        .navigationBarBackButtonHidden(true)
                 case "Home":
-                    // Mostrar view de Home
                     HomeView()
                         .navigationBarBackButtonHidden(true)
                 case "Quiz":
-                    // Mostrar view de Quiz
                     QuizView()
                         .navigationBarBackButtonHidden(true)
                 case "Rank":
-                    // Mostrar view de Quiz
                     RankView()
                         .navigationBarBackButtonHidden(true)
+                case "Results":
+                    // Mostrar view de Resultados
+                    ResultsView()
+                        .navigationBarBackButtonHidden(true)
+                case "OlympicsHistory":
+                    Text("A ser implementado")
+                    Button(action: {routerController.clear()}, label: {
+                        Text("Resetar viewStack")
+                    })
+//                        .navigationBarBackButtonHidden(true)
+                case "Achievements":
+                    Text("A ser implementado")
+                    Button(action: {routerController.clear()}, label: {
+                        Text("Resetar viewStack")
+                    })
+//                        .navigationBarBackButtonHidden(true)
                 // Adicionar outros cases para outras telas
                 default:
                     // Fazer tela de erro para quando a tela solicitada

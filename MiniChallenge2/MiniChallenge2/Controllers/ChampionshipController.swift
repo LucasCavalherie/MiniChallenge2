@@ -34,6 +34,4 @@ class ChampionshipController: ObservableObject {
         
         currentChampionship.done = true
     }
-    
-
 }

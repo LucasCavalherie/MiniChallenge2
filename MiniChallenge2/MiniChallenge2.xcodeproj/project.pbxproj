@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		092E986B2AA9018300600349 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E986A2AA9018300600349 /* GoalView.swift */; };
+		418D8A972AAD4E1900895108 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A962AAD4E1900895108 /* Onboarding2.swift */; };
+		418D8A992AAD513C00895108 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A982AAD513C00895108 /* Onboarding3.swift */; };
+		418D8A9B2AAD53C100895108 /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A9A2AAD53C100895108 /* Onboarding4.swift */; };
+		418D8A9E2AAE0F2200895108 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A9D2AAE0F2200895108 /* LogoView.swift */; };
+		41ECCD342AA8E3D800FEFCEB /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ECCD332AA8E3D800FEFCEB /* Onboarding1.swift */; };
 		7309D8822A9FAB750050C770 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309D8812A9FAB750050C770 /* ResultView.swift */; };
 		73132E752AA171B700FF3E03 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E742AA171B700FF3E03 /* HomeView.swift */; };
-		73132E772AA1775400FF3E03 /* SportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E762AA1775400FF3E03 /* SportCard.swift */; };
-		73132E7B2AA2699100FF3E03 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E7A2AA2699100FF3E03 /* NavBar.swift */; };
+		73132E772AA1775400FF3E03 /* UnlockedSportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73132E762AA1775400FF3E03 /* UnlockedSportCard.swift */; };
+		731857DC2AA8FC7B00F677D1 /* LockedSportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731857DB2AA8FC7B00F677D1 /* LockedSportCard.swift */; };
+		731857DE2AA90C3400F677D1 /* SoonSportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731857DD2AA90C3400F677D1 /* SoonSportCard.swift */; };
+		731857E12AA9163000F677D1 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731857E02AA9163000F677D1 /* ResultsView.swift */; };
 		73356B232AA0FC7100B1EA71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B222AA0FC7100B1EA71 /* User.swift */; };
 		73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B252AA1065F00B1EA71 /* Achievement.swift */; };
 		73356B282AA1113D00B1EA71 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B272AA1113D00B1EA71 /* UserController.swift */; };
@@ -32,6 +39,7 @@
 		73C011E72A9E7B59008FCA67 /* ScoreArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E62A9E7B59008FCA67 /* ScoreArea.swift */; };
 		73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011E82A9E837A008FCA67 /* Quiz.swift */; };
 		73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011EA2A9E83E6008FCA67 /* QuizController.swift */; };
+		73C647A72AAF7CE300002D59 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C647A62AAF7CE300002D59 /* NavBar.swift */; };
 		73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECB32AA00EA800756EF0 /* Sport.swift */; };
 		73CBECB72AA0122D00756EF0 /* Olympic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECB62AA0122D00756EF0 /* Olympic.swift */; };
 		73CBECB92AA0145C00756EF0 /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CBECB82AA0145C00756EF0 /* Championship.swift */; };
@@ -42,14 +50,24 @@
 		73F692182AA2C1DA00769BE9 /* ChampionshipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */; };
 		73F6921A2AA2C64000769BE9 /* ChampionshipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692192AA2C64000769BE9 /* ChampionshipData.swift */; };
 		F03356252A9E7733007472F8 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03356242A9E7733007472F8 /* RouterController.swift */; };
+		F09AD8952AA8F521005EC4E6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8942AA8F521005EC4E6 /* TabBar.swift */; };
+		F09AD8972AA8FD72005EC4E6 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */; };
+		F09AD8992AA90991005EC4E6 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8982AA90991005EC4E6 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		092E986A2AA9018300600349 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		418D8A962AAD4E1900895108 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
+		418D8A982AAD513C00895108 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
+		418D8A9A2AAD53C100895108 /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
+		418D8A9D2AAE0F2200895108 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		41ECCD332AA8E3D800FEFCEB /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		7309D8812A9FAB750050C770 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		73132E742AA171B700FF3E03 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		73132E762AA1775400FF3E03 /* SportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCard.swift; sourceTree = "<group>"; };
-		73132E7A2AA2699100FF3E03 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		73132E762AA1775400FF3E03 /* UnlockedSportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedSportCard.swift; sourceTree = "<group>"; };
+		731857DB2AA8FC7B00F677D1 /* LockedSportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedSportCard.swift; sourceTree = "<group>"; };
+		731857DD2AA90C3400F677D1 /* SoonSportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoonSportCard.swift; sourceTree = "<group>"; };
+		731857E02AA9163000F677D1 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		73356B222AA0FC7100B1EA71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		73356B252AA1065F00B1EA71 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		73356B272AA1113D00B1EA71 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -71,6 +89,7 @@
 		73C011E62A9E7B59008FCA67 /* ScoreArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreArea.swift; sourceTree = "<group>"; };
 		73C011E82A9E837A008FCA67 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		73C011EA2A9E83E6008FCA67 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
+		73C647A62AAF7CE300002D59 /* NavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavBar.swift; path = MiniChallenge2/Views/Components/NavBar.swift; sourceTree = SOURCE_ROOT; };
 		73CBECB32AA00EA800756EF0 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		73CBECB62AA0122D00756EF0 /* Olympic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Olympic.swift; sourceTree = "<group>"; };
 		73CBECB82AA0145C00756EF0 /* Championship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championship.swift; sourceTree = "<group>"; };
@@ -81,6 +100,9 @@
 		73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipController.swift; sourceTree = "<group>"; };
 		73F692192AA2C64000769BE9 /* ChampionshipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipData.swift; sourceTree = "<group>"; };
 		F03356242A9E7733007472F8 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = SOURCE_ROOT; };
+		F09AD8942AA8F521005EC4E6 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		F09AD8982AA90991005EC4E6 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = MiniChallenge2/Views/Components/ViewExtension.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +122,33 @@
 				092E986A2AA9018300600349 /* GoalView.swift */,
 			);
 			path = Goals;
+			sourceTree = "<group>";
+		};
+		418D8A9C2AAE0F0B00895108 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				418D8A9D2AAE0F2200895108 /* LogoView.swift */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		41ECCD322AA8E3AE00FEFCEB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				41ECCD332AA8E3D800FEFCEB /* Onboarding1.swift */,
+				418D8A962AAD4E1900895108 /* Onboarding2.swift */,
+				418D8A982AAD513C00895108 /* Onboarding3.swift */,
+				418D8A9A2AAD53C100895108 /* Onboarding4.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		731857DF2AA9162300F677D1 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				731857E02AA9163000F677D1 /* ResultsView.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 		73356B212AA0FC6300B1EA71 /* User */ = {
@@ -183,6 +232,10 @@
 			isa = PBXGroup;
 			children = (
 				092E98692AA9015F00600349 /* Goals */,
+				418D8A9C2AAE0F0B00895108 /* Logo */,
+				41ECCD322AA8E3AE00FEFCEB /* Onboarding */,
+				731857DF2AA9162300F677D1 /* Results */,
+				F09AD8932AA8F507005EC4E6 /* Components */,
 				7387A6CB2AA7A642001E58AE /* Onboarding */,
 				73F692122AA2B1CC00769BE9 /* Rank */,
 				73F692102AA2B18500769BE9 /* Home */,
@@ -207,6 +260,7 @@
 		73C011D02A9E6013008FCA67 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F09AD8982AA90991005EC4E6 /* ViewExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -234,7 +288,6 @@
 			children = (
 				73C011E12A9E7A17008FCA67 /* Components */,
 				73C011D42A9E6F9E008FCA67 /* QuizView.swift */,
-				7309D8812A9FAB750050C770 /* ResultView.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -306,8 +359,10 @@
 		73F692112AA2B1AA00769BE9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				73132E762AA1775400FF3E03 /* SportCard.swift */,
-				73132E7A2AA2699100FF3E03 /* NavBar.swift */,
+				731857DB2AA8FC7B00F677D1 /* LockedSportCard.swift */,
+				731857DD2AA90C3400F677D1 /* SoonSportCard.swift */,
+				73C647A62AAF7CE300002D59 /* NavBar.swift */,
+				73132E762AA1775400FF3E03 /* UnlockedSportCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -318,6 +373,15 @@
 				73F692132AA2B1E200769BE9 /* RankView.swift */,
 			);
 			path = Rank;
+			sourceTree = "<group>";
+		};
+		F09AD8932AA8F507005EC4E6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F09AD8942AA8F521005EC4E6 /* TabBar.swift */,
+				F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,29 +462,39 @@
 				73C011DE2A9E7415008FCA67 /* QuestionData.swift in Sources */,
 				73356B282AA1113D00B1EA71 /* UserController.swift in Sources */,
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
+				F09AD8972AA8FD72005EC4E6 /* TabBarItem.swift in Sources */,
 				73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */,
-				7309D8822A9FAB750050C770 /* ResultView.swift in Sources */,
 				73F692162AA2BD5000769BE9 /* NavBarQuiz.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
+				41ECCD342AA8E3D800FEFCEB /* Onboarding1.swift in Sources */,
 				73CBECBC2AA018F700756EF0 /* Country.swift in Sources */,
-				73132E7B2AA2699100FF3E03 /* NavBar.swift in Sources */,
 				73F6921A2AA2C64000769BE9 /* ChampionshipData.swift in Sources */,
 				73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */,
 				73CBECBE2AA019BA00756EF0 /* ChampionshipResult.swift in Sources */,
 				F03356252A9E7733007472F8 /* RouterController.swift in Sources */,
 				73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */,
 				73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */,
+				731857DC2AA8FC7B00F677D1 /* LockedSportCard.swift in Sources */,
+				73C647A72AAF7CE300002D59 /* NavBar.swift in Sources */,
 				73356B2C2AA113BC00B1EA71 /* AchievementsData.swift in Sources */,
 				73F692182AA2C1DA00769BE9 /* ChampionshipController.swift in Sources */,
+				418D8A972AAD4E1900895108 /* Onboarding2.swift in Sources */,
+				731857DE2AA90C3400F677D1 /* SoonSportCard.swift in Sources */,
+				731857E12AA9163000F677D1 /* ResultsView.swift in Sources */,
 				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
+				F09AD8992AA90991005EC4E6 /* ViewExtension.swift in Sources */,
 				73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */,
 				73C011D52A9E6F9E008FCA67 /* QuizView.swift in Sources */,
 				092E986B2AA9018300600349 /* GoalView.swift in Sources */,
+				418D8A9B2AAD53C100895108 /* Onboarding4.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
 				73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */,
 				73CBECB72AA0122D00756EF0 /* Olympic.swift in Sources */,
-				73132E772AA1775400FF3E03 /* SportCard.swift in Sources */,
+				73132E772AA1775400FF3E03 /* UnlockedSportCard.swift in Sources */,
 				73CBECB92AA0145C00756EF0 /* Championship.swift in Sources */,
+				418D8A9E2AAE0F2200895108 /* LogoView.swift in Sources */,
+				418D8A992AAD513C00895108 /* Onboarding3.swift in Sources */,
+				F09AD8952AA8F521005EC4E6 /* TabBar.swift in Sources */,
 				73C011E72A9E7B59008FCA67 /* ScoreArea.swift in Sources */,
 				73356B232AA0FC7100B1EA71 /* User.swift in Sources */,
 			);

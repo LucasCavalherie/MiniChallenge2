@@ -15,13 +15,19 @@ class RouterController : ObservableObject {
     }()
     
     @Published var viewStack : [String] = []
-    private let baseStack : [String] = ["Home"]
+    private let baseStack : [String] = ["Logo"]
     
     private init() {
         clear()
     }
     
     func addKeyToViewStack(viewKey: String) -> Void {
+        viewStack.append(viewKey)
+        self.objectWillChange.send()
+    }
+    
+    func switchCurrentView(viewKey: String) -> Void {
+        viewStack.removeLast()
         viewStack.append(viewKey)
         self.objectWillChange.send()
     }

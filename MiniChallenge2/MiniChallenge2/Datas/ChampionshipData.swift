@@ -12,6 +12,7 @@ final class ChampionshipData{
         sport: SportsData().sport[0],
         quiz: Quiz(questions: DataQuestions().questions),
         done: false,
+        unlock: true,
         championshipResults: [
             ChampionshipResult(
                 country: Country(name: "Espanha", flagEmoji: "🇪🇸"),

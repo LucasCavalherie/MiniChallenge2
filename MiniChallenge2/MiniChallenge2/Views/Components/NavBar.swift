@@ -1,5 +1,5 @@
 //
-//  NavBarView.swift
+//  NavBar.swift
 //  MiniChallenge2
 //
 //  Created by Lucas Cavalherie on 01/09/23.
