@@ -43,17 +43,11 @@ struct AnswerButton: View {
             }else{
                 return Color("Red")
             }
-<<<<<<< HEAD
-        }else{
-            return Color("White")
-=======
-        }
-        else if quizController.answerDelayBlock && answer.correct {
+        }else if quizController.answerDelayBlock && answer.correct {
             return Color("Green")
         }
         else{
             return Color("Gray")
->>>>>>> afbcf63619e50d179a2f6d6109191e1859ed7551
         }
     }
     

@@ -15,9 +15,7 @@ class UserController: ObservableObject {
     
     private init() {
         if let userSaved = UserDefaults().object(forKey: "userSaved") as? Data,  let userSaved = try? JSONDecoder().decode(User.self, from: userSaved) {
-            let sport = SportsData().sport[0]
-            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
-            //self.user = userSaved
+            self.user = userSaved
         } else {
             let sport = SportsData().sport[0]
             self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
@@ -27,22 +25,25 @@ class UserController: ObservableObject {
     @Published var user : User
     @Published var userCountry : Country = Country(name: "Brasil", flagEmoji: "🇧🇷")
     
-<<<<<<< HEAD
-//    func onboardingDone() {
-//        user.onboarded = true
-//    }
-=======
     func saveData() {
         if let encoded = try? JSONEncoder().encode(user) {
             UserDefaults().set(encoded, forKey: "userSaved")
         }
     }
     
-    func onboardingDone() {
+    func userDidFinishOnboarding() {
         user.onboarded = true
         saveData()
     }
->>>>>>> afbcf63619e50d179a2f6d6109191e1859ed7551
+    
+    func hasUserFinishedOnboarding() -> Bool {
+        return user.onboarded
+    }
+    
+    func resetOnboarding() {
+        user.onboarded = false
+        saveData()
+    }
     
     func upLevel() {
         user.level += 1
@@ -85,26 +86,6 @@ class UserController: ObservableObject {
         }
         user.currentOlympic = nil
         saveData()
-    }
-}
-
-
-// MARK: - User Defaults features
-
-extension UserController {
-    
-    private var onboardingKey: String { return "HasCompletedOnboarding" }
-    
-    func userDidFinishOnboarding() {
-        UserDefaults.standard.set(true, forKey: onboardingKey)
-    }
-    
-    func hasUserFinishedOnboarding() -> Bool {
-        return UserDefaults.standard.bool(forKey: onboardingKey)
-    }
-    
-    func resetOnboarding() {
-        UserDefaults.standard.set(false, forKey: onboardingKey)
     }
 }
 
