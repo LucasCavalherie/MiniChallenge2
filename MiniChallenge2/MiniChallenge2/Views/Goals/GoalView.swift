@@ -116,8 +116,8 @@ struct GoalView: View {
 
                     Button {
                         let quiz = championshipController.currentChampionship.quiz
-                                            quizController.changeQuiz(quiz: quiz)
-                                            routerController.addKeyToViewStack(viewKey: "Quiz")
+                        quizController.changeQuiz(quiz: quiz)
+                        routerController.addKeyToViewStack(viewKey: "Quiz")
                     } label: {
                         Text("Iniciar quiz")
                             .font(.title3)

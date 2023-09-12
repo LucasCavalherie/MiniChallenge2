@@ -30,6 +30,18 @@ class ChampionshipController: ObservableObject {
         currentChampionship.championshipResults.sort(by: {$0.value > $1.value})
         
         let position = currentChampionship.championshipResults.firstIndex(where: {$0.id == playerChampionshipResult.id})
+        
+        switch position {
+            case 0:
+                currentChampionship.medalType = .gold
+            case 1:
+                currentChampionship.medalType = .silver
+            case 2:
+                currentChampionship.medalType = .bronze
+            default:
+                currentChampionship.medalType = .none
+        }
+        
         OlympicController.shared.upMedalScore(position: position ?? 3)
         
         currentChampionship.done = true
