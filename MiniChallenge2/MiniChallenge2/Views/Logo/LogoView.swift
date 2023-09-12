@@ -23,7 +23,7 @@ struct LogoView: View {
                 
                 Button {
                     if UserController.shared.hasUserFinishedOnboarding() {
-                        routerController.addKeyToViewStack(viewKey: "Home")
+                        routerController.clear()
                     } else {
                         routerController.addKeyToViewStack(viewKey: "OnboardingTela1")
                     }

@@ -34,6 +34,7 @@ class UserController: ObservableObject {
     func userDidFinishOnboarding() {
         user.onboarded = true
         saveData()
+        RouterController.shared.clear()
     }
     
     func hasUserFinishedOnboarding() -> Bool {
