@@ -18,8 +18,8 @@ class QuizController: ObservableObject {
     private init() {}
     
     @Published var quiz : Quiz = Quiz(total: 0, corrects: 0, errors: 0, answered: false, questions: [])
-    @Published var question: Question = DataQuestions().questions.randomElement()!
-    @Published var dataQuestions: [Question] = DataQuestions().questions
+    @Published var question: Question = SportsData().sport[0].sportQuestions.randomElement()!
+    @Published var dataQuestions: [Question] = SportsData().sport[0].sportQuestions
     let initialTime = 30
     
     @Published var timer = 0
@@ -59,8 +59,9 @@ class QuizController: ObservableObject {
         }
     }
     
-    func changeQuiz(quiz: Quiz) {
+    func changeQuiz(quiz: Quiz, sport: Sport) {
         self.quiz = quiz
+        self.dataQuestions = sport.sportQuestions
         self.generateFirstQuestion()
     }
     

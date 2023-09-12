@@ -17,6 +17,7 @@ final class SportsData{
             color: "Blue",
             link: "https://olympics.com/pt/esportes/vela/",
             value: 0,
+            sportQuestions: DataQuestions().sailingQuestions,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
                 Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
@@ -33,8 +34,9 @@ final class SportsData{
             imageName: "Natação",
             symbolName: "figure.pool.swim",
             color: "Orange",
-            link: "https://olympics.com/pt/esportes/vela/",
+            link: "https://olympics.com/pt/esportes/natacao/",
             value: 10,
+            sportQuestions: DataQuestions().swimmingQuestions,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
                 Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
@@ -53,6 +55,7 @@ final class SportsData{
             color: "Orange",
             link: "https://olympics.com/pt/esportes/vela/",
             value: 99999999,
+            sportQuestions: DataQuestions().sailingQuestions,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
                 Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),

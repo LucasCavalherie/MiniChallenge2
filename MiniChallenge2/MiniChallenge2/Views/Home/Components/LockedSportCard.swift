@@ -62,7 +62,7 @@ struct LockedSportCard: View {
 
 struct LockedSportCard_Previews: PreviewProvider {
     static var previews: some View {
-        let quiz = Quiz(questions: DataQuestions().questions)
+        let quiz = Quiz(questions: DataQuestions().swimmingQuestions)
         let championship = Championship(
             sport: SportsData().sport[1],
             quiz: quiz,
