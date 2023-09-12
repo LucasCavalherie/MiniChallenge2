@@ -10,6 +10,7 @@ import SwiftUI
 struct ResultsView: View {
     @StateObject var routerController = RouterController.shared
     @StateObject var olympicController = OlympicController.shared
+    @StateObject var championshipController = ChampionshipController.shared
     
     var body: some View {
         VStack {
@@ -29,7 +30,7 @@ struct ResultsView: View {
                                     .foregroundColor(Color("White"))
                             }
                             
-                            Text("\(championship.quiz.corrects) acertos")
+                            Text("\(championshipController.getBrasilInChampionshipResult(championship: championship)) acertos")
                                 .font(.caption)
                                 .foregroundColor(Color("White"))
                         }
@@ -39,20 +40,35 @@ struct ResultsView: View {
                         
                         switch championship.medalType {
                             case .gold:
-                                Image(systemName: "medal.fill")
+                                Image(systemName: "circle.fill")
                                     .font(.title)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color("Yellow"))
+                                    .foregroundColor(Color("White"))
+                                    .overlay(
+                                        Image(systemName: "medal")
+                                            .font(.title3)
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(Color("Yellow"))
+                                    )
                             case .silver:
-                                Image(systemName: "medal.fill")
+                                Image(systemName: "circle.fill")
                                     .font(.title)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color("DarkGray"))
+                                    .foregroundColor(Color("White"))
+                                    .overlay(
+                                        Image(systemName: "medal")
+                                            .font(.title3)
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(Color("DarkGray"))
+                                    )
                             case .bronze:
-                                Image(systemName: "medal.fill")
+                                Image(systemName: "circle.fill")
                                     .font(.title)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(Color("Bronze"))
+                                    .foregroundColor(Color("White"))
+                                    .overlay(
+                                        Image(systemName: "medal")
+                                            .font(.title3)
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(Color("Bronze"))
+                                    )
                             case .none:
                                 EmptyView()
                         }
@@ -68,11 +84,12 @@ struct ResultsView: View {
                     routerController.clear()
                     olympicController.createOlympic()
                 } label: {
-                    Text("Retornar as olimpíadas")
+                    Text("Nova olímpiada")
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(Color("White"))
-                        .padding()
+                        .padding(.vertical)
+                        .padding(.horizontal, 56)
                         .background(Color("Orange"))
                         .cornerRadius(20)
                 }

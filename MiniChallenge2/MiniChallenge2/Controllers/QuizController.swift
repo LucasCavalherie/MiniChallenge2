@@ -58,6 +58,7 @@ class QuizController: ObservableObject {
     
     func changeQuiz(quiz: Quiz) {
         self.quiz = quiz
+        self.generateFirstQuestion()
     }
     
     func generateFirstQuestion() {

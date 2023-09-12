@@ -23,6 +23,11 @@ class ChampionshipController: ObservableObject {
         return currentChampionship.championshipResults.sorted(by: {$0.value > $1.value})
     }
     
+    func getBrasilInChampionshipResult(championship : Championship) -> Int {
+        let championshipResult = championship.championshipResults.first(where: {$0.country.name == "Brasil"})
+        return championshipResult != nil ? championshipResult!.value : 0
+    }
+    
     func finishChampionship() {
         let score = QuizController.shared.quiz.corrects // mudar depois
         let playerChampionshipResult = ChampionshipResult(country: UserController.shared.userCountry, value: score)
