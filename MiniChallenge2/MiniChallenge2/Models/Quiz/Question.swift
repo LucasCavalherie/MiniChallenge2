@@ -14,8 +14,10 @@ struct Question: Identifiable, Equatable, Codable{
     
     var id = UUID()
     let text: String
+    let justification: String
     var imageName: String = ""
     let category: Category
     let answers: [Answer]
+    var answered: Answer?
 }
 

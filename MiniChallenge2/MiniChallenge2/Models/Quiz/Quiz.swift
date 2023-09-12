@@ -14,4 +14,5 @@ struct Quiz: Identifiable, Codable{
     var errors: Int = 0
     var answered: Bool = false
     var questions: [Question]
+    var questionsAnswered: [Question] = []
 }

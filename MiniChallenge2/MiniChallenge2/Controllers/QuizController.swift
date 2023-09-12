@@ -56,6 +56,9 @@ class QuizController: ObservableObject {
             else {
                 finishTime()
             }
+            
+            question.answered = answer
+            quiz.questionsAnswered.append(question)
         }
     }
     
