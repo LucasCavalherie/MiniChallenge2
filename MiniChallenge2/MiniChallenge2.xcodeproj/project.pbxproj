@@ -54,6 +54,8 @@
 		F09AD8972AA8FD72005EC4E6 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */; };
 		F09AD8992AA90991005EC4E6 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8982AA90991005EC4E6 /* ViewExtension.swift */; };
 		F0A336172AAFA3C000358484 /* OlympicsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A336162AAFA3C000358484 /* OlympicsHistoryView.swift */; };
+		F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */; };
+		F0E5E6192AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,8 @@
 		F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F09AD8982AA90991005EC4E6 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = MiniChallenge2/Views/Components/ViewExtension.swift; sourceTree = SOURCE_ROOT; };
 		F0A336162AAFA3C000358484 /* OlympicsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicsHistoryView.swift; sourceTree = "<group>"; };
+		F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardDivider.swift; sourceTree = "<group>"; };
+		F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardChampionship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				F07044172AB0E2DB00806BA7 /* OlympicHistoryCard.swift */,
+				F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */,
+				F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 			files = (
 				73132E752AA171B700FF3E03 /* HomeView.swift in Sources */,
 				73C011C22A9E5988008FCA67 /* ContentView.swift in Sources */,
+				F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */,
 				73C011DA2A9E706F008FCA67 /* Category.swift in Sources */,
 				73F692142AA2B1E200769BE9 /* RankView.swift in Sources */,
 				73C011D82A9E700C008FCA67 /* Question.swift in Sources */,
@@ -475,6 +482,7 @@
 				73356B282AA1113D00B1EA71 /* UserController.swift in Sources */,
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
 				F09AD8972AA8FD72005EC4E6 /* TabBarItem.swift in Sources */,
+				F0E5E6192AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift in Sources */,
 				73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */,
 				73F692162AA2BD5000769BE9 /* NavBarQuiz.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,

@@ -33,30 +33,10 @@ struct OlympicHistoryCard: View {
                 VStack(spacing: 8) {
                     ForEach(0...3, id: \.self) { i in
                         if (olympic.championships.count > i) {
-                            // Divisória
                             if (i > 0) {
-                                VStack{}
-                                    .frame(width: 84, height: 2)
-                                    .background(Color("Black"))
+                                OlympicHistoryCardDivider()
                             }
-                            // Esporte
-                            VStack (alignment: .center, spacing: 8) {
-                                Text(olympic.championships[i].sport.name)
-                                    .font(.system(size: 17, weight: .semibold))
-                                HStack(alignment: .center, spacing: 0) {
-                                    Image(systemName: "medal.fill")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 40, height: 24)
-                                    Text(getMedalName(olympic.championships[i]))
-                                        .font(.system(size: 13, weight: .regular))
-                                        .lineLimit(1)
-                                }
-                                .padding(.all, 0)
-                                .frame(height: 40)
-                            }
-                            .padding(.horizontal, 21)
-                            .padding(.vertical, 8)
+                            OlympicHistoryCardChampionship(championship: olympic.championships[i])
                         }
                     }
                     // Botão final
@@ -84,18 +64,5 @@ struct OlympicHistoryCard: View {
             RoundedRectangle(cornerRadius: 14)
                 .strokeBorder(Color("Green"), lineWidth: 4)
         )
-    }
-    
-    func getMedalName(_ championship : Championship) -> String {
-        switch(championship.getPlayerPositionInResults()) {
-        case 0:
-            return "Ouro"
-        case 1:
-            return "Prata"
-        case 2:
-            return "Bronze"
-        default:
-            return "Nenhuma"
-        }
     }
 }
