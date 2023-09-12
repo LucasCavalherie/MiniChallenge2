@@ -15,10 +15,11 @@ class RouterController : ObservableObject {
     }()
     
     @Published var viewStack : [String] = []
-    private let baseStack : [String] = ["Logo"]
+    private let baseStack : [String] = ["Home"]
+    private let startStack : [String] = ["Logo"]
     
     private init() {
-        clear()
+        start()
     }
     
     func addKeyToViewStack(viewKey: String) -> Void {
@@ -39,6 +40,11 @@ class RouterController : ObservableObject {
     
     func clear() -> Void {
         viewStack = baseStack
+        self.objectWillChange.send()
+    }
+    
+    func start() -> Void {
+        viewStack = startStack
         self.objectWillChange.send()
     }
 }
