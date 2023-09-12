@@ -23,4 +23,14 @@ class Championship: Identifiable, Codable{
         self.unlock = unlock
         self.championshipResults = championshipResults
     }
+    
+    func getPlayerPositionInResults() -> Int {
+        getPositionInResults(countryName: "Brasil")
+    }
+    func getPositionInResults(countryName : String) -> Int {
+        return championshipResults.firstIndex(where: {$0.country.name == countryName}) ?? -1
+    }
+    func getPositionInResults(country: Country) -> Int {
+        getPositionInResults(countryName: country.name)
+    }
 }
