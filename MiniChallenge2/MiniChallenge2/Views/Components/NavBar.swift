@@ -38,7 +38,9 @@ struct NavBar: View {
             .background(Color("Yellow"))
             .cornerRadius(50)
         }
-        .padding(32)
+        .padding(.horizontal, 32)
+        .padding(.top, 32)
+        .padding(.bottom)
         .background(Color("White"))
     }
 }

@@ -12,7 +12,7 @@ final class SportsData{
     var sport: [Sport] = [
         Sport(
             name: "Vela",
-            imageName: "Vela",
+            imageName: "sailingImage",
             symbolName: "sailboat.fill",
             color: "Blue",
             link: "https://olympics.com/pt/esportes/vela/",
@@ -31,11 +31,11 @@ final class SportsData{
         
         Sport(
             name: "Natação",
-            imageName: "Natação",
+            imageName: "swimmingImage",
             symbolName: "figure.pool.swim",
             color: "Orange",
             link: "https://olympics.com/pt/esportes/natacao/",
-            value: 10,
+            value: 50,
             sportQuestions: DataQuestions().swimmingQuestions,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
@@ -64,7 +64,8 @@ final class SportsData{
                 Country(name: "França", flagEmoji: "🇫🇷"),
                 Country(name: "Alemanha", flagEmoji: "🇩🇪"),
                 Country(name: "Argentina", flagEmoji: "🇦🇷")
-            ]
+            ],
+            soon: true
         )
     
     ]

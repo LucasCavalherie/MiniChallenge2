@@ -18,5 +18,6 @@ struct Sport: Identifiable, Codable {
     let value: Int
     let sportQuestions: [Question]
     let countryScoreOrder: [Country]
+    var soon: Bool = false
 }
 

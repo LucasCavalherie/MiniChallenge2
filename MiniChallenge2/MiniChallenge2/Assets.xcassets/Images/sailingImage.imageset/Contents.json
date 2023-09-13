@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "vela1.png",
+      "filename" : "sailingImage 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "vela1 1.png",
+      "filename" : "sailingImage.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "vela1 2.png",
+      "filename" : "sailingImage 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

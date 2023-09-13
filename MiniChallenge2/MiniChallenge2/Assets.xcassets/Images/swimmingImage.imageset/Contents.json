@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "PrêmioPrata.png",
+      "filename" : "swimmingImage.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "PrêmioPrata 1.png",
+      "filename" : "swimmingImage 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "PrêmioPrata 2.png",
+      "filename" : "swimmingImage 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

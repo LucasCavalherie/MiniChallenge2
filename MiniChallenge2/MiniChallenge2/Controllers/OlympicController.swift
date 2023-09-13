@@ -18,11 +18,11 @@ class OlympicController: ObservableObject {
     func upMedalScore(position: Int) {
         switch position {
             case 0:
-                olympic.medalScore += 500
+                olympic.medalScore += 50
             case 1:
-                olympic.medalScore += 300
+                olympic.medalScore += 30
             case 2:
-                olympic.medalScore += 100
+                olympic.medalScore += 10
             default:
                 olympic.medalScore += 0
         }
@@ -84,6 +84,10 @@ class OlympicController: ObservableObject {
         }
         
         return dones
+    }
+    
+    func commingSoon(championship: Championship) -> Bool {
+        return championship.sport.soon
     }
     
     func canUnlockSport(championship: Championship) -> Bool {

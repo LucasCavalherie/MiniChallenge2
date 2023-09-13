@@ -14,9 +14,13 @@ struct LockedSportCard: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(Color("Gray"))
+                .fill(Color("DarkGray"))
+                .opacity(0.8)
             
-            Image("lockSport")
+            Image(championship.sport.imageName)
+                .resizable(resizingMode: .tile)
+                .ignoresSafeArea()
+                .opacity(0.6)
             
             VStack {
                 HStack (alignment: .top) {
@@ -26,7 +30,7 @@ struct LockedSportCard: View {
                             .font(.headline)
                             .fontWeight(.bold)
                     }
-                    .foregroundColor(Color("Black"))
+                    .foregroundColor(Color("White"))
                     .padding(.horizontal, 4)
                     .padding(.vertical, 4)
                     .cornerRadius(20)
@@ -40,17 +44,18 @@ struct LockedSportCard: View {
                     olympicController.unlockSport(championship: championship)
                 } label: {
                     HStack {
-                        Image(systemName: "medal.fill")
+                        Image(systemName: olympicController.canUnlockSport(championship: championship) ? "medal.fill" : "lock.fill")
                         Text("\(championship.sport.value) pontos")
                     }
                     .font(.body)
-                    .foregroundColor(Color("Black"))
+                    .foregroundColor(olympicController.canUnlockSport(championship: championship) ? Color("Black") : Color("White"))
                     .fontWeight(.semibold)
                     .padding(.vertical, 12)
                     .padding(.horizontal, 36)
-                    .background(Color("White"))
+                    .background(olympicController.canUnlockSport(championship: championship) ? Color("White") : Color("DarkGray"))
                     .cornerRadius(10)
                 }
+                .disabled(!olympicController.canUnlockSport(championship: championship))
             }
             .padding()
         }
