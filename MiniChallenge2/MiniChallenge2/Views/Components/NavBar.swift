@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NavBar: View {
     @ObservedObject var userController = UserController.shared
+    @ObservedObject var layoutController = LayoutController.shared
     
     var body: some View {
         HStack {
@@ -41,6 +42,8 @@ struct NavBar: View {
         .padding(.horizontal, 32)
         .padding(.top, 32)
         .padding(.bottom)
+        .frame(height: layoutController.navBarSize)
+        .frame(maxWidth: .infinity, maxHeight: layoutController.navBarSize)
         .background(Color("White"))
     }
 }

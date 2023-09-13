@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var routerController = RouterController.shared
+    @ObservedObject var routerController = RouterController.shared
     
     var body: some View {
         NavigationStack(path: $routerController.viewStack) {
@@ -20,9 +20,7 @@ struct ContentView: View {
                 })
             }
             .navigationDestination(for: String.self) { viewKey in
-                // Usar funções do routerController para mudar telas
                 switch viewKey {
-                    
                 case "Logo":
                     LogoView()
                         .navigationBarBackButtonHidden(true)
@@ -39,8 +37,17 @@ struct ContentView: View {
                     Onboarding4()
                         .navigationBarBackButtonHidden(true)
                 case "Home":
-                    HomeView()
-                        .navigationBarBackButtonHidden(true)
+                    VStack (spacing: 0) {
+                        NavBar()
+                        Spacer().frame(minHeight: 0)
+                        HomeView()
+                        Spacer().frame(minHeight: 0)
+                        TabBar()
+                    }
+                    .background(Color("Gray"))
+                    .padding(.all, 0)
+                    .navigationBarBackButtonHidden(true)
+                    .ignoresSafeArea()
                 case "Quiz":
                     QuizView()
                         .navigationBarBackButtonHidden(true)
@@ -55,17 +62,30 @@ struct ContentView: View {
                     ResultsView()
                         .navigationBarBackButtonHidden(true)
                 case "OlympicsHistory":
-                    Text("A ser implementado")
-                    Button(action: {routerController.clear()}, label: {
-                        Text("Resetar viewStack")
-                    })
-//                        .navigationBarBackButtonHidden(true)
+                    VStack (spacing: 0) {
+                        NavBar()
+                        Spacer().frame(minHeight: 0)
+                        OlympicsHistoryView()
+                        Spacer().frame(minHeight: 0)
+                        TabBar()
+                    }
+                    .padding(.all, 0)
+                    .navigationBarBackButtonHidden(true)
+                    .ignoresSafeArea()
                 case "Achievements":
-                    Text("A ser implementado")
-                    Button(action: {routerController.clear()}, label: {
-                        Text("Resetar viewStack")
-                    })
+                    VStack (spacing: 0) {
+                        NavBar()
+                        Spacer().frame(minHeight: 0)
+                        Text("A ser implementado")
+                        Button(action: {routerController.clear()}, label: {
+                            Text("Resetar viewStack")
+                        })
+                        Spacer().frame(minHeight: 0)
+                        TabBar()
+                    }
+                    .padding(.all, 0)
 //                        .navigationBarBackButtonHidden(true)
+                    .ignoresSafeArea()
                 // Adicionar outros cases para outras telas
                 default:
                     // Fazer tela de erro para quando a tela solicitada

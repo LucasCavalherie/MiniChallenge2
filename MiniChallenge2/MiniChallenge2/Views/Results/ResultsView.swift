@@ -38,9 +38,8 @@ struct ResultsView: View {
                             .padding(.leading, 8)
                             
                             Spacer()
-                            
-                            switch championship.medalType {
-                            case .gold:
+                                
+                            if championship.medalType != .none {
                                 Image(systemName: "circle.fill")
                                     .font(.title)
                                     .foregroundColor(Color("White"))
@@ -48,54 +47,50 @@ struct ResultsView: View {
                                         Image(systemName: "medal")
                                             .font(.title3)
                                             .fontWeight(.semibold)
-                                            .foregroundColor(Color("Yellow"))
+                                            .foregroundColor(championship.medalColor())
                                     )
-                            case .silver:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("DarkGray"))
-                                    )
-                            case .bronze:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("Bronze"))
-                                    )
-                            case .none:
+                            }
+                            else {
                                 EmptyView()
                             }
                         }
                         .listRowBackground(Color("Green"))
                         .padding(.vertical, 4)
-                    }
+
+                        if (routerController.resultSettings.showNextButton) {
+                             Button {
+                                routerController.clear()
+                                olympicController.createOlympic()
+                            } label: {
+                                Text("Nova olímpiada")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("White"))
+                                    .padding(.vertical)
+                                    .padding(.horizontal, 56)
+                                    .background(Color("Orange"))
+                                    .cornerRadius(20)
+                            }
+                        } else {
+                            Button {
+                                routerController.goBack()
+                            } label: {
+                                Text("Voltar")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("Orange"))
+                                    .padding(.vertical)
+                                    .padding(.horizontal, 56)
+                                    .background(Color("White"))
+                                    .cornerRadius(20)
+                            }
+                        }
+                   }
                 }
                 .scrollContentBackground(.hidden)
                 .padding(.horizontal)
             } else {
                 Spacer()
-            }
-            
-            Button {
-                routerController.clear()
-                olympicController.createOlympic()
-            } label: {
-                Text("Nova olímpiada")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("White"))
-                    .padding(.vertical)
-                    .padding(.horizontal, 56)
-                    .background(Color("Orange"))
-                    .cornerRadius(20)
             }
         }
         .background(Color("Gray"))

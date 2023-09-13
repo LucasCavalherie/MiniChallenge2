@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabBar: View {
     @ObservedObject var userController = UserController.shared
+    @ObservedObject var layoutController = LayoutController.shared
     
     var body: some View {
         HStack {
@@ -19,7 +20,7 @@ struct TabBar: View {
             TabBarItem(viewKey: "Achievements", iconName: "medal", text: "Conquistas")
         }
         .padding(.all, 0)
-        .frame(height: 84, alignment: .top)
+        .frame(height: layoutController.tabBarSize, alignment: .top)
         .frame(maxWidth: .infinity, alignment: .top)
         .padding(.horizontal, 27)
         .padding(.vertical, 0)
