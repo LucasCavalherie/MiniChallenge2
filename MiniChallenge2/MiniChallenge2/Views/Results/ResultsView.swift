@@ -38,39 +38,19 @@ struct ResultsView: View {
                         
                         Spacer()
                         
-                        switch championship.medalType {
-                            case .gold:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("Yellow"))
-                                    )
-                            case .silver:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("DarkGray"))
-                                    )
-                            case .bronze:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("Bronze"))
-                                    )
-                            case .none:
-                                EmptyView()
+                        if championship.medalType != .none {
+                            Image(systemName: "circle.fill")
+                                .font(.title)
+                                .foregroundColor(Color("White"))
+                                .overlay(
+                                    Image(systemName: "medal")
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(championship.medalColor())
+                                )
+                        }
+                        else {
+                            EmptyView()
                         }
                     }
                     .listRowBackground(Color("Green"))
