@@ -16,6 +16,7 @@ struct NavBarQuiz: View {
         HStack (alignment: .center) {
             HStack {
                 Button {
+                    SoundController.shared.play(sound: .clickFast)
                     routerController.clear()
                 } label: {
                     Image(systemName: "xmark")

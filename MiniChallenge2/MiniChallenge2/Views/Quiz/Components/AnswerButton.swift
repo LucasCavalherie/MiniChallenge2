@@ -21,6 +21,7 @@ struct AnswerButton: View {
                 onClickInstant()
                 clicked = true
             }
+            SoundController.shared.play(sound: .drop)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
                 onClickDelayed()
             }

@@ -71,20 +71,22 @@ struct RankView: View {
                     .padding(.vertical, 4)
                 }
             }
+            .padding(.horizontal,8)
             .scrollContentBackground(.hidden)
-            .padding(.horizontal)
             
                 Button {
+                    SoundController.shared.play(sound: .clickFast)
                     routerController.addKeyToViewStack(viewKey: "Home")
                 } label: {
                     Text("Retornar as olimpíadas")
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(Color("White"))
-                        .padding()
-                        .background(Color("Orange"))
-                        .cornerRadius(20)
-                }
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                }.background(Color("Orange"))
+                .cornerRadius(10)
+                .padding(.horizontal,28)
         }
         .background(Color("Blue"))
     }

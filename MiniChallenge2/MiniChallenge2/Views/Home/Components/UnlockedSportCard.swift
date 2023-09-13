@@ -46,6 +46,7 @@ struct UnlockedSportCard: View {
                 
                 if championship.done {
                     Button {
+                        SoundController.shared.play(sound: .clickFast)
                         routerController.addKeyToViewStack(viewKey: "Rank")
                     } label: {
                         Text("Resultados")
@@ -60,6 +61,7 @@ struct UnlockedSportCard: View {
                   
                 } else {
                     Button {
+                        SoundController.shared.play(sound: .clickFast)
                         championshipController.currentChampionship = championship
                         routerController.addKeyToViewStack(viewKey: "Goal")
                     } label: {

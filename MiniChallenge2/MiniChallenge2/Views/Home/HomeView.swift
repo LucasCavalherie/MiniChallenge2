@@ -48,6 +48,7 @@ struct HomeView: View {
                         .frame(height: 20)
                     
                     Button {
+                        SoundController.shared.play(sound: .clickFast)
                         olympicController.finishOlympic()
                         routerController.addKeyToViewStack(viewKey: "Results")
                     } label: {

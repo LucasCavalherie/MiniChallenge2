@@ -77,10 +77,11 @@ struct ResultsView: View {
                     .padding(.vertical, 4)
                 }
             }
+            .padding(.horizontal,8)
             .scrollContentBackground(.hidden)
-            .padding(.horizontal)
             
                 Button {
+                    SoundController.shared.play(sound: .beep)
                     routerController.clear()
                     olympicController.createOlympic()
                 } label: {
@@ -88,11 +89,13 @@ struct ResultsView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(Color("White"))
-                        .padding(.vertical)
-                        .padding(.horizontal, 56)
-                        .background(Color("Orange"))
-                        .cornerRadius(20)
+                        .padding(.vertical,16)
+                        .frame(maxWidth: .infinity)
                 }
+                .background(Color("Orange"))
+                .cornerRadius(10)
+                .padding(.horizontal, 28)
+            
         }
         .background(Color("Gray"))
     }
