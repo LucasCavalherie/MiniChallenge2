@@ -67,6 +67,7 @@ struct ResultsView: View {
             
             if (routerController.resultSettings.showNextButton) {
                  Button {
+                    SoundController.shared.play(sound: .beep)
                     routerController.clear()
                     olympicController.createOlympic()
                 } label: {
@@ -74,13 +75,16 @@ struct ResultsView: View {
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(Color("White"))
-                        .padding(.vertical)
-                        .padding(.horizontal, 56)
-                        .background(Color("Orange"))
-                        .cornerRadius(20)
+                        .padding(.vertical,16)
+                        .frame(maxWidth: .infinity)
                 }
+                .background(Color("Orange"))
+                .cornerRadius(10)
+                .padding(.horizontal, 28)
+            
             } else {
                 Button {
+                    SoundController.shared.play(sound: .beep)
                     routerController.goBack()
                 } label: {
                     Text("Voltar")

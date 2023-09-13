@@ -23,8 +23,10 @@ struct LogoView: View {
                 
                 Button {
                     if UserController.shared.hasUserFinishedOnboarding() {
+                        SoundController.shared.play(sound: .logo)
                         routerController.clear()
                     } else {
+                        SoundController.shared.play(sound: .logo)
                         routerController.addKeyToViewStack(viewKey: "OnboardingTela1")
                     }
                 } label: {

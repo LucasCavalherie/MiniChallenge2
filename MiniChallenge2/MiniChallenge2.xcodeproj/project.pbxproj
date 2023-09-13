@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		092E986B2AA9018300600349 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E986A2AA9018300600349 /* GoalView.swift */; };
+		4124829D2AB2410300ADC4F0 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124829C2AB2410300ADC4F0 /* SoundController.swift */; };
 		418D8A972AAD4E1900895108 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A962AAD4E1900895108 /* Onboarding2.swift */; };
 		418D8A992AAD513C00895108 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A982AAD513C00895108 /* Onboarding3.swift */; };
 		418D8A9B2AAD53C100895108 /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A9A2AAD53C100895108 /* Onboarding4.swift */; };
@@ -24,6 +25,11 @@
 		73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B292AA1115700B1EA71 /* OlympicController.swift */; };
 		73356B2C2AA113BC00B1EA71 /* AchievementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */; };
 		73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B2D2AA113CE00B1EA71 /* SportsData.swift */; };
+		7349269D2AB2805200339805 /* clickFast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 734926982AB2805100339805 /* clickFast.mp3 */; };
+		7349269E2AB2805200339805 /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 734926992AB2805100339805 /* drop.mp3 */; };
+		7349269F2AB2805200339805 /* cardClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7349269A2AB2805100339805 /* cardClick.mp3 */; };
+		734926A02AB2805200339805 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7349269B2AB2805100339805 /* beep.mp3 */; };
+		734926A12AB2805200339805 /* logo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7349269C2AB2805200339805 /* logo.mp3 */; };
 		737F4A822AAFEA6C00A878A4 /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F4A812AAFEA6C00A878A4 /* QuizResult.swift */; };
 		737F4A852AAFEF5700A878A4 /* ExpandableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F4A842AAFEF5700A878A4 /* ExpandableAnswer.swift */; };
 		73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */; };
@@ -63,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		092E986A2AA9018300600349 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		4124829C2AB2410300ADC4F0 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		418D8A962AAD4E1900895108 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		418D8A982AAD513C00895108 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		418D8A9A2AAD53C100895108 /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
@@ -79,6 +86,11 @@
 		73356B292AA1115700B1EA71 /* OlympicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicController.swift; sourceTree = "<group>"; };
 		73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsData.swift; sourceTree = "<group>"; };
 		73356B2D2AA113CE00B1EA71 /* SportsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsData.swift; sourceTree = "<group>"; };
+		734926982AB2805100339805 /* clickFast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clickFast.mp3; path = Songs/clickFast.mp3; sourceTree = "<group>"; };
+		734926992AB2805100339805 /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = drop.mp3; path = Songs/drop.mp3; sourceTree = "<group>"; };
+		7349269A2AB2805100339805 /* cardClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cardClick.mp3; path = Songs/cardClick.mp3; sourceTree = "<group>"; };
+		7349269B2AB2805100339805 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = Songs/beep.mp3; sourceTree = "<group>"; };
+		7349269C2AB2805200339805 /* logo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = logo.mp3; path = Songs/logo.mp3; sourceTree = "<group>"; };
 		737F4A812AAFEA6C00A878A4 /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		737F4A842AAFEF5700A878A4 /* ExpandableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableAnswer.swift; sourceTree = "<group>"; };
 		73C011BC2A9E5988008FCA67 /* Olympia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olympia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +296,7 @@
 				73356B272AA1113D00B1EA71 /* UserController.swift */,
 				73356B292AA1115700B1EA71 /* OlympicController.swift */,
 				73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */,
+				4124829C2AB2410300ADC4F0 /* SoundController.swift */,
 				F07044142AB0DB9600806BA7 /* LayoutController.swift */,
 			);
 			path = Controllers;
@@ -300,6 +313,11 @@
 		73C011D12A9E6049008FCA67 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7349269B2AB2805100339805 /* beep.mp3 */,
+				7349269A2AB2805100339805 /* cardClick.mp3 */,
+				734926982AB2805100339805 /* clickFast.mp3 */,
+				734926992AB2805100339805 /* drop.mp3 */,
+				7349269C2AB2805200339805 /* logo.mp3 */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -493,8 +511,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734926A12AB2805200339805 /* logo.mp3 in Resources */,
 				73C011C72A9E5988008FCA67 /* Preview Assets.xcassets in Resources */,
+				7349269D2AB2805200339805 /* clickFast.mp3 in Resources */,
+				734926A02AB2805200339805 /* beep.mp3 in Resources */,
 				73C011C42A9E5988008FCA67 /* Assets.xcassets in Resources */,
+				7349269E2AB2805200339805 /* drop.mp3 in Resources */,
+				7349269F2AB2805200339805 /* cardClick.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73132E752AA171B700FF3E03 /* HomeView.swift in Sources */,
+				4124829D2AB2410300ADC4F0 /* SoundController.swift in Sources */,
 				73C011C22A9E5988008FCA67 /* ContentView.swift in Sources */,
 				F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */,
 				73C011DA2A9E706F008FCA67 /* Category.swift in Sources */,

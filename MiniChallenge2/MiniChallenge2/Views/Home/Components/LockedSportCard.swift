@@ -41,6 +41,7 @@ struct LockedSportCard: View {
                 Spacer()
                 
                 Button {
+                    SoundController.shared.play(sound: .cardClick)
                     olympicController.unlockSport(championship: championship)
                 } label: {
                     HStack {

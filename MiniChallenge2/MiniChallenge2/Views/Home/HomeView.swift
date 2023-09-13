@@ -46,6 +46,7 @@ struct HomeView: View {
                     
                     if olympicController.hasChampionshipDoned() {
                         Button {
+                            SoundController.shared.play(sound: .clickFast)
                             olympicController.finishOlympic()
                             routerController.resultSettings = ResultSettings(olympic: olympicController.olympic)
                             routerController.addKeyToViewStack(viewKey: "Results")

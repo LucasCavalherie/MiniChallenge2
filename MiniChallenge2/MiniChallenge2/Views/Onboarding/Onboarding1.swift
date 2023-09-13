@@ -14,6 +14,7 @@ struct Onboarding1: View {
         VStack {
             HStack {
                 Button {
+                    SoundController.shared.play(sound: .clickFast)
                     routerController.addKeyToViewStack(viewKey: "Logo")
                 } label: {
                     Image(systemName: "chevron.left")
@@ -29,6 +30,7 @@ struct Onboarding1: View {
                 Spacer()
                 
                 Button {
+                    SoundController.shared.play(sound: .clickFast)
                     UserController.shared.userDidFinishOnboarding()
                     routerController.addKeyToViewStack(viewKey: "Home")
                 } label: {
@@ -60,6 +62,7 @@ struct Onboarding1: View {
                     .padding(.bottom,24)
                 
                 Button {
+                    SoundController.shared.play(sound: .clickFast)
                     routerController.addKeyToViewStack(viewKey: "OnboardingTela2")
                 } label: {
                     Text("Próximo")
