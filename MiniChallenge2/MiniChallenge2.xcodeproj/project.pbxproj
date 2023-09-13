@@ -60,6 +60,7 @@
 		F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */; };
 		F0E5E6192AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */; };
 		F0E5E61B2AB245E600A7A030 /* AchievementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E61A2AB245E600A7A030 /* AchievementsController.swift */; };
+		F0E5E61D2AB2541C00A7A030 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E61C2AB2541C00A7A030 /* Prize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardDivider.swift; sourceTree = "<group>"; };
 		F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardChampionship.swift; sourceTree = "<group>"; };
 		F0E5E61A2AB245E600A7A030 /* AchievementsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsController.swift; sourceTree = "<group>"; };
+		F0E5E61C2AB2541C00A7A030 /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				73356B252AA1065F00B1EA71 /* Achievement.swift */,
+				F0E5E61C2AB2541C00A7A030 /* Prize.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				092E986B2AA9018300600349 /* GoalView.swift in Sources */,
 				418D8A9B2AAD53C100895108 /* Onboarding4.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
+				F0E5E61D2AB2541C00A7A030 /* Prize.swift in Sources */,
 				73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */,
 				F07044152AB0DB9600806BA7 /* LayoutController.swift in Sources */,
 				73CBECB72AA0122D00756EF0 /* Olympic.swift in Sources */,

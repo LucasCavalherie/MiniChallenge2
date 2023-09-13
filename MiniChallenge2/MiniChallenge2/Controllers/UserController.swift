@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class UserController: ObservableObject {
     static var shared: UserController = {
@@ -13,7 +14,7 @@ class UserController: ObservableObject {
         return instance
     }()
     
-    @ObservedObject var achievementsController = AchievementsController.shared
+    var achievementsController = AchievementsController.shared
     
     private init() {
         if let userSaved = UserDefaults().object(forKey: "userSaved") as? Data,  let userSaved = try? JSONDecoder().decode(User.self, from: userSaved) {
@@ -31,6 +32,7 @@ class UserController: ObservableObject {
     @Published var userCountry : Country = Country(name: "Brasil", flagEmoji: "🇧🇷")
     
     func saveData() {
+        achievementsController.checkAchievements()
         if let encoded = try? JSONEncoder().encode(user) {
             UserDefaults().set(encoded, forKey: "userSaved")
         }

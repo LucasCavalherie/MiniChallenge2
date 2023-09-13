@@ -8,14 +8,18 @@
 import Foundation
 
 class Achievement: Identifiable{
-    var id: Int
-    var name: String
+    let id: Int
+    let name: String
+    let description: String
+    let sfSymbol: String
     let unlockCondition: () -> Bool
     var unlocked: Bool = false
     
-    init(id: Int, name: String, unlockCondition: @escaping () -> Bool) {
+    init(id: Int, name: String, description: String, sfSymbol: String, unlockCondition: @escaping () -> Bool) {
         self.id = id
         self.name = name
+        self.description = description
+        self.sfSymbol = sfSymbol
         self.unlockCondition = unlockCondition
     }
 }

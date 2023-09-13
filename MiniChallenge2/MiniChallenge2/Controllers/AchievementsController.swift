@@ -16,6 +16,15 @@ class AchievementsController : ObservableObject {
     
     @Published var achievements : [Achievement] = AchievementsData().achievements
     
+    func checkAchievements() -> Void {
+        for achievement in achievements {
+            if (!achievement.unlocked && achievement.unlockCondition()) {
+                achievement.unlocked = true
+                UserController.shared.addAchievement(achievement: achievement)
+            }
+        }
+    }
+    
     func setUnlockedAchievements (ids: [Int]) -> Void {
         for achievement in achievements {
             if ids.contains(achievement.id) {
