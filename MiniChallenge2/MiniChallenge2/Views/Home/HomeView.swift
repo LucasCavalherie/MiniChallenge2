@@ -88,7 +88,8 @@ struct HomeView: View {
                             }
                         }
                     }
-            }
+                }
+                .padding(.horizontal, 8)
         }
         .frame(maxWidth: .infinity, maxHeight: layoutController.contentSize())
         .background(Color("Gray"))

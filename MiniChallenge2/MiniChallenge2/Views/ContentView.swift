@@ -37,12 +37,14 @@ struct ContentView: View {
                     Onboarding4()
                         .navigationBarBackButtonHidden(true)
                 case "Home":
-                    VStack (spacing: 0) {
-                        NavBar()
-                        Spacer().frame(minHeight: 0)
+                    ZStack {
                         HomeView()
-                        Spacer().frame(minHeight: 0)
-                        TabBar()
+                        VStack {
+                            NavBar()
+                            Spacer()
+                            TabBar()
+                        }
+                        
                     }
                     .background(Color("Gray"))
                     .padding(.all, 0)
@@ -62,13 +64,15 @@ struct ContentView: View {
                     ResultsView()
                         .navigationBarBackButtonHidden(true)
                 case "OlympicsHistory":
-                    VStack (spacing: 0) {
-                        NavBar()
-                        Spacer().frame(minHeight: 0)
+                    ZStack {
                         OlympicsHistoryView()
-                        Spacer().frame(minHeight: 0)
-                        TabBar()
+                        VStack {
+                            NavBar()
+                            Spacer()
+                            TabBar()
+                        }
                     }
+                    .background(Color("Gray"))
                     .padding(.all, 0)
                     .navigationBarBackButtonHidden(true)
                     .ignoresSafeArea()

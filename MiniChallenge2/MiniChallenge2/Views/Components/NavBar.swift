@@ -13,11 +13,14 @@ struct NavBar: View {
     
     var body: some View {
         HStack {
-            VStack (alignment: .leading) {
+            HStack {
                 Text("Brasil")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.vertical, 2)
+                    .foregroundColor(Color("Black"))
+                
+                Text(" - ")
+                    .font(.headline)
                     .foregroundColor(Color("Black"))
                 
                 Text("Nível " + String(userController.user.level))
@@ -40,7 +43,7 @@ struct NavBar: View {
             .cornerRadius(50)
         }
         .padding(.horizontal, 32)
-        .padding(.top, 32)
+        .padding(.top, 64)
         .padding(.bottom)
         .frame(height: layoutController.navBarSize)
         .frame(maxWidth: .infinity, maxHeight: layoutController.navBarSize)
