@@ -45,6 +45,7 @@ struct HomeView: View {
                 
                 Button {
                     olympicController.finishOlympic()
+                    routerController.resultSettings = ResultSettings(olympic: olympicController.olympic)
                     routerController.addKeyToViewStack(viewKey: "Results")
                 } label: {
                     HStack {

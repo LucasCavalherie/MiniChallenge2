@@ -9,12 +9,14 @@ import Foundation
 import SwiftUI
 
 struct OlympicHistoryCard: View {
+    @ObservedObject var routerController = RouterController.shared
+    
     var olympic : Olympic
     
     var body: some View {
         Button(action: {
-            // Ir para a tela de resultados
-            print("Indo para a tela de resultados da Olimpíada "+olympic.name)
+            routerController.resultSettings = ResultSettings(olympic: olympic, showNextButton: false)
+            routerController.addKeyToViewStack(viewKey: "Results")
         }) {
             VStack(spacing: 0){
                 VStack(spacing: 12) {
