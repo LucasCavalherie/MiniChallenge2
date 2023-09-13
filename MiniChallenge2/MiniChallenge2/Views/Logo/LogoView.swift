@@ -28,8 +28,8 @@ struct LogoView: View {
                         routerController.addKeyToViewStack(viewKey: "OnboardingTela1")
                     }
                 } label: {
-                    Text("Próximo")
-                        .font(.body)
+                    Text("Iniciar")
+                        .font(.title3)
                         .fontWeight(.regular)
                         .foregroundColor(Color("Black"))
                         .padding(.vertical,16)
@@ -38,6 +38,7 @@ struct LogoView: View {
                 .background(Color("White"))
                 .cornerRadius(10)
                 .padding(.horizontal,28)
+                .padding(.bottom)
             }
         }
     }

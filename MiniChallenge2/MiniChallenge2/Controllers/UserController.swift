@@ -15,12 +15,10 @@ class UserController: ObservableObject {
     
     private init() {
         if let userSaved = UserDefaults().object(forKey: "userSaved") as? Data,  let userSaved = try? JSONDecoder().decode(User.self, from: userSaved) {
-            let sport = SportsData().sport[0]
-            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
-//            self.user = userSaved
+            self.user = userSaved
         } else {
             let sport = SportsData().sport[0]
-            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 20, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
+            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
         }
     }
     
@@ -68,7 +66,15 @@ class UserController: ObservableObject {
         saveData()
     }
     
-    func addPastOlympic(olympic: Olympic) {
+    func addPastOlympic(olympic: inout Olympic) {
+        var championshioDoned : [Championship] = []
+        for championship in olympic.championships {
+            if championship.done {
+                championshioDoned.append(championship)
+            }
+        }
+        olympic.championships = championshioDoned
+        
         user.pastOlympics.append(olympic)
         saveData()
     }
@@ -85,7 +91,7 @@ class UserController: ObservableObject {
     
     func finishCurrentOlympic() {
         if user.currentOlympic != nil {
-            self.addPastOlympic(olympic: user.currentOlympic!)
+            self.addPastOlympic(olympic: &user.currentOlympic!)
         }
         user.currentOlympic = nil
         saveData()

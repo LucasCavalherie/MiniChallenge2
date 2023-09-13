@@ -14,8 +14,8 @@ class LayoutController : ObservableObject {
         return instance
     }()
     
-    @Published var tabBarSize : CGFloat = 84.0
-    @Published var navBarSize : CGFloat = 158.0
+    @Published var tabBarSize : CGFloat = 104.0
+    @Published var navBarSize : CGFloat = 128.0
     
     func contentSize() -> CGFloat {
         return UIScreen.main.bounds.height - tabBarSize - navBarSize
