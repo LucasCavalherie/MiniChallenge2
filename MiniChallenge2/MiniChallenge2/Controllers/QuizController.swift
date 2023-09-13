@@ -9,20 +9,17 @@ import Foundation
 import SwiftUI
 
 class QuizController: ObservableObject {
-    var championshipController = ChampionshipController.shared
     
     static var shared: QuizController = {
         let instance = QuizController()
         return instance
     }()
     
-    private init() {
-//        self.generateFirstQuestion()
-    }
+    private init() {}
     
     @Published var quiz : Quiz = Quiz(total: 0, corrects: 0, errors: 0, answered: false, questions: [])
-    @Published var question: Question = DataQuestions().questions.randomElement()!
-    @Published var dataQuestions: [Question] = DataQuestions().questions
+    @Published var question: Question = SportsData().sport[0].sportQuestions.randomElement()!
+    @Published var dataQuestions: [Question] = SportsData().sport[0].sportQuestions
     let initialTime = 30
     
     @Published var timer = 0
@@ -56,11 +53,16 @@ class QuizController: ObservableObject {
             else {
                 finishTime()
             }
+            
+            question.answered = answer
+            quiz.questionsAnswered.append(question)
         }
     }
     
-    func changeQuiz(quiz: Quiz) {
+    func changeQuiz(quiz: Quiz, sport: Sport) {
         self.quiz = quiz
+        self.dataQuestions = sport.sportQuestions
+        self.generateFirstQuestion()
     }
     
     func generateFirstQuestion() {
@@ -74,7 +76,7 @@ class QuizController: ObservableObject {
     }
     
     func finishTime() {
-        championshipController.finishChampionship()
+        ChampionshipController.shared.finishChampionship()
         timeFinished = true
     }
     

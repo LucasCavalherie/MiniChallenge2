@@ -14,7 +14,7 @@ struct QuizView: View {
     var body: some View{
         VStack{
             if quizController.timeFinished{
-                RankView()
+                QuizResult()
             } else {
                 VStack {
                     NavBarQuiz()

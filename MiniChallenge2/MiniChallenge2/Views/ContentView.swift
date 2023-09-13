@@ -53,6 +53,9 @@ struct ContentView: View {
                 case "Rank":
                     RankView()
                         .navigationBarBackButtonHidden(true)
+                case "Goal":
+                    GoalView()
+                        .navigationBarBackButtonHidden(true)
                 case "Results":
                     // Mostrar view de Resultados
                     ResultsView()

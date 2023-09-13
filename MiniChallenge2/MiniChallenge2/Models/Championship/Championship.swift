@@ -8,13 +8,21 @@
 import Foundation
 
 // Struct que representa competições/eventos das olimpiadas
+enum MedalType: String, Codable {
+    case none = "Nenhuma"
+    case bronze = "Bronze"
+    case silver = "Prata"
+    case gold = "Ouro"
+}
+
 class Championship: Identifiable, Codable{
     var id = UUID()
     let sport: Sport
-    let quiz: Quiz
+    var quiz: Quiz
     var done: Bool
     var unlock: Bool
     var championshipResults: [ChampionshipResult]
+    var medalType: MedalType = .none
     
     init(sport: Sport, quiz: Quiz, done: Bool, unlock: Bool, championshipResults: [ChampionshipResult]) {
         self.sport = sport

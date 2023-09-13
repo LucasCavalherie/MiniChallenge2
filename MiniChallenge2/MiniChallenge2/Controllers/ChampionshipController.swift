@@ -23,6 +23,11 @@ class ChampionshipController: ObservableObject {
         return currentChampionship.championshipResults.sorted(by: {$0.value > $1.value})
     }
     
+    func getBrasilInChampionshipResult(championship : Championship) -> Int {
+        let championshipResult = championship.championshipResults.first(where: {$0.country.name == "Brasil"})
+        return championshipResult != nil ? championshipResult!.value : 0
+    }
+    
     func finishChampionship() {
         let score = QuizController.shared.quiz.corrects // mudar depois
         let playerChampionshipResult = ChampionshipResult(country: UserController.shared.userCountry, value: score)
@@ -30,6 +35,18 @@ class ChampionshipController: ObservableObject {
         currentChampionship.championshipResults.sort(by: {$0.value > $1.value})
         
         let position = currentChampionship.championshipResults.firstIndex(where: {$0.id == playerChampionshipResult.id})
+        
+        switch position {
+            case 0:
+                currentChampionship.medalType = .gold
+            case 1:
+                currentChampionship.medalType = .silver
+            case 2:
+                currentChampionship.medalType = .bronze
+            default:
+                currentChampionship.medalType = .none
+        }
+        
         OlympicController.shared.upMedalScore(position: position ?? 3)
         
         currentChampionship.done = true

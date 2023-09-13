@@ -50,7 +50,7 @@ class OlympicController: ObservableObject {
     func createChampionships(sportList: [Sport]) {
         for sport in sportList {
             let unlock = UserController.shared.checkUnlockSport(sport: sport)
-            let quiz = Quiz(questions: DataQuestions().questions)
+            let quiz = Quiz(questions: sport.sportQuestions)
             let championship = Championship(sport: sport, quiz: quiz, done: false, unlock: unlock, championshipResults: createChampionshipResults(sport: sport, step: 1))
             
             olympic.championships.append(championship)

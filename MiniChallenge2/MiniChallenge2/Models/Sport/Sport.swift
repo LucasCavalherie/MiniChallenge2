@@ -16,6 +16,7 @@ struct Sport: Identifiable, Codable {
     let color: String
     let link: String
     let value: Int
+    let sportQuestions: [Question]
     let countryScoreOrder: [Country]
 }
 

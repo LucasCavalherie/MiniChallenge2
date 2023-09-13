@@ -44,24 +44,34 @@ struct UnlockedSportCard: View {
                 
                 Spacer()
                 
-                Button {
-                    championshipController.currentChampionship = championship
-                    routerController.addKeyToViewStack(viewKey: "Rank")
-                } label: {
-                    HStack {
-                        if championship.done {
-                            Text("Resultados")
-                        } else {
-                            Text("Competir")
-                        }
+                if championship.done {
+                    Button {
+                        routerController.addKeyToViewStack(viewKey: "Rank")
+                    } label: {
+                        Text("Resultados")
+                            .font(.body)
+                            .foregroundColor(Color("Black"))
+                            .fontWeight(.semibold)
+                            .padding(.vertical, 12)
+                            .padding(.horizontal, 36)
+                            .background(Color("White"))
+                            .cornerRadius(10)
                     }
-                    .font(.body)
-                    .foregroundColor(Color("Black"))
-                    .fontWeight(.semibold)
-                    .padding(.vertical, 12)
-                    .padding(.horizontal, 36)
-                    .background(Color("White"))
-                    .cornerRadius(10)
+                  
+                } else {
+                    Button {
+                        championshipController.currentChampionship = championship
+                        routerController.addKeyToViewStack(viewKey: "Goal")
+                    } label: {
+                        Text("Competir")
+                            .font(.body)
+                            .foregroundColor(Color("Black"))
+                            .fontWeight(.semibold)
+                            .padding(.vertical, 12)
+                            .padding(.horizontal, 36)
+                            .background(Color("White"))
+                            .cornerRadius(10)
+                    }
                 }
             }
             .padding()
@@ -74,7 +84,7 @@ struct UnlockedSportCard: View {
 
 struct UnlockedSportCard_Previews: PreviewProvider {
     static var previews: some View {
-        let quiz = Quiz(questions: DataQuestions().questions)
+        let quiz = Quiz(questions: DataQuestions().swimmingQuestions)
         let championship = Championship(
             sport: SportsData().sport[0],
             quiz: quiz,
