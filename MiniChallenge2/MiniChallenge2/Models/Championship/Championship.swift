@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 // Struct que representa competições/eventos das olimpiadas
 enum MedalType: String, Codable {
@@ -30,5 +31,27 @@ class Championship: Identifiable, Codable{
         self.done = done
         self.unlock = unlock
         self.championshipResults = championshipResults
+    }
+    
+    func medalColor() -> Color {
+        switch medalType {
+        case .none:
+            return Color("Black")
+        case .bronze:
+            return Color("Bronze")
+        case .silver:
+            return Color("DarkGray")
+        case .gold:
+            return Color("Yellow")
+        }
+    }
+    func getPlayerPositionInResults() -> Int {
+        getPositionInResults(countryName: "Brasil")
+    }
+    func getPositionInResults(countryName : String) -> Int {
+        return championshipResults.firstIndex(where: {$0.country.name == countryName}) ?? -1
+    }
+    func getPositionInResults(country: Country) -> Int {
+        getPositionInResults(countryName: country.name)
     }
 }

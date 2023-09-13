@@ -9,14 +9,18 @@ import SwiftUI
 
 struct NavBar: View {
     @ObservedObject var userController = UserController.shared
+    @ObservedObject var layoutController = LayoutController.shared
     
     var body: some View {
         HStack {
-            VStack (alignment: .leading) {
+            HStack {
                 Text("Brasil")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.vertical, 2)
+                    .foregroundColor(Color("Black"))
+                
+                Text(" - ")
+                    .font(.headline)
                     .foregroundColor(Color("Black"))
                 
                 Text("Nível " + String(userController.user.level))
@@ -38,7 +42,11 @@ struct NavBar: View {
             .background(Color("Yellow"))
             .cornerRadius(50)
         }
-        .padding(32)
+        .padding(.horizontal, 32)
+        .padding(.top, 64)
+        .padding(.bottom)
+        .frame(height: layoutController.navBarSize)
+        .frame(maxWidth: .infinity, maxHeight: layoutController.navBarSize)
         .background(Color("White"))
     }
 }

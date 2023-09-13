@@ -40,7 +40,7 @@ struct GoalView: View {
                         
                         VStack (spacing: 16){ // premio1 <-> premio 2
                             VStack (spacing: 8){ // ilustraçao <-> legenda
-                                Image("PrêmioOuro")
+                                Image("PremioOuro")
                                 
                                 HStack (spacing: 6){ // ícone <-> qnt acertos
                                     HStack {
@@ -65,7 +65,7 @@ struct GoalView: View {
                             
                             HStack (spacing: 24) {
                                 VStack (spacing: 8){
-                                    Image("PrêmioPrata")
+                                    Image("PremioPrata")
                                     
                                     HStack (spacing: 6){
                                         HStack {
@@ -88,7 +88,7 @@ struct GoalView: View {
                                     }
                                 }
                                 VStack (spacing: 8){
-                                    Image("PrêmioBronze")
+                                    Image("PremioBronze")
                                     
                                     HStack (spacing: 6){
                                         HStack {

@@ -17,6 +17,10 @@ struct UnlockedSportCard: View {
             Rectangle()
                 .fill(Color(championship.sport.color))
             
+            Image(championship.sport.imageName)
+                .resizable(resizingMode: .tile)
+                .ignoresSafeArea()
+            
             VStack {
                 HStack (alignment: .top) {
                     HStack {

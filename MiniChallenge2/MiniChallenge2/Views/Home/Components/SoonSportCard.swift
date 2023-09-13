@@ -12,8 +12,10 @@ struct SoonSportCard: View {
         ZStack {
             Rectangle()
                 .fill(Color("DarkGray"))
+                .opacity(0.8)
             
             Image("lockSport")
+                .opacity(0.6)
             
             VStack {
                 HStack (alignment: .top) {
@@ -38,11 +40,11 @@ struct SoonSportCard: View {
                     Text("Bloqueado")
                 }
                 .font(.body)
-                .foregroundColor(Color("Black"))
+                .foregroundColor(Color("White"))
                 .fontWeight(.semibold)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 36)
-                .background(Color("White"))
+                .background(Color("DarkGray"))
                 .cornerRadius(10)
             }
             .padding()

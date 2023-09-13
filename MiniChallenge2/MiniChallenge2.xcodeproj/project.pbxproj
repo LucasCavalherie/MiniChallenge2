@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		092E986B2AA9018300600349 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E986A2AA9018300600349 /* GoalView.swift */; };
 		4124829D2AB2410300ADC4F0 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124829C2AB2410300ADC4F0 /* SoundController.swift */; };
-		412482AD2AB2683D00ADC4F0 /* clickFast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 412482AC2AB2683D00ADC4F0 /* clickFast.mp3 */; };
-		412482AF2AB268AD00ADC4F0 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 412482AE2AB268AC00ADC4F0 /* beep.mp3 */; };
-		412482B52AB2791000ADC4F0 /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 412482B42AB2791000ADC4F0 /* drop.mp3 */; };
-		412482B72AB27A5D00ADC4F0 /* cardClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 412482B62AB27A5D00ADC4F0 /* cardClick.mp3 */; };
-		412482B92AB27BF600ADC4F0 /* logo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 412482B82AB27BF600ADC4F0 /* logo.mp3 */; };
 		418D8A972AAD4E1900895108 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A962AAD4E1900895108 /* Onboarding2.swift */; };
 		418D8A992AAD513C00895108 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A982AAD513C00895108 /* Onboarding3.swift */; };
 		418D8A9B2AAD53C100895108 /* Onboarding4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D8A9A2AAD53C100895108 /* Onboarding4.swift */; };
@@ -30,6 +25,11 @@
 		73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B292AA1115700B1EA71 /* OlympicController.swift */; };
 		73356B2C2AA113BC00B1EA71 /* AchievementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */; };
 		73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73356B2D2AA113CE00B1EA71 /* SportsData.swift */; };
+		7349269D2AB2805200339805 /* clickFast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 734926982AB2805100339805 /* clickFast.mp3 */; };
+		7349269E2AB2805200339805 /* drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 734926992AB2805100339805 /* drop.mp3 */; };
+		7349269F2AB2805200339805 /* cardClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7349269A2AB2805100339805 /* cardClick.mp3 */; };
+		734926A02AB2805200339805 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7349269B2AB2805100339805 /* beep.mp3 */; };
+		734926A12AB2805200339805 /* logo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7349269C2AB2805200339805 /* logo.mp3 */; };
 		737F4A822AAFEA6C00A878A4 /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F4A812AAFEA6C00A878A4 /* QuizResult.swift */; };
 		737F4A852AAFEF5700A878A4 /* ExpandableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F4A842AAFEF5700A878A4 /* ExpandableAnswer.swift */; };
 		73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */; };
@@ -57,19 +57,19 @@
 		73F692182AA2C1DA00769BE9 /* ChampionshipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */; };
 		73F6921A2AA2C64000769BE9 /* ChampionshipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F692192AA2C64000769BE9 /* ChampionshipData.swift */; };
 		F03356252A9E7733007472F8 /* RouterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03356242A9E7733007472F8 /* RouterController.swift */; };
+		F07044152AB0DB9600806BA7 /* LayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07044142AB0DB9600806BA7 /* LayoutController.swift */; };
+		F07044182AB0E2DB00806BA7 /* OlympicHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07044172AB0E2DB00806BA7 /* OlympicHistoryCard.swift */; };
 		F09AD8952AA8F521005EC4E6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8942AA8F521005EC4E6 /* TabBar.swift */; };
 		F09AD8972AA8FD72005EC4E6 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */; };
 		F09AD8992AA90991005EC4E6 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8982AA90991005EC4E6 /* ViewExtension.swift */; };
+		F0A336172AAFA3C000358484 /* OlympicsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A336162AAFA3C000358484 /* OlympicsHistoryView.swift */; };
+		F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */; };
+		F0E5E6192AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		092E986A2AA9018300600349 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		4124829C2AB2410300ADC4F0 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
-		412482AC2AB2683D00ADC4F0 /* clickFast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clickFast.mp3; path = ../../../../Downloads/clickFast.mp3; sourceTree = "<group>"; };
-		412482AE2AB268AC00ADC4F0 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = "../../../../Music/Music/Media.localized/Music/Unknown Artist/Unknown Album/beep.mp3"; sourceTree = "<group>"; };
-		412482B42AB2791000ADC4F0 /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = drop.mp3; path = ../../../../Downloads/drop.mp3; sourceTree = "<group>"; };
-		412482B62AB27A5D00ADC4F0 /* cardClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cardClick.mp3; path = ../../../../Downloads/cardClick.mp3; sourceTree = "<group>"; };
-		412482B82AB27BF600ADC4F0 /* logo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = logo.mp3; path = "../../../../Music/Music/Media.localized/Music/Unknown Artist/Unknown Album/logo.mp3"; sourceTree = "<group>"; };
 		418D8A962AAD4E1900895108 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		418D8A982AAD513C00895108 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		418D8A9A2AAD53C100895108 /* Onboarding4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4.swift; sourceTree = "<group>"; };
@@ -86,9 +86,14 @@
 		73356B292AA1115700B1EA71 /* OlympicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicController.swift; sourceTree = "<group>"; };
 		73356B2B2AA113BC00B1EA71 /* AchievementsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsData.swift; sourceTree = "<group>"; };
 		73356B2D2AA113CE00B1EA71 /* SportsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsData.swift; sourceTree = "<group>"; };
+		734926982AB2805100339805 /* clickFast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clickFast.mp3; path = Songs/clickFast.mp3; sourceTree = "<group>"; };
+		734926992AB2805100339805 /* drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = drop.mp3; path = Songs/drop.mp3; sourceTree = "<group>"; };
+		7349269A2AB2805100339805 /* cardClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cardClick.mp3; path = Songs/cardClick.mp3; sourceTree = "<group>"; };
+		7349269B2AB2805100339805 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = Songs/beep.mp3; sourceTree = "<group>"; };
+		7349269C2AB2805200339805 /* logo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = logo.mp3; path = Songs/logo.mp3; sourceTree = "<group>"; };
 		737F4A812AAFEA6C00A878A4 /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		737F4A842AAFEF5700A878A4 /* ExpandableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableAnswer.swift; sourceTree = "<group>"; };
-		73C011BC2A9E5988008FCA67 /* MiniChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73C011BC2A9E5988008FCA67 /* Olympia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olympia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C011BF2A9E5988008FCA67 /* MiniChallenge2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge2App.swift; sourceTree = "<group>"; };
 		73C011C12A9E5988008FCA67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73C011C32A9E5988008FCA67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,9 +119,14 @@
 		73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipController.swift; sourceTree = "<group>"; };
 		73F692192AA2C64000769BE9 /* ChampionshipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionshipData.swift; sourceTree = "<group>"; };
 		F03356242A9E7733007472F8 /* RouterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterController.swift; sourceTree = SOURCE_ROOT; };
+		F07044142AB0DB9600806BA7 /* LayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutController.swift; sourceTree = "<group>"; };
+		F07044172AB0E2DB00806BA7 /* OlympicHistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCard.swift; sourceTree = "<group>"; };
 		F09AD8942AA8F521005EC4E6 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F09AD8982AA90991005EC4E6 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = MiniChallenge2/Views/Components/ViewExtension.swift; sourceTree = SOURCE_ROOT; };
+		F0A336162AAFA3C000358484 /* OlympicsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicsHistoryView.swift; sourceTree = "<group>"; };
+		F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardDivider.swift; sourceTree = "<group>"; };
+		F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardChampionship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +226,7 @@
 		73C011BD2A9E5988008FCA67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73C011BC2A9E5988008FCA67 /* MiniChallenge2.app */,
+				73C011BC2A9E5988008FCA67 /* Olympia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +272,7 @@
 		73C011CE2A9E5CBD008FCA67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0A336152AAFA38C00358484 /* OlympicsHistory */,
 				092E98692AA9015F00600349 /* Goals */,
 				418D8A9C2AAE0F0B00895108 /* Logo */,
 				41ECCD322AA8E3AE00FEFCEB /* Onboarding */,
@@ -286,6 +297,7 @@
 				73356B292AA1115700B1EA71 /* OlympicController.swift */,
 				73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */,
 				4124829C2AB2410300ADC4F0 /* SoundController.swift */,
+				F07044142AB0DB9600806BA7 /* LayoutController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -301,11 +313,11 @@
 		73C011D12A9E6049008FCA67 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				412482AE2AB268AC00ADC4F0 /* beep.mp3 */,
-				412482B62AB27A5D00ADC4F0 /* cardClick.mp3 */,
-				412482B42AB2791000ADC4F0 /* drop.mp3 */,
-				412482B82AB27BF600ADC4F0 /* logo.mp3 */,
-				412482AC2AB2683D00ADC4F0 /* clickFast.mp3 */,
+				7349269B2AB2805100339805 /* beep.mp3 */,
+				7349269A2AB2805100339805 /* cardClick.mp3 */,
+				734926982AB2805100339805 /* clickFast.mp3 */,
+				734926992AB2805100339805 /* drop.mp3 */,
+				7349269C2AB2805200339805 /* logo.mp3 */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -413,6 +425,16 @@
 			path = Rank;
 			sourceTree = "<group>";
 		};
+		F07044162AB0E2D100806BA7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F07044172AB0E2DB00806BA7 /* OlympicHistoryCard.swift */,
+				F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */,
+				F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F09AD8932AA8F507005EC4E6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,12 +444,21 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		F0A336152AAFA38C00358484 /* OlympicsHistory */ = {
+			isa = PBXGroup;
+			children = (
+				F07044162AB0E2D100806BA7 /* Components */,
+				F0A336162AAFA3C000358484 /* OlympicsHistoryView.swift */,
+			);
+			path = OlympicsHistory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		73C011BB2A9E5988008FCA67 /* MiniChallenge2 */ = {
+		73C011BB2A9E5988008FCA67 /* Olympia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73C011CA2A9E5988008FCA67 /* Build configuration list for PBXNativeTarget "MiniChallenge2" */;
+			buildConfigurationList = 73C011CA2A9E5988008FCA67 /* Build configuration list for PBXNativeTarget "Olympia" */;
 			buildPhases = (
 				73C011B82A9E5988008FCA67 /* Sources */,
 				73C011B92A9E5988008FCA67 /* Frameworks */,
@@ -437,9 +468,9 @@
 			);
 			dependencies = (
 			);
-			name = MiniChallenge2;
+			name = Olympia;
 			productName = MiniChallenge2;
-			productReference = 73C011BC2A9E5988008FCA67 /* MiniChallenge2.app */;
+			productReference = 73C011BC2A9E5988008FCA67 /* Olympia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -470,7 +501,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				73C011BB2A9E5988008FCA67 /* MiniChallenge2 */,
+				73C011BB2A9E5988008FCA67 /* Olympia */,
 			);
 		};
 /* End PBXProject section */
@@ -480,13 +511,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				412482AD2AB2683D00ADC4F0 /* clickFast.mp3 in Resources */,
-				412482B72AB27A5D00ADC4F0 /* cardClick.mp3 in Resources */,
+				734926A12AB2805200339805 /* logo.mp3 in Resources */,
 				73C011C72A9E5988008FCA67 /* Preview Assets.xcassets in Resources */,
+				7349269D2AB2805200339805 /* clickFast.mp3 in Resources */,
+				734926A02AB2805200339805 /* beep.mp3 in Resources */,
 				73C011C42A9E5988008FCA67 /* Assets.xcassets in Resources */,
-				412482AF2AB268AD00ADC4F0 /* beep.mp3 in Resources */,
-				412482B52AB2791000ADC4F0 /* drop.mp3 in Resources */,
-				412482B92AB27BF600ADC4F0 /* logo.mp3 in Resources */,
+				7349269E2AB2805200339805 /* drop.mp3 in Resources */,
+				7349269F2AB2805200339805 /* cardClick.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +531,7 @@
 				73132E752AA171B700FF3E03 /* HomeView.swift in Sources */,
 				4124829D2AB2410300ADC4F0 /* SoundController.swift in Sources */,
 				73C011C22A9E5988008FCA67 /* ContentView.swift in Sources */,
+				F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */,
 				73C011DA2A9E706F008FCA67 /* Category.swift in Sources */,
 				73F692142AA2B1E200769BE9 /* RankView.swift in Sources */,
 				73C011D82A9E700C008FCA67 /* Question.swift in Sources */,
@@ -507,15 +539,18 @@
 				73356B282AA1113D00B1EA71 /* UserController.swift in Sources */,
 				73C011DC2A9E71CF008FCA67 /* Answer.swift in Sources */,
 				F09AD8972AA8FD72005EC4E6 /* TabBarItem.swift in Sources */,
+				F0E5E6192AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift in Sources */,
 				73356B262AA1065F00B1EA71 /* Achievement.swift in Sources */,
 				73F692162AA2BD5000769BE9 /* NavBarQuiz.swift in Sources */,
 				73C011E52A9E7AA2008FCA67 /* Countdown.swift in Sources */,
 				41ECCD342AA8E3D800FEFCEB /* Onboarding1.swift in Sources */,
 				73CBECBC2AA018F700756EF0 /* Country.swift in Sources */,
 				73F6921A2AA2C64000769BE9 /* ChampionshipData.swift in Sources */,
+				F0A336172AAFA3C000358484 /* OlympicsHistoryView.swift in Sources */,
 				73356B2A2AA1115700B1EA71 /* OlympicController.swift in Sources */,
 				73CBECBE2AA019BA00756EF0 /* ChampionshipResult.swift in Sources */,
 				F03356252A9E7733007472F8 /* RouterController.swift in Sources */,
+				F07044182AB0E2DB00806BA7 /* OlympicHistoryCard.swift in Sources */,
 				73C011C02A9E5988008FCA67 /* MiniChallenge2App.swift in Sources */,
 				73C011E92A9E837A008FCA67 /* Quiz.swift in Sources */,
 				731857DC2AA8FC7B00F677D1 /* LockedSportCard.swift in Sources */,
@@ -534,6 +569,7 @@
 				418D8A9B2AAD53C100895108 /* Onboarding4.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
 				73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */,
+				F07044152AB0DB9600806BA7 /* LayoutController.swift in Sources */,
 				73CBECB72AA0122D00756EF0 /* Olympic.swift in Sources */,
 				73132E772AA1775400FF3E03 /* UnlockedSportCard.swift in Sources */,
 				73CBECB92AA0145C00756EF0 /* Championship.swift in Sources */,
@@ -669,7 +705,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
 				DEVELOPMENT_TEAM = 4X6L65DYQU;
 				ENABLE_PREVIEWS = YES;
@@ -677,8 +713,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -687,9 +723,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = appledeveloperacademy.Olympia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -699,7 +738,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallenge2/Preview Content\"";
 				DEVELOPMENT_TEAM = 4X6L65DYQU;
 				ENABLE_PREVIEWS = YES;
@@ -707,8 +746,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,9 +756,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = appledeveloperacademy.Olympia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -735,7 +777,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73C011CA2A9E5988008FCA67 /* Build configuration list for PBXNativeTarget "MiniChallenge2" */ = {
+		73C011CA2A9E5988008FCA67 /* Build configuration list for PBXNativeTarget "Olympia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73C011CB2A9E5988008FCA67 /* Debug */,

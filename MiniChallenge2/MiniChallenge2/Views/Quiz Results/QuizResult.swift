@@ -42,6 +42,8 @@ struct QuizResult: View {
                     .pickerStyle(.segmented)
                     .padding(.bottom)
                     .foregroundColor(.blue)
+                    .environment(\.colorScheme, .light)
+                    .preferredColorScheme(.light)
                     
                     ScrollView (showsIndicators: false) {
                         if selectedTheme == "Erros" {
