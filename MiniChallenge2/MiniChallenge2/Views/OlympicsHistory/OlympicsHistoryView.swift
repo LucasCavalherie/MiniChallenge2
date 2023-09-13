@@ -28,6 +28,5 @@ struct OlympicsHistoryView: View {
         .frame(height: layoutController.contentSize(), alignment: .top)
         .frame(maxWidth: .infinity, maxHeight: layoutController.contentSize())
         .background(Color("Gray"))
-        .onDisappear{userController.saveData()}
     }
 }
