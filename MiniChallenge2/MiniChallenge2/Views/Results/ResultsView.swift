@@ -15,30 +15,31 @@ struct ResultsView: View {
     var body: some View {
         VStack {
             NavBar()
-            List {
-                ForEach(Array(olympicController.olympic.championships.enumerated()), id: \.element.id) { i, championship in
-                    HStack {
-                        Image(systemName: championship.sport.symbolName)
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("White"))
-                        
-                        VStack (alignment: .leading) {
-                            HStack {
-                                Text(championship.sport.name)
-                                    .font(.headline)
+            if olympicController.hasChampionshipDoned() {
+                List {
+                    ForEach(Array(olympicController.listChampionships().enumerated()), id: \.element.id) { i, championship in
+                        HStack {
+                            Image(systemName: championship.sport.symbolName)
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color("White"))
+                            
+                            VStack (alignment: .leading) {
+                                HStack {
+                                    Text(championship.sport.name)
+                                        .font(.headline)
+                                        .foregroundColor(Color("White"))
+                                }
+                                
+                                Text("\(championshipController.getBrasilInChampionshipResult(championship: championship)) acertos")
+                                    .font(.caption)
                                     .foregroundColor(Color("White"))
                             }
+                            .padding(.leading, 8)
                             
-                            Text("\(championshipController.getBrasilInChampionshipResult(championship: championship)) acertos")
-                                .font(.caption)
-                                .foregroundColor(Color("White"))
-                        }
-                        .padding(.leading, 8)
-                        
-                        Spacer()
-                        
-                        switch championship.medalType {
+                            Spacer()
+                            
+                            switch championship.medalType {
                             case .gold:
                                 Image(systemName: "circle.fill")
                                     .font(.title)
@@ -71,28 +72,31 @@ struct ResultsView: View {
                                     )
                             case .none:
                                 EmptyView()
+                            }
                         }
+                        .listRowBackground(Color("Green"))
+                        .padding(.vertical, 4)
                     }
-                    .listRowBackground(Color("Green"))
-                    .padding(.vertical, 4)
                 }
+                .scrollContentBackground(.hidden)
+                .padding(.horizontal)
+            } else {
+                Spacer()
             }
-            .scrollContentBackground(.hidden)
-            .padding(.horizontal)
             
-                Button {
-                    routerController.clear()
-                    olympicController.createOlympic()
-                } label: {
-                    Text("Nova olímpiada")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("White"))
-                        .padding(.vertical)
-                        .padding(.horizontal, 56)
-                        .background(Color("Orange"))
-                        .cornerRadius(20)
-                }
+            Button {
+                routerController.clear()
+                olympicController.createOlympic()
+            } label: {
+                Text("Nova olímpiada")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("White"))
+                    .padding(.vertical)
+                    .padding(.horizontal, 56)
+                    .background(Color("Orange"))
+                    .cornerRadius(20)
+            }
         }
         .background(Color("Gray"))
     }

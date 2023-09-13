@@ -48,19 +48,21 @@ struct HomeView: View {
                         .frame(height: 20)
                         .padding(.trailing)
                     
-                    Button {
-                        olympicController.finishOlympic()
-                        routerController.addKeyToViewStack(viewKey: "Results")
-                    } label: {
-                        HStack {
-                            Text("Encerrar")
+                    if olympicController.hasChampionshipDoned() {
+                        Button {
+                            olympicController.finishOlympic()
+                            routerController.addKeyToViewStack(viewKey: "Results")
+                        } label: {
+                            HStack {
+                                Text("Encerrar")
+                            }
+                            .foregroundColor(Color("Black"))
+                            .fontWeight(.semibold)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 8)
+                            .background(Color("White"))
+                            .cornerRadius(10)
                         }
-                        .foregroundColor(Color("Black"))
-                        .fontWeight(.semibold)
-                        .padding(.vertical, 8)
-                        .padding(.horizontal, 8)
-                        .background(Color("White"))
-                        .cornerRadius(10)
                     }
                 }
                 .padding(.bottom)

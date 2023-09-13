@@ -70,6 +70,20 @@ class OlympicController: ObservableObject {
         return championship.championshipResults.sorted(by: {$0.value > $1.value})
     }
     
+    func listChampionships() -> [Championship] {
+        var championshioDoned : [Championship] = []
+        for championship in olympic.championships {
+            if championship.done {
+                championshioDoned.append(championship)
+            }
+        }
+        return championshioDoned
+    }
+    
+    func hasChampionshipDoned() -> Bool {
+        return self.listChampionships().count > 0
+    }
+    
     func finishOlympic() {
         UserController.shared.upMedalScore(medalScore: olympic.medalScore)
         UserController.shared.upLevel()

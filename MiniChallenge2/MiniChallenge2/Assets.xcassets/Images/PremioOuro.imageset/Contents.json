@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "PrêmioOuro.png",
+      "filename" : "PremioOuro.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "PrêmioOuro 1.png",
+      "filename" : "PremioOuro 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "PrêmioOuro 2.png",
+      "filename" : "PremioOuro 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -68,7 +68,15 @@ class UserController: ObservableObject {
         saveData()
     }
     
-    func addPastOlympic(olympic: Olympic) {
+    func addPastOlympic(olympic: inout Olympic) {
+        var championshioDoned : [Championship] = []
+        for championship in olympic.championships {
+            if championship.done {
+                championshioDoned.append(championship)
+            }
+        }
+        olympic.championships = championshioDoned
+        
         user.pastOlympics.append(olympic)
         saveData()
     }
@@ -85,7 +93,7 @@ class UserController: ObservableObject {
     
     func finishCurrentOlympic() {
         if user.currentOlympic != nil {
-            self.addPastOlympic(olympic: user.currentOlympic!)
+            self.addPastOlympic(olympic: &user.currentOlympic!)
         }
         user.currentOlympic = nil
         saveData()
