@@ -8,6 +8,6 @@
 import Foundation
 
 final class AchievementsData{
-    var achievement: [Achievement] = []
+    var achievements: [Achievement] = []
 }
 
