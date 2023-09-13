@@ -16,7 +16,7 @@ struct ResultsView: View {
         VStack {
             NavBar()
             List {
-                ForEach(Array(olympicController.olympic.championships.enumerated()), id: \.element.id) { i, championship in
+                ForEach(Array(routerController.resultSettings.olympic.championships.enumerated()), id: \.element.id) { i, championship in
                     HStack {
                         Image(systemName: championship.sport.symbolName)
                             .font(.title3)
@@ -38,39 +38,19 @@ struct ResultsView: View {
                         
                         Spacer()
                         
-                        switch championship.medalType {
-                            case .gold:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("Yellow"))
-                                    )
-                            case .silver:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("DarkGray"))
-                                    )
-                            case .bronze:
-                                Image(systemName: "circle.fill")
-                                    .font(.title)
-                                    .foregroundColor(Color("White"))
-                                    .overlay(
-                                        Image(systemName: "medal")
-                                            .font(.title3)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("Bronze"))
-                                    )
-                            case .none:
-                                EmptyView()
+                        if championship.medalType != .none {
+                            Image(systemName: "circle.fill")
+                                .font(.title)
+                                .foregroundColor(Color("White"))
+                                .overlay(
+                                    Image(systemName: "medal")
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(championship.medalColor())
+                                )
+                        }
+                        else {
+                            EmptyView()
                         }
                     }
                     .listRowBackground(Color("Green"))
@@ -80,7 +60,8 @@ struct ResultsView: View {
             .scrollContentBackground(.hidden)
             .padding(.horizontal)
             
-                Button {
+            if (routerController.resultSettings.showNextButton) {
+                 Button {
                     routerController.clear()
                     olympicController.createOlympic()
                 } label: {
@@ -93,6 +74,20 @@ struct ResultsView: View {
                         .background(Color("Orange"))
                         .cornerRadius(20)
                 }
+            } else {
+                Button {
+                   routerController.goBack()
+               } label: {
+                   Text("Voltar")
+                       .font(.title3)
+                       .fontWeight(.bold)
+                       .foregroundColor(Color("Orange"))
+                       .padding(.vertical)
+                       .padding(.horizontal, 56)
+                       .background(Color("White"))
+                       .cornerRadius(20)
+               }
+            }
         }
         .background(Color("Gray"))
     }

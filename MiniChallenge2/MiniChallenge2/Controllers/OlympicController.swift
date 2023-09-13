@@ -39,6 +39,9 @@ class OlympicController: ObservableObject {
     }
     
     func createOlympic() {
+        if (olympic.championships.count > 0) {
+            UserController.shared.addPastOlympic(olympic: olympic)
+        }
         olympic = Olympic(name: "Olimpiadas", medalScore: 0, championships: [])
         createChampionships(sportList: SportsData().sport)
         UserController.shared.saveCurrentOlympic(olympic: olympic)
