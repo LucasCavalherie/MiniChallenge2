@@ -69,7 +69,6 @@ class SoundController {
         case drop
         case clickFast
         case beep
-        case certo
         case cardClick
         case logo
     }
