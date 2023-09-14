@@ -42,6 +42,8 @@ struct QuizResult: View {
                     .pickerStyle(.segmented)
                     .padding(.bottom)
                     .foregroundColor(.blue)
+                    .environment(\.colorScheme, .light)
+                    .preferredColorScheme(.light)
                     
                     ScrollView (showsIndicators: false) {
                         if selectedTheme == "Erros" {
@@ -59,17 +61,19 @@ struct QuizResult: View {
                         }
                         
                         Button {
+                            SoundController.shared.play(sound: .clickFast)
                             routerController.addKeyToViewStack(viewKey: "Rank")
                         } label: {
                             Text("Ver o Ranking")
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("White"))
-                                .padding()
-                                .background(Color("Orange"))
-                                .cornerRadius(20)
+                                .padding(.vertical)
+                                .frame(maxWidth: .infinity)
                         }
-                        .padding(.vertical)
+                        .background(Color("Orange"))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 10)
                     }
                 }
                 .padding()

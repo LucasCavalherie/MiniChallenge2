@@ -40,7 +40,7 @@ struct ExpandableAnswer: View {
         }
         .padding()
         .background(Color("Gray"))
-        .cornerRadius(16)
+        .cornerRadius(10)
     }
 }
 

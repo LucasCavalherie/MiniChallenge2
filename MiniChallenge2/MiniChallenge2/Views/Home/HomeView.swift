@@ -32,58 +32,66 @@ struct HomeView: View {
     @ObservedObject var layoutController = LayoutController.shared
     
     var body: some View {
-        VStack (alignment: .leading) {
-            Text("Olimpíada")
-                .font(.title2)
-                .foregroundColor(Color("Black"))
-                .fontWeight(.bold)
-                .padding()
-            
-            HStack {
-                ProgressOlympicBar(value: olympicController.countChampionshipDone(), total: userController.user.unlockedSports.count)
-                    .frame(height: 20)
-                
-                Button {
-                    olympicController.finishOlympic()
-                    routerController.resultSettings = ResultSettings(olympic: olympicController.olympic)
-                    routerController.addKeyToViewStack(viewKey: "Results")
-                } label: {
-                    HStack {
-                        Text("Encerrar")
-                    }
-                    .font(.body)
+            VStack (alignment: .leading) {
+                Text("Olimpíada atual")
+                    .font(.title2)
                     .foregroundColor(Color("Black"))
-                    .fontWeight(.semibold)
-                    .padding(.vertical, 12)
-                    .padding(.horizontal, 12)
-                    .background(Color("White"))
-                    .cornerRadius(10)
-                }
-            }
-            .padding(.bottom)
-            
-            
-            ScrollView (.horizontal, showsIndicators: false) {
+                    .fontWeight(.bold)
+                    .padding(.horizontal)
+                
                 HStack {
-                    ForEach(olympicController.olympic.championships) { championship in
-                        if championship.unlock {
-                            UnlockedSportCard(championship: championship)
-                                .padding(.horizontal, 8)
-                        } else {
-                            if olympicController.canUnlockSport(championship: championship) {
-                                LockedSportCard(championship: championship)
+                    ProgressOlympicBar(value: olympicController.countChampionshipDone(), total: userController.user.unlockedSports.count)
+                        .frame(height: 20)
+                        .padding(.trailing)
+                    
+                    if olympicController.hasChampionshipDoned() {
+                        Button {
+                            SoundController.shared.play(sound: .clickFast)
+                            olympicController.finishOlympic()
+                            routerController.resultSettings = ResultSettings(olympic: olympicController.olympic)
+                            routerController.addKeyToViewStack(viewKey: "Results")
+                        } label: {
+                            HStack {
+                                Text("Encerrar")
+                            }
+                            .foregroundColor(Color("Black"))
+                            .fontWeight(.semibold)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 8)
+                            .background(Color("White"))
+                            .cornerRadius(10)
+                        }
+                    }
+                }
+                .padding(.bottom)
+                .padding(.horizontal)
+                
+            
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(olympicController.olympic.championships) { championship in
+                            if championship.unlock {
+                                UnlockedSportCard(championship: championship)
                                     .padding(.horizontal, 8)
                             } else {
-                                SoonSportCard()
-                                    .padding(.horizontal, 8)
+                                if olympicController.canUnlockSport(championship: championship) {
+                                    LockedSportCard(championship: championship)
+                                        .padding(.horizontal, 8)
+                                } else {
+                                    if olympicController.commingSoon(championship: championship) {
+                                        SoonSportCard()
+                                            .padding(.horizontal, 8)
+                                    } else {
+                                        LockedSportCard(championship: championship)
+                                            .padding(.horizontal, 8)
+                                    }
+                                }
                             }
                         }
-
                     }
                 }
-            }
+                .padding(.horizontal, 8)
         }
-        .padding(.all)
         .frame(maxWidth: .infinity, maxHeight: layoutController.contentSize())
         .background(Color("Gray"))
         .onDisappear{userController.saveData()}

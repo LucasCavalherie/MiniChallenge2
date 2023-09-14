@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "PrêmioOuro.png",
+      "filename" : "sailingImage 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "sailingImage.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "sailingImage 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -40,7 +40,7 @@ struct GoalView: View {
                         
                         VStack (spacing: 16){ // premio1 <-> premio 2
                             VStack (spacing: 8){ // ilustraçao <-> legenda
-                                Image("PrêmioOuro")
+                                Image("PremioOuro")
                                 
                                 HStack (spacing: 6){ // ícone <-> qnt acertos
                                     HStack {
@@ -65,7 +65,7 @@ struct GoalView: View {
                             
                             HStack (spacing: 24) {
                                 VStack (spacing: 8){
-                                    Image("PrêmioPrata")
+                                    Image("PremioPrata")
                                     
                                     HStack (spacing: 6){
                                         HStack {
@@ -88,7 +88,7 @@ struct GoalView: View {
                                     }
                                 }
                                 VStack (spacing: 8){
-                                    Image("PrêmioBronze")
+                                    Image("PremioBronze")
                                     
                                     HStack (spacing: 6){
                                         HStack {
@@ -115,6 +115,7 @@ struct GoalView: View {
                     }
 
                     Button {
+                        SoundController.shared.play(sound: .cardClick)
                         let quiz = championshipController.currentChampionship.quiz
                         let sport = championshipController.currentChampionship.sport
                         quizController.changeQuiz(quiz: quiz, sport: sport)
@@ -125,15 +126,15 @@ struct GoalView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color("White"))
                             .padding()
-                            .background(Color("Green"))
-                            .cornerRadius(20)
-                    }
+                            .frame(maxWidth: .infinity)
+                    }.background(Color("Green"))
+                        .cornerRadius(10)
 
                 }
                 .padding(24)
                 .background(Color("White"))
                 .cornerRadius(10)
-            }
+            }.padding(.horizontal, 28)
             
             Spacer()
             

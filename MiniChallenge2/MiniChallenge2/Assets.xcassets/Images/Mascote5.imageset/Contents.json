@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "PrêmioPrata.png",
+      "filename" : "mascote5.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "mascote5 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "mascote5 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

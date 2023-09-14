@@ -17,6 +17,10 @@ struct UnlockedSportCard: View {
             Rectangle()
                 .fill(Color(championship.sport.color))
             
+            Image(championship.sport.imageName)
+                .resizable(resizingMode: .tile)
+                .ignoresSafeArea()
+            
             VStack {
                 HStack (alignment: .top) {
                     HStack {
@@ -46,6 +50,7 @@ struct UnlockedSportCard: View {
                 
                 if championship.done {
                     Button {
+                        SoundController.shared.play(sound: .clickFast)
                         routerController.addKeyToViewStack(viewKey: "Rank")
                     } label: {
                         Text("Resultados")
@@ -60,6 +65,7 @@ struct UnlockedSportCard: View {
                   
                 } else {
                     Button {
+                        SoundController.shared.play(sound: .clickFast)
                         championshipController.currentChampionship = championship
                         routerController.addKeyToViewStack(viewKey: "Goal")
                     } label: {
