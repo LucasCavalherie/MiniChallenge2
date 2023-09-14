@@ -12,6 +12,8 @@ class SoundController {
     
     static let shared = SoundController()
     private var soundDict: [Sound:AVAudioPlayer?] = [:]
+    private let queue = DispatchQueue(label: "com.example.soundQueue", attributes: .concurrent)
+
     
     init() {
         for sound in Sound.allCases {
@@ -46,8 +48,10 @@ class SoundController {
     }
     
     func play(sound: Sound) {
-        guard let audioPlayer = soundDict[sound, default: nil] else { return }
-        audioPlayer.play()
+        queue.async {
+            guard let audioPlayer = self.soundDict[sound] else { return }
+            audioPlayer?.play()
+        }
     }
     
     func pause(sound: Sound) {
