@@ -20,7 +20,10 @@ struct OlympicsHistoryView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 20) {
                         ForEach(userController.user.pastOlympics) { pastOlympic in
-                            OlympicHistoryCard(olympic: pastOlympic)
+                            VStack {
+                                OlympicHistoryCard(olympic: pastOlympic)
+                                Spacer()
+                            }
                         }
                     }
                     .padding(.vertical, 0)
@@ -54,7 +57,9 @@ struct OlympicsHistoryView: View {
                 Spacer()
             }
         }
-        .padding(.top, 48)
+        .padding(.top, layoutController.navBarSize)
+        .padding(.bottom, layoutController.tabBarSize)
+        .padding(.horizontal, 0)
         .frame(maxWidth: .infinity)
         .background(Color("Gray"))
     }
