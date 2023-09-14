@@ -16,6 +16,6 @@ struct User: Identifiable, Codable {
     var medalScore: Int
     var unlockedSports: [Sport]
     var pastOlympics: [Olympic]
-    var achievements: [Achievement]
+    var achievementIds: [Int]
     var currentOlympic: Olympic?
 }

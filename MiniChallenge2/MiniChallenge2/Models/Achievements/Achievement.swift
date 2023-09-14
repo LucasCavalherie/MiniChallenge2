@@ -7,9 +7,28 @@
 
 import Foundation
 
-struct Achievement: Identifiable, Codable{
-    var id = UUID()
+class Achievement: Identifiable, Hashable {
+    static func == (lhs: Achievement, rhs: Achievement) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    let id: Int
     let name: String
-    let unlockCondition: Bool
+    let description: String
+    let sfSymbol: String
+    let unlockCondition: () -> Bool
+    var unlocked: Bool = false
+    
+    init(id: Int, name: String, description: String, sfSymbol: String, unlockCondition: @escaping () -> Bool) {
+        self.id = id
+        self.name = name
+        self.description = description
+        self.sfSymbol = sfSymbol
+        self.unlockCondition = unlockCondition
+    }
 }
 

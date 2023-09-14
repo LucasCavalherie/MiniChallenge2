@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class UserController: ObservableObject {
     static var shared: UserController = {
@@ -13,14 +14,17 @@ class UserController: ObservableObject {
         return instance
     }()
     
+    var achievementsController = AchievementsController.shared
+    
     private init() {
         if let userSaved = UserDefaults().object(forKey: "userSaved") as? Data,  let userSaved = try? JSONDecoder().decode(User.self, from: userSaved) {
             let sport = SportsData().sport[0]
-            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
-            //self.user = userSaved
+            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [sport], pastOlympics: [], achievementIds: [], currentOlympic: nil)
+//            achievementsController.setUnlockedAchievements(ids: userSaved.achievementIds)
+//            self.user = userSaved
         } else {
             let sport = SportsData().sport[0]
-            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [sport], pastOlympics: [], achievements: [], currentOlympic: nil)
+            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [sport], pastOlympics: [], achievementIds: [], currentOlympic: nil)
         }
     }
     
@@ -28,6 +32,7 @@ class UserController: ObservableObject {
     @Published var userCountry : Country = Country(name: "Brasil", flagEmoji: "🇧🇷")
     
     func saveData() {
+        achievementsController.checkAchievements()
         if let encoded = try? JSONEncoder().encode(user) {
             UserDefaults().set(encoded, forKey: "userSaved")
         }
@@ -82,7 +87,7 @@ class UserController: ObservableObject {
     }
     
     func addAchievement(achievement: Achievement) {
-        user.achievements.append(achievement)
+        user.achievementIds.append(achievement.id)
         saveData()
     }
     
@@ -97,6 +102,11 @@ class UserController: ObservableObject {
         }
         user.currentOlympic = nil
         saveData()
+    }
+    
+    func getHighestAchievement() -> Achievement {
+        let highestId = user.achievementIds.max() ?? 0
+        return achievementsController.achievements[highestId]
     }
 }
 

@@ -16,9 +16,9 @@ struct ResultsView: View {
         VStack {
             NavBar()
             
-            if olympicController.hasChampionshipDoned() {
+            if olympicController.hasChampionshipDoned(olympic: routerController.resultSettings.olympic) {
                 List {
-                    ForEach(Array(olympicController.listChampionships().enumerated()), id: \.element.id) { i, championship in
+                    ForEach(Array(olympicController.listChampionships(olympic: routerController.resultSettings.olympic).enumerated()), id: \.element.id) { i, championship in
                         HStack {
                             Image(systemName: championship.sport.symbolName)
                                 .font(.title3)
@@ -84,7 +84,7 @@ struct ResultsView: View {
             
             } else {
                 Button {
-                    SoundController.shared.play(sound: .beep)
+                    SoundController.shared.play(sound: .clickFast)
                     routerController.goBack()
                 } label: {
                     Text("Voltar")

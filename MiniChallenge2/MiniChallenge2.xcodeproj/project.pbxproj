@@ -63,8 +63,12 @@
 		F09AD8972AA8FD72005EC4E6 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */; };
 		F09AD8992AA90991005EC4E6 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AD8982AA90991005EC4E6 /* ViewExtension.swift */; };
 		F0A336172AAFA3C000358484 /* OlympicsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A336162AAFA3C000358484 /* OlympicsHistoryView.swift */; };
+		F0AF35F92AB349C0003B6533 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AF35F82AB349C0003B6533 /* AchievementCardView.swift */; };
 		F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */; };
 		F0E5E6192AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */; };
+		F0E5E61B2AB245E600A7A030 /* AchievementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E61A2AB245E600A7A030 /* AchievementsController.swift */; };
+		F0E5E61D2AB2541C00A7A030 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E61C2AB2541C00A7A030 /* Prize.swift */; };
+		F0E5E6202AB3401600A7A030 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5E61F2AB3401600A7A030 /* AchievementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,8 +129,12 @@
 		F09AD8962AA8FD72005EC4E6 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F09AD8982AA90991005EC4E6 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = MiniChallenge2/Views/Components/ViewExtension.swift; sourceTree = SOURCE_ROOT; };
 		F0A336162AAFA3C000358484 /* OlympicsHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicsHistoryView.swift; sourceTree = "<group>"; };
+		F0AF35F82AB349C0003B6533 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
 		F0E5E6162AB10AD500A7A030 /* OlympicHistoryCardDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardDivider.swift; sourceTree = "<group>"; };
 		F0E5E6182AB10B2200A7A030 /* OlympicHistoryCardChampionship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicHistoryCardChampionship.swift; sourceTree = "<group>"; };
+		F0E5E61A2AB245E600A7A030 /* AchievementsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsController.swift; sourceTree = "<group>"; };
+		F0E5E61C2AB2541C00A7A030 /* Prize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
+		F0E5E61F2AB3401600A7A030 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				73356B252AA1065F00B1EA71 /* Achievement.swift */,
+				F0E5E61C2AB2541C00A7A030 /* Prize.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 		73C011CE2A9E5CBD008FCA67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0E5E61E2AB33FF800A7A030 /* Achievement */,
 				F0A336152AAFA38C00358484 /* OlympicsHistory */,
 				092E98692AA9015F00600349 /* Goals */,
 				418D8A9C2AAE0F0B00895108 /* Logo */,
@@ -298,6 +308,7 @@
 				73F692172AA2C1DA00769BE9 /* ChampionshipController.swift */,
 				4124829C2AB2410300ADC4F0 /* SoundController.swift */,
 				F07044142AB0DB9600806BA7 /* LayoutController.swift */,
+				F0E5E61A2AB245E600A7A030 /* AchievementsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -453,6 +464,15 @@
 			path = OlympicsHistory;
 			sourceTree = "<group>";
 		};
+		F0E5E61E2AB33FF800A7A030 /* Achievement */ = {
+			isa = PBXGroup;
+			children = (
+				F0E5E61F2AB3401600A7A030 /* AchievementView.swift */,
+				F0AF35F82AB349C0003B6533 /* AchievementCardView.swift */,
+			);
+			path = Achievement;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -532,6 +552,7 @@
 				4124829D2AB2410300ADC4F0 /* SoundController.swift in Sources */,
 				73C011C22A9E5988008FCA67 /* ContentView.swift in Sources */,
 				F0E5E6172AB10AD500A7A030 /* OlympicHistoryCardDivider.swift in Sources */,
+				F0E5E6202AB3401600A7A030 /* AchievementView.swift in Sources */,
 				73C011DA2A9E706F008FCA67 /* Category.swift in Sources */,
 				73F692142AA2B1E200769BE9 /* RankView.swift in Sources */,
 				73C011D82A9E700C008FCA67 /* Question.swift in Sources */,
@@ -561,6 +582,7 @@
 				418D8A972AAD4E1900895108 /* Onboarding2.swift in Sources */,
 				731857DE2AA90C3400F677D1 /* SoonSportCard.swift in Sources */,
 				731857E12AA9163000F677D1 /* ResultsView.swift in Sources */,
+				F0E5E61B2AB245E600A7A030 /* AchievementsController.swift in Sources */,
 				73C011EB2A9E83E6008FCA67 /* QuizController.swift in Sources */,
 				F09AD8992AA90991005EC4E6 /* ViewExtension.swift in Sources */,
 				73356B2E2AA113CE00B1EA71 /* SportsData.swift in Sources */,
@@ -568,10 +590,12 @@
 				092E986B2AA9018300600349 /* GoalView.swift in Sources */,
 				418D8A9B2AAD53C100895108 /* Onboarding4.swift in Sources */,
 				73C011E32A9E7A34008FCA67 /* AnswerButton.swift in Sources */,
+				F0E5E61D2AB2541C00A7A030 /* Prize.swift in Sources */,
 				73CBECB42AA00EA800756EF0 /* Sport.swift in Sources */,
 				F07044152AB0DB9600806BA7 /* LayoutController.swift in Sources */,
 				73CBECB72AA0122D00756EF0 /* Olympic.swift in Sources */,
 				73132E772AA1775400FF3E03 /* UnlockedSportCard.swift in Sources */,
+				F0AF35F92AB349C0003B6533 /* AchievementCardView.swift in Sources */,
 				73CBECB92AA0145C00756EF0 /* Championship.swift in Sources */,
 				418D8A9E2AAE0F2200895108 /* LogoView.swift in Sources */,
 				418D8A992AAD513C00895108 /* Onboarding3.swift in Sources */,

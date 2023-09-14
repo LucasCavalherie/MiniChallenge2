@@ -44,7 +44,7 @@ struct HomeView: View {
                         .frame(height: 20)
                         .padding(.trailing)
                     
-                    if olympicController.hasChampionshipDoned() {
+                    if olympicController.hasChampionshipDoned(olympic: olympicController.olympic) {
                         Button {
                             SoundController.shared.play(sound: .clickFast)
                             olympicController.finishOlympic()
@@ -92,7 +92,7 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 8)
         }
-        .frame(maxWidth: .infinity, maxHeight: layoutController.contentSize())
+        .frame(maxWidth: .infinity)
         .background(Color("Gray"))
         .onDisappear{userController.saveData()}
     }
