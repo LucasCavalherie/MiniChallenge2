@@ -18,10 +18,8 @@ class UserController: ObservableObject {
     
     private init() {
         if let userSaved = UserDefaults().object(forKey: "userSaved") as? Data,  let userSaved = try? JSONDecoder().decode(User.self, from: userSaved) {
-            let sport = SportsData().sport[0]
-            self.user = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [sport], pastOlympics: [], achievementIds: [], currentOlympic: nil)
-//            achievementsController.setUnlockedAchievements(ids: userSaved.achievementIds)
-//            self.user = userSaved
+            achievementsController.setUnlockedAchievements(ids: userSaved.achievementIds)
+            self.user = userSaved
         } else {
             let sport = SportsData().sport[0]
             self.user = User(onboarded: false, name: "User", level: 1, medalScore: 0, unlockedSports: [sport], pastOlympics: [], achievementIds: [], currentOlympic: nil)
