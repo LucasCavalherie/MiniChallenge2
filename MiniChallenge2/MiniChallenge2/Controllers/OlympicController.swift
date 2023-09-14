@@ -73,7 +73,7 @@ class OlympicController: ObservableObject {
         return championship.championshipResults.sorted(by: {$0.value > $1.value})
     }
     
-    func listChampionships() -> [Championship] {
+    func listChampionships(olympic: Olympic) -> [Championship] {
         var championshioDoned : [Championship] = []
         for championship in olympic.championships {
             if championship.done {
@@ -83,8 +83,8 @@ class OlympicController: ObservableObject {
         return championshioDoned
     }
     
-    func hasChampionshipDoned() -> Bool {
-        return self.listChampionships().count > 0
+    func hasChampionshipDoned(olympic: Olympic) -> Bool {
+        return self.listChampionships(olympic: olympic).count > 0
     }
     
     func finishOlympic() {

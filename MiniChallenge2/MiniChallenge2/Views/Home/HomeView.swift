@@ -44,7 +44,7 @@ struct HomeView: View {
                         .frame(height: 20)
                         .padding(.trailing)
                     
-                    if olympicController.hasChampionshipDoned() {
+                    if olympicController.hasChampionshipDoned(olympic: olympicController.olympic) {
                         Button {
                             SoundController.shared.play(sound: .clickFast)
                             olympicController.finishOlympic()
