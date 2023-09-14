@@ -23,7 +23,7 @@ struct NavBar: View {
                     .font(.headline)
                     .foregroundColor(Color("Black"))
                 
-                Text("Nível " + String(userController.user.level))
+                Text(playerTitle())
                     .foregroundColor(Color("Black"))
                     .font(.headline)
                     .italic()
@@ -48,6 +48,12 @@ struct NavBar: View {
         .frame(height: layoutController.navBarSize)
         .frame(maxWidth: .infinity, maxHeight: layoutController.navBarSize)
         .background(Color("White"))
+    }
+    
+    func playerTitle() -> String {
+        let achievement = userController.getHighestAchievement().name
+        let level = "Nível " + String(userController.user.level)
+        return achievement+" "+level
     }
 }
 

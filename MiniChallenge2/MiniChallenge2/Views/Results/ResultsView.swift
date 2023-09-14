@@ -84,7 +84,7 @@ struct ResultsView: View {
             
             } else {
                 Button {
-                    SoundController.shared.play(sound: .beep)
+                    SoundController.shared.play(sound: .clickFast)
                     routerController.goBack()
                 } label: {
                     Text("Voltar")

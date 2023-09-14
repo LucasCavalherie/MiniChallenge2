@@ -103,6 +103,11 @@ class UserController: ObservableObject {
         user.currentOlympic = nil
         saveData()
     }
+    
+    func getHighestAchievement() -> Achievement {
+        let highestId = user.achievementIds.max() ?? 0
+        return achievementsController.achievements[highestId]
+    }
 }
 
 

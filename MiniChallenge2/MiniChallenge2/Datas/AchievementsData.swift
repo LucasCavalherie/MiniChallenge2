@@ -11,7 +11,7 @@ import SwiftUI
 final class AchievementsData{
     var achievements: [Achievement] = [
         Achievement(id: 0, name: "Iniciante", description: "Boas vindas às Olimpíadas", sfSymbol: "flag", unlockCondition: {
-            return true
+            return UserController.shared.hasUserFinishedOnboarding()
         }),
         Achievement(id: 1, name: "Entusiasta", description: "Dispute sua 1ª olimpíada", sfSymbol: "flag.checkered", unlockCondition: {
             return UserController.shared.user.level > 1

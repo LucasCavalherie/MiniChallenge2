@@ -76,7 +76,7 @@ struct RankView: View {
             
                 Button {
                     SoundController.shared.play(sound: .clickFast)
-                    routerController.addKeyToViewStack(viewKey: "Home")
+                    routerController.clear()
                 } label: {
                     Text("Retornar as olimpíadas")
                         .font(.title3)

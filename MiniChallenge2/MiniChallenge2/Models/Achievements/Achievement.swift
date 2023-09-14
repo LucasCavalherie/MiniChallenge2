@@ -7,7 +7,15 @@
 
 import Foundation
 
-class Achievement: Identifiable{
+class Achievement: Identifiable, Hashable {
+    static func == (lhs: Achievement, rhs: Achievement) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     let id: Int
     let name: String
     let description: String

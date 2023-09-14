@@ -55,8 +55,7 @@ struct OlympicsHistoryView: View {
             }
         }
         .padding(.top, 48)
-        .frame(height: layoutController.contentSize(), alignment: .top)
-        .frame(maxWidth: .infinity, maxHeight: layoutController.contentSize())
+        .frame(maxWidth: .infinity)
         .background(Color("Gray"))
     }
 }

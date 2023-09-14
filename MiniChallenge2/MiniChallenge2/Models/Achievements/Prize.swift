@@ -7,7 +7,14 @@
 
 import Foundation
 
-class Prize: Identifiable {
+class Prize: Identifiable, Hashable {
+    static func == (lhs: Prize, rhs: Prize) -> Bool {
+        lhs.imageName == rhs.imageName
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(imageName)
+    }
+    
     let imageName: String
     
     init(imageName: String) {

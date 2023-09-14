@@ -92,7 +92,7 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 8)
         }
-        .frame(maxWidth: .infinity, maxHeight: layoutController.contentSize())
+        .frame(maxWidth: .infinity)
         .background(Color("Gray"))
         .onDisappear{userController.saveData()}
     }

@@ -15,6 +15,7 @@ class AchievementsController : ObservableObject {
     }()
     
     @Published var achievements : [Achievement] = AchievementsData().achievements
+    @Published var prizes : [Prize] = AchievementsData().prizes
     
     func checkAchievements() -> Void {
         for achievement in achievements {
