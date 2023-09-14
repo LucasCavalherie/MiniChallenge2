@@ -8,35 +8,63 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var routerController = RouterController.shared
+    @ObservedObject var routerController = RouterController.shared
+    let showBarViews: [String] = ["Home", "OlympicsHistory", "Achievements"]
     
     var body: some View {
         NavigationStack(path: $routerController.viewStack) {
             VStack {
                 // Essa tela geralmente
-                Text("Stack vazia")
+                Text("Stack vazia (é pra funcionar assim mesmo)")
+                Button(action: {routerController.clear()}, label: {
+                    Text("Resetar viewStack")
+                })
             }
             .navigationDestination(for: String.self) { viewKey in
-                // Usar funções do routerController para mudar telas
-                switch viewKey {
-                case "Home":
-                    // Mostrar view de Home
-                    HomeView()
-                        .navigationBarBackButtonHidden(true)
-                case "Quiz":
-                    // Mostrar view de Quiz
-                    QuizView()
-                        .navigationBarBackButtonHidden(true)
-                case "Rank":
-                    // Mostrar view de Quiz
-                    RankView()
-                        .navigationBarBackButtonHidden(true)
-                // Adicionar outros cases para outras telas
-                default:
-                    // Fazer tela de erro para quando a tela solicitada
-                    // não existir
-                    Text("Erro!")
+                ZStack {
+                    switch viewKey {
+                    case "Logo":
+                        LogoView()
+                    case "OnboardingTela1":
+                        Onboarding1()
+                    case "OnboardingTela2":
+                        Onboarding2()
+                    case "OnboardingTela3":
+                        Onboarding3()
+                    case "OnboardingTela4":
+                        Onboarding4()
+                    case "Home":
+                        HomeView()
+                    case "Quiz":
+                        QuizView()
+                    case "Rank":
+                        RankView()
+                    case "Goal":
+                        GoalView()
+                    case "Results":
+                        ResultsView()
+                    case "OlympicsHistory":
+                        OlympicsHistoryView()
+                    case "Achievements":
+                        AchievementView()
+                    // Adicionar outros cases para outras telas
+                    default:
+                        // Fazer tela de erro para quando a tela solicitada
+                        // não existir
+                        Text("Erro!")
+                    }
+                    if (showBarViews.contains(viewKey)) {
+                        VStack {
+                            NavBar()
+                            Spacer()
+                            TabBar()
+                        }
+                        .ignoresSafeArea()
+                    }
                 }
+                .background(Color("Gray"))
+                .padding(.all, 0)
+                .navigationBarBackButtonHidden(true)
             }
         }
     }

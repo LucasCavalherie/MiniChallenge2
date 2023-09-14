@@ -12,10 +12,31 @@ final class SportsData{
     var sport: [Sport] = [
         Sport(
             name: "Vela",
-            imageName: "Vela",
+            imageName: "sailingImage",
             symbolName: "sailboat.fill",
-            color: Color("Blue"),
+            color: "Blue",
             link: "https://olympics.com/pt/esportes/vela/",
+            value: 0,
+            sportQuestions: DataQuestions().sailingQuestions,
+            countryScoreOrder: [
+                Country(name: "Espanha", flagEmoji: "🇪🇸"),
+                Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
+                Country(name: "Japão", flagEmoji: "🇯🇵"),
+                Country(name: "Itália", flagEmoji: "🇮🇹"),
+                Country(name: "França", flagEmoji: "🇫🇷"),
+                Country(name: "Alemanha", flagEmoji: "🇩🇪"),
+                Country(name: "Argentina", flagEmoji: "🇦🇷")
+            ]
+        ),
+        
+        Sport(
+            name: "Natação",
+            imageName: "swimmingImage",
+            symbolName: "figure.pool.swim",
+            color: "Orange",
+            link: "https://olympics.com/pt/esportes/natacao/",
+            value: 50,
+            sportQuestions: DataQuestions().swimmingQuestions,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
                 Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
@@ -31,8 +52,10 @@ final class SportsData{
             name: "Rugby",
             imageName: "Vela",
             symbolName: "figure.rugby",
-            color: Color("Orange"),
+            color: "Orange",
             link: "https://olympics.com/pt/esportes/vela/",
+            value: 99999999,
+            sportQuestions: DataQuestions().sailingQuestions,
             countryScoreOrder: [
                 Country(name: "Espanha", flagEmoji: "🇪🇸"),
                 Country(name: "Estados Unidos", flagEmoji: "🇺🇸"),
@@ -41,7 +64,8 @@ final class SportsData{
                 Country(name: "França", flagEmoji: "🇫🇷"),
                 Country(name: "Alemanha", flagEmoji: "🇩🇪"),
                 Country(name: "Argentina", flagEmoji: "🇦🇷")
-            ]
+            ],
+            soon: true
         )
     
     ]

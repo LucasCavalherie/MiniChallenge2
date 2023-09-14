@@ -14,7 +14,7 @@ struct QuizView: View {
     var body: some View{
         VStack{
             if quizController.timeFinished{
-                RankView()
+                QuizResult()
             } else {
                 VStack {
                     NavBarQuiz()
@@ -23,8 +23,7 @@ struct QuizView: View {
                         Spacer()
                         
                         Countdown(counter: $quizController.timer, countTo: quizController.totalTime){
-                            championshipController.finishChampionship()
-                            quizController.timeFinished = true
+                            quizController.finishTime()
                         }
 
                         VStack(spacing: 16){
@@ -49,9 +48,11 @@ struct QuizView: View {
 
                         VStack(spacing: 16){
                             ForEach(quizController.question.answers) { answer in
-                                AnswerButton(answer: .constant(answer)){
+                                AnswerButton(answer: .constant(answer), onClickInstant: {
+                                    quizController.blockAnswering(block: true)
+                                }, onClickDelayed: {
                                     quizController.answeringTheQuestion(answer: answer)
-                                }
+                                })
                             }
                         }
 

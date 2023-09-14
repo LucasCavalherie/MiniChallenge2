@@ -7,57 +7,94 @@
 
 import SwiftUI
 
-struct HomeView: View {
-    @ObservedObject var userController = UserController.shared
-    @ObservedObject var olympicController = OlympicController.shared
+struct ProgressOlympicBar: View {
+    var value: Int
+    var total: Int
     
     var body: some View {
-        VStack {
-            NavBar()
-            
-            Spacer()
-            
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
+                    .foregroundColor(Color("White"))
+                
+                Rectangle().frame(width: min(CGFloat(Float(self.value) / Float(self.total))*geometry.size.width, geometry.size.width), height: geometry.size.height)
+                    .foregroundColor(Color("Blue"))
+                
+            }.cornerRadius(45.0)
+        }
+    }
+}
+
+struct HomeView: View {
+    @ObservedObject var routerController = RouterController.shared
+    @ObservedObject var userController = UserController.shared
+    @ObservedObject var olympicController = OlympicController.shared
+    @ObservedObject var layoutController = LayoutController.shared
+    
+    var body: some View {
             VStack (alignment: .leading) {
                 Text("Olimpíada atual")
-                    .font(.title3)
+                    .font(.title2)
                     .foregroundColor(Color("Black"))
                     .fontWeight(.bold)
+                    .padding(.horizontal)
                 
+                HStack {
+                    ProgressOlympicBar(value: olympicController.countChampionshipDone(), total: userController.user.unlockedSports.count)
+                        .frame(height: 20)
+                        .padding(.trailing)
+                    
+                    if olympicController.hasChampionshipDoned(olympic: olympicController.olympic) {
+                        Button {
+                            SoundController.shared.play(sound: .clickFast)
+                            olympicController.finishOlympic()
+                            routerController.resultSettings = ResultSettings(olympic: olympicController.olympic)
+                            routerController.addKeyToViewStack(viewKey: "Results")
+                        } label: {
+                            HStack {
+                                Text("Encerrar")
+                            }
+                            .foregroundColor(Color("Black"))
+                            .fontWeight(.semibold)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 8)
+                            .background(Color("White"))
+                            .cornerRadius(10)
+                        }
+                    }
+                }
+                .padding(.bottom)
+                .padding(.horizontal)
+                
+            
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(olympicController.olympic.championships) { championship in
-                            SportCard(championship: championship)
-                                .padding(.horizontal, 8)
+                            if championship.unlock {
+                                UnlockedSportCard(championship: championship)
+                                    .padding(.horizontal, 8)
+                            } else {
+                                if olympicController.canUnlockSport(championship: championship) {
+                                    LockedSportCard(championship: championship)
+                                        .padding(.horizontal, 8)
+                                } else {
+                                    if olympicController.commingSoon(championship: championship) {
+                                        SoonSportCard()
+                                            .padding(.horizontal, 8)
+                                    } else {
+                                        LockedSportCard(championship: championship)
+                                            .padding(.horizontal, 8)
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-            }
-            .padding()
-            
-            VStack (alignment: .leading) {
-                Text("Prêmios")
-                    .font(.title3)
-                    .foregroundColor(Color("Black"))
-                    .fontWeight(.bold)
-                
-                ScrollView (.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0..<6) { index in
-                            Rectangle()
-                                .fill(Color("Green"))
-                                .frame(width: 140, height: 100)
-                                .cornerRadius(16)
-                                .padding(8)
-                        }
-                            
-                    }
-                }
-            }
-            .padding()
-            
-            Spacer()
+                .padding(.horizontal, 8)
         }
+        .frame(maxWidth: .infinity)
         .background(Color("Gray"))
+        .onDisappear{userController.saveData()}
     }
 }
 

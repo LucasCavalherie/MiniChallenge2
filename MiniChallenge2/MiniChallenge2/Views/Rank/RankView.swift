@@ -71,38 +71,22 @@ struct RankView: View {
                     .padding(.vertical, 4)
                 }
             }
+            .padding(.horizontal,8)
             .scrollContentBackground(.hidden)
-            .padding(.horizontal)
             
-            if championshipController.currentChampionship.done {
                 Button {
-                    routerController.addKeyToViewStack(viewKey: "Home")
+                    SoundController.shared.play(sound: .clickFast)
+                    routerController.clear()
                 } label: {
                     Text("Retornar as olimpíadas")
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundColor(Color("White"))
-                        .padding()
-                        .background(Color("Orange"))
-                        .cornerRadius(20)
-                }
-            } else {
-                Button {
-                    let quiz = championshipController.currentChampionship.quiz
-                    quizController.changeQuiz(quiz: quiz)
-                    routerController.addKeyToViewStack(viewKey: "Quiz")
-                } label: {
-                    Text("Começar quiz")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("White"))
-                        .padding()
-                        .background(Color("Green"))
-                        .cornerRadius(20)
-                }
-            }
-            
-            
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                }.background(Color("Orange"))
+                .cornerRadius(10)
+                .padding(.horizontal,28)
         }
         .background(Color("Blue"))
     }

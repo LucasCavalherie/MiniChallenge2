@@ -10,8 +10,9 @@ import Foundation
 final class ChampionshipData{
     let championship = Championship(
         sport: SportsData().sport[0],
-        quiz: Quiz(questions: DataQuestions().questions),
+        quiz: Quiz(questions: DataQuestions().swimmingQuestions),
         done: false,
+        unlock: true,
         championshipResults: [
             ChampionshipResult(
                 country: Country(name: "Espanha", flagEmoji: "🇪🇸"),
